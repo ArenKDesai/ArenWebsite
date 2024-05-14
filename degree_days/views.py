@@ -42,7 +42,7 @@ html2 = '''
 '''
 
 def index(request):
-    return render(request, 'templates/index.html')
+    return render(request, 'degree_days/index.html')
 
 def download_csv(request):
     if request.method == 'POST':
