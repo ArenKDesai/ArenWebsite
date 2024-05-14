@@ -23,8 +23,8 @@ html2 = '''
           <br />
         </header>
 
-        <form method="post" action="{% url 'download_csv' %}">
         {% csrf_token %}
+        <form method="post" action="{% url 'download_csv' %}">
         <p>From: (start year, inclusive)</p> 
         <input type="text" name="start_year">
         <br />
