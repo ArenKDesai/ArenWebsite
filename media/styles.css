@@ -32,6 +32,10 @@ p {
 a {
   color: white;
 }
+button {
+  color: white;
+  font-family: pixeloidsans;
+}
 .links {
   text-align: center;
   background-color: #006A49;
