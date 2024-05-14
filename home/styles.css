@@ -1,0 +1,168 @@
+@font-face {
+  font-family: pixeloidsans;
+  src: url(PixeloidSans-mLxMm.ttf);
+}
+@font-face {
+  font-family: pixeloidsansBOLD;
+  src: url(PixeloidSansBold-PKnYd.ttf);
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: pixeloidsansBOLD;
+}
+h2 {
+  text-align: center;
+  color: black;
+  font-family: pixeloidsansBOLD;
+}
+h4 {
+  text-align: center;
+  color: black;
+  font-family: pixeloidsansBOLD;
+}
+p {
+  margin: 5px;
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: pixeloidsans;
+}
+a {
+  color: black;
+}
+.links {
+  text-align: center;
+  background-color: #7e8aa7;
+  color: #d9d3d9;
+  font-family: pixeloidsans;
+}
+
+.links2 {
+  text-align: center;
+  margin: 5px;
+  color: #d9d3d9;
+  font-family: pixeloidsans;
+}
+.footer {
+  margin: 0;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 7.5%;
+  background-color: #8a2e3f;
+  color: #d9d3d9;
+}
+body {
+  background-color: #2a202a;
+  background-image: url("Backgroundrender.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.scrollbox {
+  width: 100%;
+  max-height: 3000px;
+  height: 1500px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+
+  text-align: center;
+
+  position: relative;
+  border: 0;
+}
+
+.scrollboxmusic {
+  width: 100%;
+  max-height: 5600px;
+  height: 5600px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+
+  text-align: center;
+
+  position: relative;
+  border: 0;
+}
+
+.scrollboxart {
+  width: 100%;
+  max-height: 6450px;
+  height: 6450px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+
+  text-align: center;
+
+  position: relative;
+  border: 0;
+}
+
+.textbox {
+  position: relative;
+  overflow: hidden;
+  overflow-y: hidden;
+  left: 40%;
+  top: 0;
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  height: 99%;
+  background-color: #8a2e3f;
+  border: 10%;
+  border-style: solid;
+  border-color: #7e8aa7;
+  margin-left: -25%;
+}
+
+.linkbutton {
+  background-color: inherit;
+  border: 5px;
+  border-color: #5f80a6;
+
+  padding: 5px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: pixeloidsans;
+  display: inline-block;
+  transition-duration: 0.4s;
+}
+
+.linkbutton:hover {
+  font-family: pixeloidsansBOLD;
+  background-color: #3b6b58;
+  color: #d9d3d9;
+}
