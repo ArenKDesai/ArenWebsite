@@ -31,8 +31,11 @@ html2 = '''
         <p>To: (end year, inclusive)</p>
         <input type="text" name="end_year">
         <br />
+        <br />
         <button type="submit">Download CSV</button>
         </form>
+      </div>
+    </div>
 
   </body>
 </html>
