@@ -103,7 +103,7 @@ html2 = '''
 
         <br />
         <h2>academics</h2>
-        <p>Fall 2025 undergraduate of computer science & data science @ UW - Madison.</p>
+        <p>Fall 2025 undergraduate student of computer science & data science @ UW - Madison.</p>
 
         <br />
         <br />
