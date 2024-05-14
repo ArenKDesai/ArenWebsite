@@ -23,7 +23,6 @@ html2 = '''
           <br />
         </header>
 
-        {% csrf_token %}
         <form method="post" action="{% url 'download_csv' %}">
         <p>From: (start year, inclusive)</p> 
         <input type="text" name="start_year">
@@ -32,6 +31,7 @@ html2 = '''
         <input type="text" name="end_year">
         <br />
         <br />
+        {% csrf_token %}
         <p><button type="submit">Download CSV</button></p>
         </form>
       </div>
@@ -42,7 +42,7 @@ html2 = '''
 '''
 
 def index(request):
-    return HttpResponse(html2)
+    return render(request, 'index.html')
 
 def download_csv(request):
     if request.method == 'POST':
