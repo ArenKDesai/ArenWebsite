@@ -32,7 +32,7 @@ html2 = '''
         <input type="text" name="end_year">
         <br />
         <br />
-        <button type="submit">Download CSV</button>
+        <p><button type="submit">Download CSV</button></p>
         </form>
       </div>
     </div>
