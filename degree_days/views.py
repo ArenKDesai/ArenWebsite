@@ -10,33 +10,35 @@ def index(request):
 def aquire_csv(start_year, end_year):
     base_url = 'https://ftp.cpc.ncep.noaa.gov/htdocs/products/analysis_monitoring/cdus/degree_days/archives/Heating%20degree%20Days/monthly%20states/'
 
+    start_year = 2015
+    end_year = 2016
     months = [
-        'jan',
-        'feb',
-        'mar',
-        'apr',
-        'may',
-        'jun',
-        'jul',
-        'aug',
-        'sep',
-        'oct',
-        'nov',
-        'dec'
+    'jan',
+    'feb',
+    'mar',
+    'apr',
+    'may',
+    'jun',
+    'jul',
+    'aug',
+    'sep',
+    'oct',
+    'nov',
+    'dec'
     ]
     months_cap = {
-        months[0] : 'Jan',
-        months[1] : 'Feb',
-        months[2] : 'Mar',
-        months[3] : 'Apr',
-        months[4] : 'May',
-        months[5] : 'Jun',
-        months[6] : 'Jul',
-        months[7] : 'Aug',
-        months[8] : 'Sep',
-        months[9] : 'Oct',
-        months[10] : 'Nov',
-        months[11] : 'Dec'
+    months[0] : 'Jan',
+    months[1] : 'Feb',
+    months[2] : 'Mar',
+    months[3] : 'Apr',
+    months[4] : 'May',
+    months[5] : 'Jun',
+    months[6] : 'Jul',
+    months[7] : 'Aug',
+    months[8] : 'Sep',
+    months[9] : 'Oct',
+    months[10] : 'Nov',
+    months[11] : 'Dec'
     }
     df_complete = None
 
@@ -60,7 +62,7 @@ def aquire_csv(start_year, end_year):
                 name = re.search(r'\S+ \S* \S*', line)
                 if name:
                     name_str = name.group(0)
-                    
+        
                     # Get the names of the regions
                     if name_str.strip() not in df_dict['Region'] and name_str.strip() != 'REGION':
                         df_dict['Region'].append(name_str.strip())
@@ -75,24 +77,24 @@ def aquire_csv(start_year, end_year):
                         if dfn == -999: dfn = 0
                         df_dict[f'{year} Total Degree Days'].append(tdd)
                         df_dict[f'{year} Deviation From Norm'].append(dfn)
-                month_df = pd.DataFrame(df_dict)
+            month_df = pd.DataFrame(df_dict)
 
-                # Merge the previous data with the new data
-                if df_complete is not None:
-                    # Check if a previous month has been processed
-                    if f'{year} Total Degree Days' in df_complete.columns:
-                        df_complete[f'{year} Total Degree Days'] = df_complete[f'{year} Total Degree Days'] + month_df[f'{year} Total Degree Days']
-                    else:
-                        df_complete[f'{year} Total Degree Days'] = month_df[f'{year} Total Degree Days']
-
-                    # Repeat for other column
-                    if f'{year} Deviation From Norm' in df_complete.columns:
-                        df_complete[f'{year} Deviation From Norm'] = df_complete[f'{year} Deviation From Norm'] + month_df[f'{year} Deviation From Norm']
-                    else:
-                        df_complete[f'{year} Deviation From Norm'] = month_df[f'{year} Deviation From Norm']
-                # Complete df is new
+            # Merge the previous data with the new data
+            if df_complete is not None:
+                # Check if a previous month has been processed
+                if f'{year} Total Degree Days' in df_complete.columns:
+                    df_complete[f'{year} Total Degree Days'] = df_complete[f'{year} Total Degree Days'] + month_df[f'{year} Total Degree Days']
                 else:
-                    df_complete = month_df
+                    df_complete[f'{year} Total Degree Days'] = month_df[f'{year} Total Degree Days']
+
+                # Repeat for other column
+                if f'{year} Deviation From Norm' in df_complete.columns:
+                    df_complete[f'{year} Deviation From Norm'] = df_complete[f'{year} Deviation From Norm'] + month_df[f'{year} Deviation From Norm']
+                else:
+                    df_complete[f'{year} Deviation From Norm'] = month_df[f'{year} Deviation From Norm']
+            # Complete df is new
+            else:
+                df_complete = month_df
     return df_complete
 
 def download_csv(request):
