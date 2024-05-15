@@ -2,44 +2,6 @@ import pandas as pd
 from django.http import HttpResponse
 from django.shortcuts import render
 
-html2 = '''
-<!doctype html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Degree Days</title>
-
-    <link href="../media/styles.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <div class="scrollbox">
-      <div class="textbox">
-
-        <header>
-          <br />
-          <h1>Download Degree Days CSV</h1>
-          <br />
-        </header>
-
-        <form method="post" action="{% url 'download_csv' %}">
-        <p>From: (start year, inclusive)</p> 
-        <input type="text" name="start_year">
-        <br />
-        <p>To: (end year, inclusive)</p>
-        <input type="text" name="end_year">
-        <br />
-        <br />
-        {% csrf_token %}
-        <p><button type="submit">Download CSV</button></p>
-        </form>
-      </div>
-    </div>
-
-  </body>
-</html>
-'''
 
 def index(request):
     return render(request, 'index.html')
