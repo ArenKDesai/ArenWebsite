@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Aren_Website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['Aren_Website/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
