@@ -169,3 +169,23 @@ body {
   background-color: #3b6b58;
   color: #FFC0CB;
 }
+
+.downloadbutton {
+  background-color: #006A49;
+  border: 5px;
+  border-color: #5f80a6;
+  color: white;
+
+  padding: 5px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: pixeloidsans;
+  display: inline-block;
+  transition-duration: 0.4s;
+}
+
+.downloadbutton:hover {
+  font-family: pixeloidsansBOLD;
+  background-color: #3b6b58;
+  color: #FFC0CB;
+}
