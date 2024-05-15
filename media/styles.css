@@ -36,6 +36,9 @@ button {
   color: white;
   font-family: pixeloidsans;
 }
+code {
+  text-align: left;
+}
 .links {
   text-align: center;
   background-color: #006A49;
