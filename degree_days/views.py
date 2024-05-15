@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import requests
 import regex as re
+import os
 
 def index(request):
     return render(request, 'index.html')
@@ -111,10 +112,20 @@ def download_csv(request):
     else:
         return HttpResponse("Method not allowed")
     
+
 def download_aquire_csv(request):
     if request.method == 'POST':
-        response = HttpResponse(content_type='text/csv')
+        # Assuming aquire_csv.py is in the same directory as views.py
+        file_path = os.path.join(os.path.dirname(__file__), 'aquire_csv.py')
+        
+        # Open the file and read its contents
+        with open(file_path, 'rb') as f:
+            file_content = f.read()
+        
+        # Set the appropriate content type and disposition for download
+        response = HttpResponse(file_content, content_type='text/py')
         response['Content-Disposition'] = 'attachment; filename="aquire_csv.py"'
+        
         return response
     else:
         return HttpResponse("Method not allowed")
