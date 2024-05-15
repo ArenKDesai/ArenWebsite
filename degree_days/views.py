@@ -10,8 +10,6 @@ def index(request):
 def aquire_csv(start_year, end_year):
     base_url = 'https://ftp.cpc.ncep.noaa.gov/htdocs/products/analysis_monitoring/cdus/degree_days/archives/Heating%20degree%20Days/monthly%20states/'
 
-    start_year = 2015
-    end_year = 2016
     months = [
     'jan',
     'feb',

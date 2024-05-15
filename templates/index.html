@@ -32,7 +32,7 @@
         <br />
         <h3>Explanation</h3>
         <p>Data taken from <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/">the Climate Prediction Center</a>, from the 1997-current archives. Here's the code used:</p>
-        <code>
+        <code> <pre>
 import requests
 import pandas as pd
 import regex as re
@@ -125,7 +125,7 @@ for year in range(start_year, end_year + 1):
     # Complete df is new
     else:
       df_complete = month_df
-        </code>
+        </code></pre>
       </div>
     </div>
 
