@@ -136,18 +136,20 @@ body {
 }
 
 .textbox {
-  position: relative;
-  left: 40%;
-  top: 0;
-  text-align: center;
-  margin: auto;
-  width: 70%;
-  height: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5%;
   background-color: #3EB489;
-  border: 10%;
-  border-style: solid;
-  border-color: #79D9B7;
-  margin-left: -25%;
+  border: 10px solid #79D9B7;
+}
+
+.textbox-content {
+  flex: 1;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
 }
 
 .linkbutton {
