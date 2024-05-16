@@ -40,7 +40,8 @@
         <p>(This may take 1-2 minutes to load)</p>
         <br />
         <h2>Explanation</h2>
-        <p>Data taken from <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/">the Climate Prediction Center</a>, from the 1997-current archives. Here's the code used:</p>
+        <p>Data taken from <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/">the Climate Prediction Center</a>, from the 1997-current archives. 
+        The code finds the monthly sum of the selected degree days (heating or cooling) by region (states, or USA total), and sums them into a yearly column and deviation column. Here's the code used:</p>
         <form method="post" action="{% url 'download_aquire_csv' %}">
           {% csrf_token %}
           <h4><button class="downloadbutton" type="submit">Download Code (Python)</button></h4>
