@@ -9,7 +9,10 @@ def index(request):
     return render(request, 'index.html')
 
 def aquire_csv(start_year, end_year, selected_type):
-    base_url = f'https://ftp.cpc.ncep.noaa.gov/htdocs/products/analysis_monitoring/cdus/degree_days/archives/{selected_type}%20degree%20Days/monthly%20states/'
+    if selected_type == 'Heating':
+        base_url = f'https://ftp.cpc.ncep.noaa.gov/htdocs/products/analysis_monitoring/cdus/degree_days/archives/Heating%20degree%20Days/monthly%20states/'
+    else:
+        base_url = f'https://ftp.cpc.ncep.noaa.gov/htdocs/products/analysis_monitoring/cdus/degree_days/archives/Cooling%20Degree%20Days/monthly%20cooling%20degree%20days%20state/'
 
     months = [
     'jan',
@@ -105,7 +108,7 @@ def download_csv(request):
         df = aquire_csv(start_year, end_year, selected_type)
         
         response = HttpResponse(content_type='text/csv')
-        response['Content-Disposition'] = 'attachment; filename="degree_days.csv"'
+        response['Content-Disposition'] = f'attachment; filename="{selected_type}_degree_days.csv"'
         
         df.to_csv(path_or_buf=response, index=False)
         
