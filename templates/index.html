@@ -27,10 +27,12 @@
         <br />
         <br />
         <p>Select Type:</p>
-        <label for="heating"><p>Heating</p></label>
+        <p>
+        <label for="heating">Heating</label>
         <input type="radio" id="heating" name="type" value="Heating" checked>
-        <label for="cooling"><p>Cooling</p></label>
+        <label for="cooling">Cooling</label>
         <input type="radio" id="cooling" name="type" value="Cooling">
+        </p>
         <br />
         {% csrf_token %}
         <h4><button class="downloadbutton" type="submit">Download CSV</button></h4>
