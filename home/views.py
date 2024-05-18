@@ -75,6 +75,11 @@ html2 = '''
         </p>
 
         <br />
+
+        <a href="photos"><button class="linkbutton"><u>photography</u></button></a>
+        <p>A page where I sometimes store some of my photos.</p>
+
+        <br />
         <br />
         <h2>github links</h2>
         <p>Projects I'm proud of.</p>
