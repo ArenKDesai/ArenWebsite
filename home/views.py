@@ -34,7 +34,9 @@ html = '''
         <a href="https://github.com/ArenKDesai"><button class="linkbutton"><u>Github</u></button></a>
         <br />
 
+        <br />
         <a href="portfolio"><button class="linkbutton"><u>Portfolio</u></button></a>
+        <br />
 
         <br />
         <a href="degree-days"><button class="linkbutton"><u>Degree Days CSV</u></button></a>
