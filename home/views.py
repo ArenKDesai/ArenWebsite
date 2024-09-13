@@ -28,9 +28,9 @@ html = '''
         <br />
         <br />
         <h2>useful links</h2>
-        <br />
-        <br />
+        <p>Projects I've developed outside of academics.</p>
 
+        <br />
         <a href="https://github.com/ArenKDesai"><button class="linkbutton"><u>Github</u></button></a>
         <br />
 
