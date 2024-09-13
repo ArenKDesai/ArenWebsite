@@ -21,5 +21,6 @@ urlpatterns = [
     path('sustainability-education', include('edpol140_final.urls')),
     path('degree-days', include('degree_days.urls')),
     path('photos', include('photos.urls')),
+    path('portfolio', include('portfolio.urls')),
     path('admin/', admin.site.urls),
 ]
