@@ -28,15 +28,17 @@ html = '''
         <br />
         <br />
         <h2>useful links</h2>
-        <p>Completed projects that can be accessed from the web</p>
         <br />
         <br />
 
         <a href="https://github.com/ArenKDesai"><button class="linkbutton"><u>Github</u></button></a>
         <br />
 
+        <br />
         <a href="degree-days"><button class="linkbutton"><u>Degree Days CSV</u></button></a>
-        <p>An easy-to-download CSV of the degree days for all states and USA total between two given years. Put the same year twice for one year. <b>IMPORTANT:</b> 
+        <p>An easy-to-download CSV of the degree days for all states and USA total between two given years. Put the same year twice for one year. 
+        
+        <b>IMPORTANT:</b> 
         Any degree day per month from the CPC that couldn't be measured was recorded as -999 in their database, but this was switched to 0 to avoid errors. 
         </p>
         <br />
