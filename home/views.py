@@ -24,8 +24,8 @@ html = '''
           <br />
           I've optimized this website with Django to save energy. And time. </p>
         </header>
-
         <br />
+
         <br />
         <h2>useful links</h2>
         <p>Projects I've developed outside of academics.</p>
@@ -41,6 +41,9 @@ html = '''
         <b>IMPORTANT:</b> 
         Any degree day per month from the CPC that couldn't be measured was recorded as -999 in their database, but this was switched to 0 to avoid errors. 
         </p>
+        <br />
+
+        <a href="portfolio"><button class="linkbutton"><u>Portfolio</u></button></a>
         <br />
 
         <a href="photos"><button class="linkbutton"><u>Photography</u></button></a>
