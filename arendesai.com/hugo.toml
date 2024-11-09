@@ -1,4 +1,47 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://arendesai.com'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'aren desai'
 theme = 'risotto'
+author = "Aren Desai"
+paginate = 3
+enableInlineShortcodes = true
+ignoreErrors = ["error-remote-getjson"]
+
+sectionPagesMeny = "main"
+
+[params]
+noindex = false
+
+[params.theme]
+palette = "base16-dark"
+
+[params.about]
+title = "arendesai.com"
+description = "Aren Desai's (mostly) professional website!"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "Github"
+url = "https://github.com/ArenKDesai"
+
+[menu]
+    [[menu.main]]
+        identifier = 'portfolio'
+        name = "Portfolio"
+        url = 'portfolio'
+        weight = 10
+
+    [[menu.main]]
+        identifier = 'coursework'
+        name = "Coursework"
+        url = 'coursework'
+        weight = 10
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 3
+        ordered = true

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>Tags &ndash; aren desai</title>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>Portfolio &ndash; aren desai</title>
 <meta name="description" content="Aren Desai&#39;s (mostly) professional website!">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,6 @@
 
 
 
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml" title="aren desai">
 
 </head>
 
@@ -49,14 +48,20 @@
 </header>
 
             <section class="page__body">
-    <h1 id="tags">Tags</h1>
+    <header class="content__header">
+        <h1>Portfolio</h1>
+    </header>
+    <div class="content__body">
+        <p>Aren Desai is a Computer Science / Data Science dual major at the University of Wisconsin, currently completing his senior year. You can view his code on <a href="https://github.com/ArenKDesai">his github</a>.</p>
+<p><a href="/resume_nodetails.pdf">Here</a> is my resume (with my address taken out of course).</p>
+<h1 id="notable-projects">Notable Projects</h1>
+<h2 id="hourly-dispatch-simulator---mge">Hourly Dispatch Simulator - MGE</h2>
+<p>While I can&rsquo;t post the code due to company policy, I developed a highly efficient simulator of the Blount Generating Station for Madison Gas &amp; Electric.</p>
+<p>It used scipy.optimize&rsquo;s minimize function with a custom objective function as it&rsquo;s MISO market simulation with over twenty parameters, and double checked against real LMP data for validity. Then, it used a dynamic programming approach to optimize the hourly dispatch of Blount by generating every possible daily hourly dispatch option (over 1 billion options!), then filtering out the impossible configurations, using the previous market simulation as a vector to mat-mul against the hourly dispatch matrix, and taking the maximum index. This returns the maximum possible daily revenue.</p>
+<p><a href="/MarketSimulatorDocs.md">Documentation</a></p>
 
-    
-
-    <ul>
-    
-    </ul>
-
+    </div>
+    <footer class="content__footer"></footer>
 
             </section>
 
@@ -80,6 +85,14 @@
 </div>
                 <hr>
                 <div class="aside__content">
+    <p>Aren Desai&#39;s Portfolio</p>
+    
+        <p>
+            By Aren Desai, 
+            2024-11-08
+        </p>
+    
+
     
 
                 </div>
