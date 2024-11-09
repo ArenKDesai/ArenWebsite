@@ -28,13 +28,13 @@ url = "https://github.com/ArenKDesai"
     [[menu.main]]
         identifier = 'portfolio'
         name = "Portfolio"
-        url = 'portfolio'
+        url = '/portfolio/'
         weight = 10
 
     [[menu.main]]
         identifier = 'coursework'
         name = "Coursework"
-        url = 'coursework'
+        url = '/coursework/'
         weight = 10
 
 [markup.goldmark.renderer]
@@ -45,3 +45,16 @@ unsafe = true
         startLevel = 2
         endLevel = 3
         ordered = true
+
+[deployment]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "production"
+
+# URL specifies the Go Cloud Development Kit URL to deploy to. Examples:
+# URL = "https://console.cloud.google.com/storage/browser/arendesai.com"
+
+# Google Cloud Storage -- see https://gocloud.dev/howto/blob/#gcs
+URL = "gs://arendesai.com"
+
