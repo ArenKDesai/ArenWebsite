@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>aren desai</title>
+    <title>arendesai.com</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on aren desai</description>
+    <description>Recent content on arendesai.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2024 15:25:35 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coursework</title>
       <link>http://localhost:1313/coursework/</link>
-      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Nov 2024 15:25:35 -0600</pubDate>
       <guid>http://localhost:1313/coursework/</guid>
-      <description>&lt;h1 id=&#34;in-progress&#34;&gt;In Progress&lt;/h1&gt;&#xA;&lt;p&gt;Intro to Big Data Systems (CS544)&lt;br&gt;&#xA;Intro to Algorithms (CS577)&lt;br&gt;&#xA;Data Ethics &amp;amp; Policy (LIS461)&lt;/p&gt;&#xA;&lt;h1 id=&#34;completed&#34;&gt;Completed&lt;/h1&gt;&#xA;&lt;h2 id=&#34;programming&#34;&gt;Programming&lt;/h2&gt;&#xA;&lt;p&gt;Intro to Artificial Intelligence (CS540)&lt;br&gt;&#xA;Programming III (CS400)&lt;br&gt;&#xA;Machine Organization and Programming (CS354)&lt;br&gt;&#xA;Data Science Programming II (CS320)&lt;/p&gt;&#xA;&lt;h2 id=&#34;mathematical&#34;&gt;Mathematical&lt;/h2&gt;&#xA;&lt;p&gt;Numerical Linear Algebra (CS513)&lt;br&gt;&#xA;Applied Multivariate Analysis (STAT456)&lt;br&gt;&#xA;Data Science Modelling II (STAT340)&lt;/p&gt;&#xA;&lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;&#xA;&lt;p&gt;Intro to Computer Engineering (CS252)&lt;br&gt;&#xA;Intro to Geographical Information Systems (GEOG377)&lt;br&gt;&#xA;CS Education (CS502)&lt;br&gt;&#xA;Comparative Education (ED POL240)&lt;br&gt;&#xA;Intro to Education (ED POL140)&lt;/p&gt;</description>
+      <description>&lt;h2&gt;In Progress&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intro to Big Data Systems (CS544)&lt;/li&gt;&#xA;&lt;li&gt;Intro to Algorithms (CS577)&lt;/li&gt;&#xA;&lt;li&gt;Data Ethics &amp; Policy (LIS461)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2&gt;Completed&lt;/h2&gt;&#xA;&lt;h3&gt;Programming&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intro to Artificial Intelligence (CS540)&lt;/li&gt;&#xA;&lt;li&gt;Programming III (CS400)&lt;/li&gt;&#xA;&lt;li&gt;Machine Organization and Programming (CS354)&lt;/li&gt;&#xA;&lt;li&gt;Data Science Programming II (CS320)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3&gt;Mathematical&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Numerical Linear Algebra (CS513)&lt;/li&gt;&#xA;&lt;li&gt;Applied Multivariate Analysis (STAT456)&lt;/li&gt;&#xA;&lt;li&gt;Data Science Modelling II (STAT340)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3&gt;Other&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Intro to Computer Engineering (CS252)&lt;/li&gt;&#xA;  &lt;li&gt;Intro to Geographical Information Systems (GEOG377)&lt;/li&gt;&#xA;  &lt;li&gt;CS Education (CS502)&lt;/li&gt;&#xA;  &lt;li&gt;Comparative Education (ED POL240)&lt;/li&gt;&#xA;  &lt;li&gt;Intro to Education (ED POL140)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Portfolio</title>
       <link>http://localhost:1313/portfolio/</link>
-      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Nov 2024 14:01:21 -0600</pubDate>
       <guid>http://localhost:1313/portfolio/</guid>
-      <description>&lt;p&gt;Aren Desai is a Computer Science / Data Science dual major at the University of Wisconsin, currently completing his senior year. You can view his code on &lt;a href=&#34;https://github.com/ArenKDesai&#34;&gt;his github&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/resume_nodetails.pdf&#34;&gt;Here&lt;/a&gt; is my resume (with my address taken out of course).&lt;/p&gt;&#xA;&lt;h1 id=&#34;notable-projects&#34;&gt;Notable Projects&lt;/h1&gt;&#xA;&lt;h2 id=&#34;hourly-dispatch-simulator---mge&#34;&gt;Hourly Dispatch Simulator - MGE&lt;/h2&gt;&#xA;&lt;p&gt;While I can&amp;rsquo;t post the code due to company policy, I developed a highly efficient simulator of the Blount Generating Station for Madison Gas &amp;amp; Electric.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;degrees&#34;&gt;Degrees&lt;/h2&gt;&#xA;&lt;p&gt;I am a senior undergraduate student at the University of Wisconsin - Madison getting a Bachelor&amp;rsquo;s of Science with two majors: Computer Science and Data Science.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve also been the Finance Lead of the Google Developer Student Club and a software developer for the UW Robotics team (Software - Arm division).&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s my &lt;a href=&#34;http://localhost:1313/resume_nodetails.pdf&#34; download=&#34;/resume_nodetails.pdf&#34;&gt;resume&lt;/a&gt; with the sensitive details removed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;developed-projects&#34;&gt;Developed Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;hourly-dispatch-simulator-----madison-gas--electric&#34;&gt;Hourly Dispatch Simulator &amp;mdash; Madison Gas &amp;amp; Electric&lt;/h3&gt;&#xA;&lt;p&gt;While I can&amp;rsquo;t post the code due to company policy, I developed a highly efficient simulator of the Blount Generating Station for Madison Gas &amp;amp; Electric.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

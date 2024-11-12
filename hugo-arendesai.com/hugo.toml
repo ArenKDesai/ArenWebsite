@@ -1,0 +1,53 @@
+baseURL = 'https://arendesai.com/'
+languageCode = 'en-us'
+title = 'arendesai.com'
+theme = 'risotto'
+
+[menu]
+
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "coursework"
+    name = "Coursework"
+    url = "/coursework/"
+    weight = 10
+
+[params.theme]
+palette = "base16-dark"
+
+[params.about]
+title = "arendesai.com"
+description = "Aren Desai's (somewhat) professional website!"
+#logo_image = "images/rice.svg"
+#
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/ArenKDesai"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+
+  # Table of contents
+  # Add toc = true to content front matter to enable
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+    ordered    = true
+
+[deployment]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "production"
+
+# URL specifies the Go Cloud Development Kit URL to deploy to. Examples:
+URL = "gs://arendesai.com"
+
