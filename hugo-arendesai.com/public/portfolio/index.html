@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>Portfolio &ndash; arendesai.com</title>
+    <head><title>Portfolio &ndash; arendesai.com</title>
 <meta name="description" content="Aren Desai&#39;s (somewhat) professional website!">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +15,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/palettes/base16-dark.css">
-<link rel="stylesheet" href="http://localhost:1313/css/risotto.css">
-<link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+<link rel="stylesheet" href="https://arendesai.com/css/palettes/base16-dark.css">
+<link rel="stylesheet" href="https://arendesai.com/css/risotto.css">
+<link rel="stylesheet" href="https://arendesai.com/css/custom.css">
 
 
 
@@ -35,12 +35,12 @@
 
             <header class="page__header"><nav class="page__nav main-nav">
     <ul>
-      <li class="nomarker"><h1 class="page__logo"><a href="http://localhost:1313/" class="page__logo-inner">arendesai.com</a></h1></li>
+      <li class="nomarker"><h1 class="page__logo"><a href="https://arendesai.com/" class="page__logo-inner">arendesai.com</a></h1></li>
     
     
-    <li class="main-nav__item"><a class="nav-main-item" href="http://localhost:1313/coursework/" title="">Coursework</a></li>
+    <li class="main-nav__item"><a class="nav-main-item" href="https://arendesai.com/coursework/" title="">Coursework</a></li>
     
-    <li class="main-nav__item"><a class="nav-main-item active" href="http://localhost:1313/portfolio/" title="">Portfolio</a></li>
+    <li class="main-nav__item"><a class="nav-main-item active" href="https://arendesai.com/portfolio/" title="">Portfolio</a></li>
     
     </ul>
 </nav>
@@ -54,13 +54,16 @@
     <div class="content__body">
         <h2 id="degrees">Degrees</h2>
 <p>I am a senior undergraduate student at the University of Wisconsin - Madison getting a Bachelor&rsquo;s of Science with two majors: Computer Science and Data Science.</p>
-<p>I&rsquo;ve also been the Finance Lead of the Google Developer Student Club and a software developer for the UW Robotics team (Software - Arm division).</p>
+<p>I specialize in Data Science and Machine Learning, but I also have deep experience with Linux systems and databases.</p>
 <p>Here&rsquo;s my <a href="/resume_nodetails.pdf" download="/resume_nodetails.pdf">resume</a> with the sensitive details removed.</p>
 <h2 id="developed-projects">Developed Projects</h2>
 <h3 id="hourly-dispatch-simulator-----madison-gas--electric">Hourly Dispatch Simulator &mdash; Madison Gas &amp; Electric</h3>
 <p>While I can&rsquo;t post the code due to company policy, I developed a highly efficient simulator of the Blount Generating Station for Madison Gas &amp; Electric.</p>
 <p>It used scipy.optimize&rsquo;s minimize function with a custom objective function as it&rsquo;s MISO market simulation with over twenty parameters, and double checked against real LMP data for validity. Then, it used a dynamic programming approach to optimize the hourly dispatch of Blount by generating every possible daily hourly dispatch option (over 1 billion options!), then filtering out the impossible configurations, using the previous market simulation as a vector to mat-mul against the hourly dispatch matrix, and taking the maximum index. This returns the maximum possible daily revenue.</p>
 <p><a href="/MarketSimulatorDocs.md" download="/MarketSimulatorDocs.md">Documentation</a></p>
+<h3 id="this-website">This Website</h3>
+<p>This website was developed using <a href="https://gohugo.io">hugo</a> and the risotto theme.</p>
+<p>It lives on a Google Cloud Platform bucket where HTTP/HTTPS requests are managed with an automatic load balancer with a manual SSL certificate.</p>
 
     </div>
     <footer class="content__footer"></footer>

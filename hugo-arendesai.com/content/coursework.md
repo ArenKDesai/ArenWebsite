@@ -2,7 +2,12 @@
 date = '2024-11-12T15:25:35-06:00'
 title = 'Coursework'
 +++
-
+<p>Note: prerequisites are removed in favor of higher-level coursework in most cases. </p>
+<h2>Planned</h2>
+<ul>
+<li>Theory and Algorithms for Data Science (CS541)</li>
+<li>Intro to Operating Systems (CS537)</li>
+</ul>
 <h2>In Progress</h2>
 <ul>
 <li>Intro to Big Data Systems (CS544)</li>
@@ -28,6 +33,4 @@ title = 'Coursework'
   <li>Intro to Computer Engineering (CS252)</li>
   <li>Intro to Geographical Information Systems (GEOG377)</li>
   <li>CS Education (CS502)</li>
-  <li>Comparative Education (ED POL240)</li>
-  <li>Intro to Education (ED POL140)</li>
 </ul>
