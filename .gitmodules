@@ -1,0 +1,6 @@
+[submodule "hugo-arendesai.com/themes/Hugo-Octopress"]
+	path = hugo-arendesai.com/themes/Hugo-Octopress
+	url = https://github.com/parsiya/Hugo-Octopress
+[submodule "hugo-arendesai.com/themes/hello-friend-ng"]
+	path = hugo-arendesai.com/themes/hello-friend-ng
+	url = https://github.com/rhazdon/hugo-theme-hello-friend-ng.git

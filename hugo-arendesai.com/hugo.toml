@@ -20,6 +20,11 @@ theme = 'risotto'
 [params.theme]
 palette = "base16-dark"
 
+[Author]
+name = "Aren Desai"
+bio = "Graphics Programmer and ML Engineer"
+avatar = "static/face.jpeg"
+
 [params.about]
 title = "arendesai.com"
 description = "Aren Desai's (somewhat) professional website!"
