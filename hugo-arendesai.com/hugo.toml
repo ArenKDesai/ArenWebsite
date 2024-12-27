@@ -1,7 +1,11 @@
 baseURL = 'https://arendesai.com/'
 languageCode = 'en-us'
 title = 'arendesai.com'
-theme = 'risotto'
+theme = 'mainroad'
+
+# Mainroad Config
+[Params.style.vars]
+  highlightColor = "#556b2f"
 
 [menu]
 
