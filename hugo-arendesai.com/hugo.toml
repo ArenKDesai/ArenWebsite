@@ -21,6 +21,24 @@ theme = 'mainroad'
     url = "/coursework/"
     weight = 10
 
+  [[menu.main]]
+    identifier = "datascience"
+    name = "Data Science"
+    url = "/datascience/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "computergraphics"
+    name = "Computer Graphics"
+    url = "/computergraphics/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "robotics"
+    name = "Robotics"
+    url = "/robotics/"
+    weight = 10
+
 [params.theme]
 palette = "base16-dark"
 
