@@ -15,12 +15,12 @@ Here's my <a href="/resume_nodetails.pdf" download="/resume_nodetails.pdf">resum
 
 ## Developed Projects
 
-### Boat ([github](https://github.com/ArenKDesai/Boat))
+### Unity HDRP Boat ([github](https://github.com/ArenKDesai/Boat))
 Tags: *Blender, Unity, 3D, Mesh, Graphics*
 ![Boat](/boat.png)
 A mesh of a fishing vessel designed in Blender and shaders designed to handle water and snow in Unity. 
 
-### Hourly Dispatch Simulator --- Madison Gas & Electric (<a href="/MarketSimulatorDocs.md" download="/MarketSimulatorDocs.md">documentation</a>)
+### Hourly Dispatch Simulator (<a href="/MarketSimulatorDocs.md" download="/MarketSimulatorDocs.md">documentation</a>)
 
 While I can't post the code due to company policy, I developed a highly efficient simulator of the Blount Generating Station for Madison Gas & Electric. 
 
@@ -31,7 +31,7 @@ Tags: *AI, Machine Learning (ML), LLM, HuggingFace, Group Project*
 
 An LLM running Google's Gemma that uses JSONformer to call user-defined functions as an object-oriented AI-Assistant with plugin capabilities. 
 
-### This Website --- Personal
+### This GCP Website 
 Tags: *Google Cloud, GCP, Web*
 
 This website was developed using <a href="https://gohugo.io">hugo</a> and the risotto theme. It lives on a Google Cloud Platform bucket where HTTP/HTTPS requests are managed with an automatic load balancer with a manual SSL certificate. 
