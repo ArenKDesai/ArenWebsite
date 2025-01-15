@@ -13,31 +13,31 @@ theme = 'mainroad'
     identifier = "portfolio"
     name = "Portfolio"
     url = "/portfolio/"
-    weight = 10
+    weight = 1
 
   [[menu.main]]
     identifier = "coursework"
     name = "Coursework"
     url = "/coursework/"
-    weight = 10
+    weight = 2
 
   [[menu.main]]
     identifier = "datascience"
     name = "Data Science"
     url = "/datascience/"
-    weight = 10
+    weight = 3
 
   [[menu.main]]
     identifier = "computergraphics"
     name = "Computer Graphics"
     url = "/computergraphics/"
-    weight = 10
+    weight = 5
 
   [[menu.main]]
     identifier = "robotics"
     name = "Robotics"
     url = "/robotics/"
-    weight = 10
+    weight = 4
 
 [params.theme]
 palette = "base16-dark"
