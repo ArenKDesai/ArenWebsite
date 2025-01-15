@@ -3,7 +3,7 @@ date = '2025-01-14T22:29:24-06:00'
 title = 'Data Science'
 +++
 
-I have a Bachelor's Degree in Data Science, but unfortunately, most of my real-world work is company property, so I can't show you the details. I can provide metrics and documentation instead. 
+Unfortunately, most of my real-world work is company property, so I can't show you the details. I can provide metrics and documentation instead. 
 
 ## Professional
 
@@ -12,10 +12,12 @@ I have a Bachelor's Degree in Data Science, but unfortunately, most of my real-w
 
 A deep exploration of locational market price (LMP) data focused on Madison, WI. Multiple data sources were used and coordinated with data engineers to develop a [LEAR](https://www.mdpi.com/1996-1073/9/8/621) and deep neural network (DNN) model that captures the spatiotemporal nature of LMP data, and allows for a 2-week forecast. This is used by Madison Gas & Electric's (MGE's) energy traders to maximize potential revenue. 
 
-### Hourly Dispatch Simulator (<a href="/MarketSimulatorDocs.md" download="/MarketSimulatorDocs.md">documentation</a>)
-*scikit-learn, NumPy, PyInstaller*
+### Hourly Dispatch Simulator (<a href="/MarketSimulatorDocs.txt" download="/MarketSimulatorDocs.txt">documentation</a>)
+*scikit-learn, NumPy*
 
-It used scipy.optimize's minimize function with a custom objective function as it's MISO market simulation with over twenty parameters, and double checked against real LMP data for validity. Then, it used a dynamic programming approach to optimize the hourly dispatch of Blount by generating every possible daily hourly dispatch option (over 1 billion options!), then filtering out the impossible configurations, using the previous market simulation as a vector to mat-mul against the hourly dispatch matrix, and taking the maximum index. This returns the maximum possible daily revenue. 
+The simulator uses scipy.optimize's minimize function with a custom objective function as it's MISO market simulation with over twenty parameters, and double checked against real LMP data for validity. Then, it used a dynamic programming approach to optimize the hourly dispatch of Blount by generating every possible daily hourly dispatch option (over 1 billion options!), then filtering out the impossible configurations, using the previous market simulation as a vector to mat-mul against the hourly dispatch matrix, and taking the maximum index. This returns the maximum possible daily revenue. 
+
+The tool is currently being used by MGE's energy traders to predict minute changes' effects to unit parameters. 
 
 ## Personal
 

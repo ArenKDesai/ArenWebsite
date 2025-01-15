@@ -25,14 +25,14 @@ Note: prerequisites are removed in favor of higher-level coursework in most case
   - Selenium, Sci-Kit Learn, PyTorch, Tensorflow, Pandas, NumPy, SQL
 - Data Science Modelling II (STAT340)
   - Monte Carlo, Bayesian inference, ANOVA, bootstrap, cross-validation.
+- Applied Multivariate Analysis (STAT456)
+  - Factor analysis, LDA and QDA, multivariate Gaussian mixtures, PCA. 
 
 ### Computer Science
 - Programming III (CS400)
   - Inheritance and polymorphism, Git, GUI, data structures.
 - Machine Organization and Programming (CS354)
   - Virtual address space and memory, the heap and stack, C.
-- Applied Multivariate Analysis (STAT456)
-  - Factor analysis, LDA and QDA, multivariate Gaussian mixtures, PCA. 
 - Intro to Algorithms (CS577)
   - Greedy, Divide and Conquer, Dynamic Programming, Network Flow, P vs NP
 
