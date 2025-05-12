@@ -2,6 +2,7 @@ import * as THREE from 'three/webgpu';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WebGPUCapabilities from 'three/addons/capabilities/WebGPU.js';
 import {createPorch} from './porch.js';
+import { createFishingCharacter } from './fishingCharacter.js';
 
 const texLoader = new THREE.TextureLoader();
 let waterSurface;
@@ -41,20 +42,24 @@ async function init() {
     
     // Create camera
     const camera = new THREE.PerspectiveCamera(
-        75, 
+        50, 
         window.innerWidth / window.innerHeight, 
         0.1, 
         1000
     );
-    camera.position.z = 5;
-    camera.position.y = 0;
+    camera.position.x = 57.734;
+    camera.position.y = 20.803;
+    camera.position.z = 41.605;
+    camera.rotation.x = -2.633;
+    camera.rotation.y = 1.419;
+    camera.rotation.z = 2.638;
 
     // NOTE: enable for debugging purposes
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
-    controls.minDistance = 10.0;
-    controls.maxDistance = 500.0;
-    controls.update();
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
+    // controls.minDistance = 10.0;
+    // controls.maxDistance = 500.0;
+    // controls.update();
     
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0x404040);
@@ -80,13 +85,22 @@ async function init() {
         requestAnimationFrame(animate);
 
         const time = clock.getElapsedTime();
+        const delta = clock.getDelta();
         
         // Animate the water by moving the normal map
         if (waterSurface && waterSurface.material.normalMap) {
             waterSurface.material.normalMap.offset.set(time * 0.001, time * 0.0006);
         }
+        updateCharacter(delta);
 
         renderer.render(scene, camera);
+        // console.log(`camera x: ${camera.position.x}`);
+        // console.log(`camera y: ${camera.position.y}`);
+        // console.log(`camera z: ${camera.position.z}`);
+        // console.log(`camera rot x: ${camera.rotation.x}`);
+        // console.log(`camera rot y: ${camera.rotation.y}`);
+        // console.log(`camera rot z: ${camera.rotation.z}`);
+        
     }
     
     animate();
@@ -206,6 +220,8 @@ function createWaterSurface(scene, envMap) {
     });
 
     const porch = createPorch(scene);
+    const { character, update: updateCharacter } = createFishingCharacter(scene, porch);
+    window.updateCharacter = updateCharacter;
 }
 
 // Display error message
