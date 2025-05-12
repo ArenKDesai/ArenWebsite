@@ -1,8 +1,6 @@
 import * as THREE from 'three/webgpu';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WebGPUCapabilities from 'three/addons/capabilities/WebGPU.js';
-import {createPorch} from './porch.js';
-import { createFishingCharacter } from './fishingCharacter.js';
 
 const texLoader = new THREE.TextureLoader();
 let waterSurface;
@@ -91,7 +89,6 @@ async function init() {
         if (waterSurface && waterSurface.material.normalMap) {
             waterSurface.material.normalMap.offset.set(time * 0.001, time * 0.0006);
         }
-        updateCharacter(delta);
 
         renderer.render(scene, camera);
         // console.log(`camera x: ${camera.position.x}`);
@@ -218,10 +215,6 @@ function createWaterSurface(scene, envMap) {
         waterSurface.position.y = -5; // Position below skybox center
         scene.add(waterSurface);
     });
-
-    const porch = createPorch(scene);
-    const { character, update: updateCharacter } = createFishingCharacter(scene, porch);
-    window.updateCharacter = updateCharacter;
 }
 
 // Display error message
