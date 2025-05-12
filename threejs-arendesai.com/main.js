@@ -2,6 +2,8 @@ import * as THREE from 'three/webgpu';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WebGPUCapabilities from 'three/addons/capabilities/WebGPU.js';
 
+import { createPier } from "./pier.js";
+
 const texLoader = new THREE.TextureLoader();
 let waterSurface;
 let skybox;
@@ -53,11 +55,11 @@ async function init() {
     camera.rotation.z = 2.638;
 
     // NOTE: enable for debugging purposes
-    // const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
-    // controls.minDistance = 10.0;
-    // controls.maxDistance = 500.0;
-    // controls.update();
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
+    controls.minDistance = 10.0;
+    controls.maxDistance = 500.0;
+    controls.update();
     
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0x404040);
@@ -178,6 +180,8 @@ async function loadSkyboxAndWater(scene) {
             
             // Now create the water with the environment map ready
             createWaterSurface(scene, envMap);
+
+            createPier(scene);
             
             resolve();
         });
