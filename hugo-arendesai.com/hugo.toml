@@ -2,6 +2,9 @@ baseURL = 'https://arendesai.com/'
 languageCode = 'en-us'
 title = 'arendesai.com'
 theme = 'mainroad'
+relativeURLs = true
+enableEmoji = true
+canonifyURLs = true
 
 # Mainroad Config
 [Params.style.vars]
