@@ -11,4 +11,4 @@ I've been a Data Analytics Intern for Compeer Financial, an Energy Supply and Tr
 
 Here's my <a href="/resume_nodetails.pdf" download="/resume_nodetails.pdf">resume</a> with the sensitive details removed. 
 
-My main interests are in Data Science (mainly forecasting and machine learning), Computer Graphics, and Robotics. 
+My main interests are in Data Science (mainly deep learning and machine learning), Computer Graphics, and Robotics. 
