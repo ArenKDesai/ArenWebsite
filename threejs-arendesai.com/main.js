@@ -3,10 +3,12 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WebGPUCapabilities from 'three/addons/capabilities/WebGPU.js';
 
 import { createPier } from "./pier.js";
+import { createFisher } from './fisher.js';
 
 const texLoader = new THREE.TextureLoader();
 let waterSurface;
 let skybox;
+let updateFisher;
 
 // Initialize application
 async function init() {
@@ -78,6 +80,9 @@ async function init() {
 
     // Load skybox and environment map first, then create water
     await loadSkyboxAndWater(scene);
+
+    // fisher
+    updateFisher = createFisher(scene);
     
     let clock = new THREE.Clock();
     // Animation loop
@@ -90,6 +95,10 @@ async function init() {
         // Animate the water by moving the normal map
         if (waterSurface && waterSurface.material.normalMap) {
             waterSurface.material.normalMap.offset.set(time * 0.001, time * 0.0006);
+        }
+
+        if (updateFisher) {
+            updateFisher(delta);
         }
 
         renderer.render(scene, camera);
