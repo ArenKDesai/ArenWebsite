@@ -35,8 +35,9 @@ export function createPier(scene) {
                 }
             });
             
-            object.position.y = -3.5;
-            object.scale = 2;
+            object.position.y = -2;
+            object.scale.x = 4;
+            object.scale.z = 4;
             scene.add(object);
         },
         (xhr) => {

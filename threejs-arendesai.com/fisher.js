@@ -22,8 +22,9 @@ export function createFisher(scene) {
             fisher = gltf.scene;
             
             // Position the fisher on the pier
-            fisher.position.set(0, -2, 0); // Adjust position as needed
+            fisher.position.set(-30, -2, 15); // Adjust position as needed
             fisher.scale.set(1, 1, 1); // Adjust scale if needed
+            fisher.rotation.set(0, Math.PI, 0);
             
             // Add the model to the scene
             scene.add(fisher);

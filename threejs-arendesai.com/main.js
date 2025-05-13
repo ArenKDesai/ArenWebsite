@@ -49,19 +49,19 @@ async function init() {
         0.1, 
         1000
     );
-    camera.position.x = 57.734;
-    camera.position.y = 20.803;
-    camera.position.z = 41.605;
-    camera.rotation.x = -2.633;
-    camera.rotation.y = 1.419;
-    camera.rotation.z = 2.638;
+    camera.position.x = -26.687;
+    camera.position.y = 1.882;
+    camera.position.z = 27.907;
+    camera.rotation.x = -0.047;
+    camera.rotation.y = 0.587;
+    camera.rotation.z = 0.026;
 
     // NOTE: enable for debugging purposes
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
-    controls.minDistance = 10.0;
-    controls.maxDistance = 500.0;
-    controls.update();
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
+    // controls.minDistance = 10.0;
+    // controls.maxDistance = 500.0;
+    // controls.update();
     
     // Add lighting
     const ambientLight = new THREE.AmbientLight(0x404040);
