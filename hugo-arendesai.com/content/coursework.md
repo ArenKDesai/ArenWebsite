@@ -5,15 +5,6 @@ title = 'Coursework'
 
 Note: prerequisites are removed in favor of higher-level coursework in most cases. 
 
-
-## In Progress
-- Honors Computer Graphics (CS559)
-  - Curves as b-splines, quaternions, 3D scaling, web graphics, GPUs
-- Intro to Operating Systems (CS537)
-  - I/O devices, batch processing and threading, virtual address translation
-
-## Completed
-
 ### Data Science
 - Intro to Big Data Systems (CS544)
   - gRPC, Docker, Hadoop FS, Kafka, MySQL, Spark, HBase, Cassandra
@@ -35,6 +26,10 @@ Note: prerequisites are removed in favor of higher-level coursework in most case
   - Virtual address space and memory, the heap and stack, C.
 - Intro to Algorithms (CS577)
   - Greedy, Divide and Conquer, Dynamic Programming, Network Flow, P vs NP
+- Accelerated Honors Computer Graphics (CS559)
+  - Curves as b-splines, quaternions, 3D scaling, web graphics, GPUs
+- Intro to Operating Systems (CS537)
+  - I/O devices, batch processing and threading, virtual address translation
 
 ### Other
 - Computer Science Education (CS502)
