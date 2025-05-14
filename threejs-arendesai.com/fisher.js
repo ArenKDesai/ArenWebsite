@@ -99,7 +99,7 @@ function handleClick() {
         dialogueProgress += 1;
         
         if (dialogueProgress == 5) {
-            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/");
+            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/computergraphics");
         }
     } else {
         // console.log('Playing all animations');

@@ -6,7 +6,7 @@ export function createWebsiteOverlay(url) {
   overlay.style.left = '0';
   overlay.style.width = '100%';
   overlay.style.height = '100%';
-//   overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+  // overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
   overlay.style.zIndex = '1000';
   overlay.style.display = 'flex';
   overlay.style.top = '20%';
