@@ -1,6 +1,7 @@
 import * as THREE from 'three/webgpu';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WebGPUCapabilities from 'three/addons/capabilities/WebGPU.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 import { createPier } from "./pier.js";
 import { createFisher } from './fisher.js';
@@ -83,6 +84,13 @@ async function init() {
 
     // fisher
     updateFisher = createFisher(scene);
+
+    const labelRenderer = new CSS2DRenderer();
+    labelRenderer.setSize(window.innerWidth, window.innerHeight);
+    labelRenderer.domElement.style.position = 'absolute';
+    labelRenderer.domElement.style.top = '0px';
+    labelRenderer.domElement.style.pointerEvents = 'none';
+    document.body.appendChild(labelRenderer.domElement);
     
     let clock = new THREE.Clock();
     // Animation loop
@@ -99,6 +107,7 @@ async function init() {
 
         if (updateFisher) {
             updateFisher(delta);
+            labelRenderer.render(scene, camera); 
         }
 
         renderer.render(scene, camera);

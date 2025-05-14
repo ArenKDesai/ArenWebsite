@@ -1,6 +1,7 @@
 import * as THREE from 'three/webgpu';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { createWebsiteOverlay } from "./windowOpen.js";
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
@@ -84,6 +85,42 @@ export function createFisher(scene) {
     return updateFisher;
 }
 
+function showDialogue(text) {
+    // Remove any existing dialogue
+    const existingLabel = fisher.getObjectByName('dialogueLabel');
+    if (existingLabel) fisher.remove(existingLabel);
+    
+    // Create dialogue element
+    const dialogueDiv = document.createElement('div');
+    dialogueDiv.className = 'dialogue-bubble';
+    dialogueDiv.textContent = text;
+    // dialogueDiv.style.backgroundColor = 'white';
+    dialogueDiv.style.padding = '10px 15px';
+    dialogueDiv.style.borderRadius = '20px';
+    dialogueDiv.style.border = '2px solid #333';
+    dialogueDiv.style.position = 'relative';
+    dialogueDiv.style.maxWidth = '250px';
+    dialogueDiv.style.fontSize = '24px';
+    
+    // Create pointer triangle
+    const pointer = document.createElement('div');
+    pointer.style.position = 'absolute';
+    pointer.style.bottom = '-10px';
+    pointer.style.right = '20px';
+    pointer.style.width = '0';
+    pointer.style.height = '0';
+    pointer.style.borderLeft = '10px solid transparent';
+    pointer.style.borderRight = '10px solid transparent';
+    pointer.style.borderTop = '10px solid #333';
+    dialogueDiv.appendChild(pointer);
+    
+    // Create label
+    const dialogueLabel = new CSS2DObject(dialogueDiv);
+    dialogueLabel.position.set(2, 7, 0); // Position above fisher's head
+    dialogueLabel.name = 'dialogueLabel';
+    fisher.add(dialogueLabel);
+}
+
 // Handle click event
 function handleClick() {
     // console.log('Document clicked!');
@@ -93,6 +130,7 @@ function handleClick() {
         console.warn('Cannot play animations - not properly initialized');
         return;
     }
+    showDialogue("oh... ▶ you probably wanted to see aren's website... ▶ well, that's okay.");
     
     // Toggle animations
     if (dialogueProgress > 0) {
