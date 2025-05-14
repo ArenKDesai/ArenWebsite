@@ -9,6 +9,15 @@ let dialogueProgress = 0; // Track animation state
 let fisher; // Reference to the model
 let clock; // Clock for animations
 
+// New variables for dialogue system
+let fullDialogueText = ""; // Stores the complete dialogue text
+let dialogueSegments = []; // Array to store dialogue segments split by ▸
+let currentSegmentIndex = 0; // Current segment being displayed
+let currentCharIndex = 0; // Current character being displayed
+let isTyping = false; // Whether text is currently being animated
+let typingSpeed = 50; // Milliseconds between characters
+let typingInterval; // Interval for typing animation
+
 export function createFisher(scene) {
     // Create a dedicated clock for animations
     clock = new THREE.Clock();
@@ -85,7 +94,7 @@ export function createFisher(scene) {
     return updateFisher;
 }
 
-function showDialogue(text) {
+function createDialogueElement() {
     // Remove any existing dialogue
     const existingLabel = fisher.getObjectByName('dialogueLabel');
     if (existingLabel) fisher.remove(existingLabel);
@@ -93,14 +102,15 @@ function showDialogue(text) {
     // Create dialogue element
     const dialogueDiv = document.createElement('div');
     dialogueDiv.className = 'dialogue-bubble';
-    dialogueDiv.textContent = text;
-    // dialogueDiv.style.backgroundColor = 'white';
+    dialogueDiv.id = 'dialogue-text';
     dialogueDiv.style.padding = '10px 15px';
     dialogueDiv.style.borderRadius = '20px';
     dialogueDiv.style.border = '2px solid #333';
+    dialogueDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
     dialogueDiv.style.position = 'relative';
     dialogueDiv.style.maxWidth = '250px';
     dialogueDiv.style.fontSize = '24px';
+    dialogueDiv.style.color = '#333';
     
     // Create pointer triangle
     const pointer = document.createElement('div');
@@ -119,30 +129,61 @@ function showDialogue(text) {
     dialogueLabel.position.set(2, 7, 0); // Position above fisher's head
     dialogueLabel.name = 'dialogueLabel';
     fisher.add(dialogueLabel);
+    
+    return dialogueDiv;
+}
+
+function showDialogue(text) {
+    // Store the full text and split into segments
+    fullDialogueText = text;
+    dialogueSegments = text.split('▸').map(segment => segment.trim());
+    currentSegmentIndex = 0;
+    
+    // Create or get the dialogue element
+    let dialogueDiv = document.getElementById('dialogue-text');
+    if (!dialogueDiv) {
+        dialogueDiv = createDialogueElement();
+    }
+    
+    // Start the typing animation for the first segment
+    startTypingAnimation(dialogueDiv);
+}
+
+function startTypingAnimation(dialogueDiv) {
+    // Clear any existing animation
+    clearInterval(typingInterval);
+    
+    // Reset character index
+    currentCharIndex = 0;
+    isTyping = true;
+    
+    // Get the current segment text
+    const currentSegment = dialogueSegments[currentSegmentIndex];
+    dialogueDiv.textContent = '';
+    
+    // Start typing animation
+    typingInterval = setInterval(() => {
+        if (currentCharIndex < currentSegment.length) {
+            dialogueDiv.textContent += currentSegment[currentCharIndex];
+            currentCharIndex++;
+        } else {
+            // Finished typing this segment
+            clearInterval(typingInterval);
+            isTyping = false;
+        }
+    }, typingSpeed);
 }
 
 // Handle click event
 function handleClick() {
-    // console.log('Document clicked!');
-    // console.log('Animation state:', dialogueProgress);
-    
     if (!mixer || animationActions.length === 0) {
         console.warn('Cannot play animations - not properly initialized');
         return;
     }
-    showDialogue("oh... ▶ you probably wanted to see aren's website... ▶ well, that's okay.");
     
-    // Toggle animations
-    if (dialogueProgress > 0) {
-        dialogueProgress += 1;
-        
-        if (dialogueProgress == 5) {
-            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/wroversoftware");
-        }
-    } else {
-        // console.log('Playing all animations');
-        
-        // Reset the clock
+    // If this is the first click, start the dialogue
+    if (dialogueProgress === 0) {
+        // Reset the clock and play animations
         clock.start();
         
         // Reset and play all animations
@@ -151,7 +192,49 @@ function handleClick() {
             action.play();
         });
         
-        dialogueProgress += 1;
+        // Start dialogue
+        showDialogue("oh... ▸ you probably wanted to see aren's website... ▸ well, that's okay.");
+        dialogueProgress = 1;
+        return;
+    }
+    
+    // Handle clicks during dialogue
+    let dialogueDiv = document.getElementById('dialogue-text');
+    
+    // If text is still typing, complete it immediately
+    if (isTyping) {
+        clearInterval(typingInterval);
+        dialogueDiv.textContent = dialogueSegments[currentSegmentIndex];
+        isTyping = false;
+        return;
+    }
+    
+    // If we have more segments, show the next one
+    if (currentSegmentIndex < dialogueSegments.length - 1) {
+        currentSegmentIndex++;
+        startTypingAnimation(dialogueDiv);
+    } else {
+        // We've shown all segments, advance dialogue progress
+        dialogueProgress++;
+        
+        // If we reached the critical point, show the website
+        if (dialogueProgress >= 5) {
+            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/wroversoftware");
+        } else {
+            // Reset dialogue and start new segment if needed
+            // You can add new dialogue here for each dialogueProgress level
+            switch (dialogueProgress) {
+                case 2:
+                    showDialogue("i've been fishing here for days... ▸ the water is so peaceful. ▸ do you fish?");
+                    break;
+                case 3:
+                    showDialogue("one more click... ▸ and i'll show you aren's website. ▸ ready?");
+                    break;
+                case 4:
+                    showDialogue("here it comes!");
+                    break;
+            }
+        }
     }
 }
 
