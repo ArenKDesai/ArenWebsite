@@ -193,7 +193,7 @@ function handleClick() {
         });
         
         // Start dialogue
-        showDialogue("oh... ▸ you probably wanted to see aren's website... ▸ well, that's okay.");
+        showDialogue("oh... ▸ you probably wanted to see aren's website... ▸ but it's sunk to the bottom of the sea.");
         dialogueProgress = 1;
         return;
     }
@@ -218,20 +218,14 @@ function handleClick() {
         dialogueProgress++;
         
         // If we reached the critical point, show the website
-        if (dialogueProgress >= 5) {
+        if (dialogueProgress >= 3) {
             createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/wroversoftware");
         } else {
             // Reset dialogue and start new segment if needed
             // You can add new dialogue here for each dialogueProgress level
             switch (dialogueProgress) {
                 case 2:
-                    showDialogue("i've been fishing here for days... ▸ the water is so peaceful. ▸ do you fish?");
-                    break;
-                case 3:
-                    showDialogue("one more click... ▸ and i'll show you aren's website. ▸ ready?");
-                    break;
-                case 4:
-                    showDialogue("here it comes!");
+                    showDialogue("i think i can fish some of it back up... ▸ are you looking for anything in particular?");
                     break;
             }
         }
