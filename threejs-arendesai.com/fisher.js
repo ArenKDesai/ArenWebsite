@@ -1,9 +1,10 @@
 import * as THREE from 'three/webgpu';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { createWebsiteOverlay } from "./windowOpen.js";
 
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
-let isAnimationPlaying = false; // Track animation state
+let dialogueProgress = 0; // Track animation state
 let fisher; // Reference to the model
 let clock; // Clock for animations
 
@@ -24,7 +25,14 @@ export function createFisher(scene) {
             // Position the fisher on the pier
             fisher.position.set(-30, -2, 15); // Adjust position as needed
             fisher.scale.set(1, 1, 1); // Adjust scale if needed
-            fisher.rotation.set(0, Math.PI, 0);
+            fisher.rotation.set(0, Math.PI - 0.2, 0);
+
+            fisher.traverse((child) => {
+                if (child instanceof THREE.Mesh) {
+                    child.castShadow = true;
+                    child.receiveShadow = true;
+                }
+            });
             
             // Add the model to the scene
             scene.add(fisher);
@@ -79,7 +87,7 @@ export function createFisher(scene) {
 // Handle click event
 function handleClick() {
     // console.log('Document clicked!');
-    // console.log('Animation state:', isAnimationPlaying);
+    // console.log('Animation state:', dialogueProgress);
     
     if (!mixer || animationActions.length === 0) {
         console.warn('Cannot play animations - not properly initialized');
@@ -87,15 +95,12 @@ function handleClick() {
     }
     
     // Toggle animations
-    if (isAnimationPlaying) {
-        // console.log('Stopping all animations');
+    if (dialogueProgress > 0) {
+        dialogueProgress += 1;
         
-        // Stop all animations
-        animationActions.forEach(action => {
-            action.stop();
-        });
-        
-        isAnimationPlaying = false;
+        if (dialogueProgress == 5) {
+            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/");
+        }
     } else {
         // console.log('Playing all animations');
         
@@ -108,7 +113,7 @@ function handleClick() {
             action.play();
         });
         
-        isAnimationPlaying = true;
+        dialogueProgress += 1;
     }
 }
 
@@ -123,7 +128,7 @@ function updateFisher(delta) {
         mixer.update(deltaTime);
         
         // Debug animation progress (if playing)
-        if (isAnimationPlaying) {
+        if (dialogueProgress > 0) {
             // console.log('Animation time:', mixer.time.toFixed(3));
             
             // Check if all animations have completed
@@ -134,7 +139,7 @@ function updateFisher(delta) {
             if (allFinished) {
                 // console.log('All animations complete');
                 // Uncomment to auto-reset when done
-                // isAnimationPlaying = false;
+                // dialogueProgress = false;
             }
         }
     }

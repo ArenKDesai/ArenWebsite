@@ -49,7 +49,7 @@ async function init() {
         0.1, 
         1000
     );
-    camera.position.x = -26.687;
+    camera.position.x = -29.187;
     camera.position.y = 1.882;
     camera.position.z = 27.907;
     camera.rotation.x = -0.047;
