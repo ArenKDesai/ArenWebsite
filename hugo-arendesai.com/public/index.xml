@@ -2,46 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>arendesai.com</title>
-    <link>https://arendesai.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on arendesai.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Jan 2025 22:59:26 -0600</lastBuildDate>
-    <atom:link href="https://arendesai.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Robotics</title>
-      <link>https://arendesai.com/robotics/</link>
+      <link>http://localhost:1313/robotics/</link>
       <pubDate>Tue, 14 Jan 2025 22:59:26 -0600</pubDate>
-      <guid>https://arendesai.com/robotics/</guid>
+      <guid>http://localhost:1313/robotics/</guid>
       <description>&lt;h3 id=&#34;wroversoftware-github&#34;&gt;WRoverSoftware (&lt;a href=&#34;https://github.com/WisconsinRobotics/WRoverSoftware&#34;&gt;github&lt;/a&gt;)&lt;/h3&gt;&#xA;&lt;p&gt;In the 2024-2025 school year, I contributed heavily to the rviz/Gazebo simulation and IK Solver (RelaxedIK) for UW Robotics&amp;rsquo; arm. I also made large contributions to the ROS2 core code and CAN / VESC communication, all of which can be viewed in the github link above.&lt;/p&gt;&#xA;&lt;img src=&#34;./swerveMotor.jpg&#34; alt=&#34;Swerve Motor&#34; width=&#34;300&#34;&gt;&#xD;&#xA;&lt;img src=&#34;./jetsonOrinNX.jpg&#34; alt=&#34;Jetson Orin NX (Reading CAN data)&#34; width=&#34;300&#34;&gt;</description>
     </item>
     <item>
       <title>Computer Graphics</title>
-      <link>https://arendesai.com/computergraphics/</link>
+      <link>http://localhost:1313/computergraphics/</link>
       <pubDate>Tue, 14 Jan 2025 22:59:17 -0600</pubDate>
-      <guid>https://arendesai.com/computergraphics/</guid>
+      <guid>http://localhost:1313/computergraphics/</guid>
       <description>&lt;h3 id=&#34;point-sprite-tutorial-github&#34;&gt;Point Sprite Tutorial (&lt;a href=&#34;https://github.com/CS559-Spring25-AH/portfolio-4-ArenKDesai&#34;&gt;github&lt;/a&gt;)&lt;/h3&gt;&#xA;&lt;p&gt;This tutorial was developed as the final honors portfolio for my graphics course. It explains the benefits of point sprites, how to use them, and interesting applications. It&amp;rsquo;s deployed at &lt;a href=&#34;https://cs559-spring25-ah.github.io/portfolio-4-ArenKDesai/&#34;&gt;https://cs559-spring25-ah.github.io/portfolio-4-ArenKDesai/&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;img src=&#34;./pointSpriteDemo.png&#34; alt=&#34;pointSpritePage&#34; width=&#34;500&#34;&gt;&#xD;&#xA;&lt;h3 id=&#34;boat-github&#34;&gt;Boat (&lt;a href=&#34;https://github.com/ArenKDesai/Boat&#34;&gt;github&lt;/a&gt;)&lt;/h3&gt;&#xA;&lt;p&gt;This boat was designed in Blender and modeled in Unity, using the High-Definition Rendering Pipeline (HDRP). Here&amp;rsquo;s a screenshot:&lt;/p&gt;&#xA;&lt;img src=&#34;./boatScreenshot.jpg&#34; alt=&#34;Boat&#34; width=&#34;500&#34;&gt;</description>
     </item>
     <item>
       <title>Data Science</title>
-      <link>https://arendesai.com/datascience/</link>
+      <link>http://localhost:1313/datascience/</link>
       <pubDate>Tue, 14 Jan 2025 22:29:24 -0600</pubDate>
-      <guid>https://arendesai.com/datascience/</guid>
+      <guid>http://localhost:1313/datascience/</guid>
       <description>&lt;p&gt;Unfortunately, most of my real-world work is company property, so I can&amp;rsquo;t show you the details. I can provide metrics and documentation instead.&lt;/p&gt;&#xA;&lt;h2 id=&#34;professional&#34;&gt;Professional&lt;/h2&gt;&#xA;&lt;h3 id=&#34;locational-market-price-lmp-forecasting&#34;&gt;Locational Market Price (LMP) Forecasting&lt;/h3&gt;&#xA;&lt;p&gt;&lt;em&gt;Forecasting, Machine Learning (ML), LASSO Regression, Deep Neural Networks (DNN)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;A deep exploration of locational market price (LMP) data focused on Madison, WI. Multiple data sources were used and coordinated with data engineers to develop a &lt;a href=&#34;https://www.mdpi.com/1996-1073/9/8/621&#34;&gt;LEAR&lt;/a&gt; and deep neural network (DNN) model that captures the spatiotemporal nature of LMP data, and allows for a 2-week forecast. This is used by Madison Gas &amp;amp; Electric&amp;rsquo;s (MGE&amp;rsquo;s) energy traders to maximize potential revenue.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coursework</title>
-      <link>https://arendesai.com/coursework/</link>
+      <link>http://localhost:1313/coursework/</link>
       <pubDate>Tue, 12 Nov 2024 15:25:35 -0600</pubDate>
-      <guid>https://arendesai.com/coursework/</guid>
+      <guid>http://localhost:1313/coursework/</guid>
       <description>&lt;p&gt;Note: prerequisites are removed in favor of higher-level coursework in most cases.&lt;/p&gt;&#xA;&lt;h3 id=&#34;data-science&#34;&gt;Data Science&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Intro to Big Data Systems (CS544)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;gRPC, Docker, Hadoop FS, Kafka, MySQL, Spark, HBase, Cassandra&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Intro to Artificial Intelligence (CS540)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GANs, CNNs, RNNs, supervised vs unsupervised, Q-learning, A*.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Numerical Linear Algebra (CS513)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;QR, LU, Schur decomposition, Krylov spaces, GMRES, power method.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Data Science Programming II (CS320)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Selenium, Sci-Kit Learn, PyTorch, Tensorflow, Pandas, NumPy, SQL&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Data Science Modelling II (STAT340)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Monte Carlo, Bayesian inference, ANOVA, bootstrap, cross-validation.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Applied Multivariate Analysis (STAT456)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Factor analysis, LDA and QDA, multivariate Gaussian mixtures, PCA.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;computer-science&#34;&gt;Computer Science&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Programming III (CS400)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Inheritance and polymorphism, Git, GUI, data structures.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Machine Organization and Programming (CS354)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Virtual address space and memory, the heap and stack, C.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Intro to Algorithms (CS577)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Greedy, Divide and Conquer, Dynamic Programming, Network Flow, P vs NP&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Accelerated Honors Computer Graphics (CS559)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Curves as b-splines, quaternions, 3D scaling, web graphics, GPUs&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Intro to Operating Systems (CS537)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I/O devices, batch processing and threading, virtual address translation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;other&#34;&gt;Other&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Computer Science Education (CS502)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CS educational pedagogy, practical experience through tutoring students.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Intro to Geographical Information Systems (GEOG377)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ArcGIS, vectorization and rasterization, mapping techniques.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Data and Algorithms: Ethics and Policy (LIS461)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ethical, legal and policy issues related to analytics and algorithms&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Portfolio</title>
-      <link>https://arendesai.com/portfolio/</link>
+      <link>http://localhost:1313/portfolio/</link>
       <pubDate>Tue, 12 Nov 2024 14:01:21 -0600</pubDate>
-      <guid>https://arendesai.com/portfolio/</guid>
+      <guid>http://localhost:1313/portfolio/</guid>
       <description>&lt;p&gt;My main interest is in Data Science (mainly deep learning and machine learning), but I also work in Computer Graphics and Robotics.&lt;/p&gt;&#xA;&lt;h2 id=&#34;degrees&#34;&gt;Degrees&lt;/h2&gt;&#xA;&lt;p&gt;I have a &lt;strong&gt;Bachelor&amp;rsquo;s Degree in Computer Science and Data Science&lt;/strong&gt; from the University of Wisconsin Madison, where I was the Finance Lead of the Google Developer Student Club and a member of the UW Robotics Club - Arm Software team.&lt;/p&gt;&#xA;&lt;h3 id=&#34;certifications&#34;&gt;Certifications&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently preparing for the &lt;strong&gt;Google Cloud Platform Professional Certification&lt;/strong&gt; exam.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Point Sprite Tutorial</title>
+      <link>http://localhost:1313/pointspritetutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pointspritetutorial/</guid>
+      <description>&lt;h3 id=&#34;point-sprite-tutorial-github&#34;&gt;Point Sprite Tutorial (&lt;a href=&#34;https://github.com/CS559-Spring25-AH/portfolio-4-ArenKDesai&#34;&gt;github&lt;/a&gt;)&lt;/h3&gt;&#xA;&lt;p&gt;This tutorial was developed as the final honors portfolio for my graphics course. It explains the benefits of point sprites, how to use them, and interesting applications. It&amp;rsquo;s deployed at &lt;a href=&#34;https://cs559-spring25-ah.github.io/portfolio-4-ArenKDesai/&#34;&gt;https://cs559-spring25-ah.github.io/portfolio-4-ArenKDesai/&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;img src=&#34;./pointSpriteDemo.png&#34; alt=&#34;pointSpritePage&#34; width=&#34;500&#34;&gt;</description>
     </item>
   </channel>
 </rss>

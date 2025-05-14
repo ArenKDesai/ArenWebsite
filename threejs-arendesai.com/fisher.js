@@ -99,7 +99,7 @@ function handleClick() {
         dialogueProgress += 1;
         
         if (dialogueProgress == 5) {
-            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/computergraphics");
+            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/pointspritetutorial");
         }
     } else {
         // console.log('Playing all animations');
