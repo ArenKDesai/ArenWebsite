@@ -4,3 +4,6 @@
 [submodule "hugo-arendesai.com/themes/cactus"]
 	path = hugo-arendesai.com/themes/cactus
 	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
+[submodule "hugo-arendesai.com/themes/hugo-theme-cactus"]
+	path = hugo-arendesai.com/themes/hugo-theme-cactus
+	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
