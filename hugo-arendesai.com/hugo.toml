@@ -1,7 +1,7 @@
 baseURL = 'https://arendesai.com/'
 languageCode = 'en-us'
 title = 'arendesai.com'
-theme = 'mainroad'
+theme = 'cactus'
 relativeURLs = true
 enableEmoji = true
 canonifyURLs = true
@@ -53,8 +53,8 @@ avatar = "static/face.jpeg"
 [params.about]
 title = "arendesai.com"
 description = "Aren Desai's (somewhat) professional website!"
-#logo_image = "images/rice.svg"
-#
+# logo_image = "images/rice.svg"
+
 [[params.socialLinks]]
 icon = "fa-brands fa-github"
 title = "GitHub"
