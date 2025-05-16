@@ -3,6 +3,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
+import { findMostSimilarUrl } from "./similarityAlgo.js";
+
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
 let dialogueProgress = 0; // Track animation state
