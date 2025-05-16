@@ -15,3 +15,5 @@ Table of Contents:
 - boat
 - point sprite tutorial
 - wroversoftware
+- gcp website
+- market simulation optimizer

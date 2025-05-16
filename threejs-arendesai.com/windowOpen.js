@@ -5,9 +5,11 @@ const urlDict = {
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
     "boat. graphics. sea. water.": "https://arenkdesai.github.io/ArenWebsite/boat",
     "coursework. school. classes.": "https://arenkdesai.github.io/ArenWebsite/coursework",
-    "data science. analysis. professional. machine learning. artificial intelligence.": "https://arenkdesai.github.io/ArenWebsite/datascience",
     "point sprites. graphics. particles.": "https://arenkdesai.github.io/ArenWebsite/pointspritetutorial",
-    "robotics. hardware. CAN VESC.": "https://arenkdesai.github.io/ArenWebsite/wroversoftware"
+    "robotics. hardware. can vesc.": "https://arenkdesai.github.io/ArenWebsite/wroversoftware",
+    "gcp. google clould platform. cloud. website.": "https://arenkdesai.github.io/ArenWebsite/gcpwebsite",
+    "market simulation optimizer. optimization. miso. madison gas & electric. madison gas and electric. mge.": "https://arenkdesai.github.io/ArenWebsite/marketsimoptimizer",
+    "madison gas and electric. madison gas & electric. mge. lmp. locational market price. machine learning. forecasting. temporal fusion transformer.": "https://arenkdesai.github.io/ArenWebsite/lmpforecasting"
 }
 
 export function createWebsiteOverlay(defaultUrl) {
