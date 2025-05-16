@@ -1,10 +1,3 @@
-const urls = [
-  "https://example.com/products/wireless-headphones",
-  "https://example.com/blog/top-10-wireless-devices",
-  "https://example.com/support/headphone-troubleshooting",
-  "https://example.com/products/bluetooth-speakers"
-];
-
 export function findMostSimilarUrl(phrase, urls) {
   // Preprocess the phrase and URLs
   const normalizedPhrase = phrase.toLowerCase().replace(/[^\w\s]/g, '');
@@ -41,7 +34,3 @@ export function findMostSimilarUrl(phrase, urls) {
   urlScores.sort((a, b) => b.score - a.score);
   return urlScores[0].url;
 }
-
-const userPhrase = "do you have any top wireless equipment?";
-const bestMatch = findMostSimilarUrl(userPhrase, urls);
-console.log(`Best match: ${bestMatch}`);

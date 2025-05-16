@@ -1,3 +1,15 @@
+import { findMostSimilarUrl } from "./similarityAlgo.js";
+
+const urlDict = {
+    "portfolio. resume. cv.": "https://arenkdesai.github.io/ArenWebsite/portfolio",
+    "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
+    "boat. graphics. sea. water.": "https://arenkdesai.github.io/ArenWebsite/boat",
+    "coursework. school. classes.": "https://arenkdesai.github.io/ArenWebsite/coursework",
+    "data science. analysis. professional. machine learning. artificial intelligence.": "https://arenkdesai.github.io/ArenWebsite/datascience",
+    "point sprites. graphics. particles.": "https://arenkdesai.github.io/ArenWebsite/pointspritetutorial",
+    "robotics. hardware. CAN VESC.": "https://arenkdesai.github.io/ArenWebsite/wroversoftware"
+}
+
 export function createWebsiteOverlay(defaultUrl) {
   // Check if there's already an input dialog to prevent duplicates
   if (document.getElementById('url-input-dialog')) {
@@ -24,7 +36,7 @@ export function createWebsiteOverlay(defaultUrl) {
   
   // Simple label
   const label = document.createElement('div');
-  label.textContent = 'Enter website URL:';
+  // label.textContent = 'What are you looking for?';
   label.style.marginBottom = '10px';
   label.style.fontSize = '14px';
   label.style.color = '#555';
@@ -33,7 +45,7 @@ export function createWebsiteOverlay(defaultUrl) {
   const input = document.createElement('input');
   input.type = 'text';
   input.value = defaultUrl || '';
-  input.placeholder = 'https://example.com';
+  input.placeholder = "show me aren's table of contents";
   input.style.width = '100%';
   input.style.padding = '8px';
   input.style.marginBottom = '10px';
@@ -76,28 +88,15 @@ export function createWebsiteOverlay(defaultUrl) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const url = input.value.trim();
-    let finalUrl = url;
+    const userRes = input.value.trim();
+
+    let finalUrl = findMostSimilarUrl(userRes, Object.keys(urlDict));
     
-    // Add protocol if missing
-    if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
-      finalUrl = 'https://' + url;
-    }
-    
-    // Use default if empty
-    if (!finalUrl) {
-      finalUrl = defaultUrl;
-    }
-    
-    // Remove the input dialog
     if (inputDialog.parentNode) {
       document.body.removeChild(inputDialog);
     }
-    
-    // Only open if we have a URL
-    if (finalUrl) {
-      showWebsiteIframe(finalUrl);
-    }
+
+    showWebsiteIframe(urlDict[finalUrl]);
   });
   
   // Make sure the cancel button works

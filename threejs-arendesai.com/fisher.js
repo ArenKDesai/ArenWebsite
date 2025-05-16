@@ -3,7 +3,6 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
-import { findMostSimilarUrl } from "./similarityAlgo.js";
 
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
@@ -221,7 +220,7 @@ function handleClick() {
         
         // If we reached the critical point, show the website
         if (dialogueProgress >= 3) {
-            createWebsiteOverlay("https://arenkdesai.github.io/ArenWebsite/wroversoftware");
+            createWebsiteOverlay("");
         } else {
             // Reset dialogue and start new segment if needed
             // You can add new dialogue here for each dialogueProgress level
