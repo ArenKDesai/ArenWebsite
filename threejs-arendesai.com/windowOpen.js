@@ -3,10 +3,10 @@ import { findMostSimilarUrl } from "./similarityAlgo.js";
 const urlDict = {
     "portfolio. resume. cv.": "https://arenkdesai.github.io/ArenWebsite/portfolio",
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
-    "boat. graphics. sea. water.": "https://arenkdesai.github.io/ArenWebsite/boat",
+    "boat. graphics. sea. water. fish.": "https://arenkdesai.github.io/ArenWebsite/boat",
     "coursework. school. classes.": "https://arenkdesai.github.io/ArenWebsite/coursework",
     "point sprites. graphics. particles.": "https://arenkdesai.github.io/ArenWebsite/pointspritetutorial",
-    "robotics. hardware. can vesc.": "https://arenkdesai.github.io/ArenWebsite/wroversoftware",
+    "robotics. hardware. can vesc. wroversoftware.": "https://arenkdesai.github.io/ArenWebsite/wroversoftware",
     "gcp. google clould platform. cloud. website.": "https://arenkdesai.github.io/ArenWebsite/gcpwebsite",
     "market simulation optimizer. optimization. miso. madison gas & electric. madison gas and electric. mge.": "https://arenkdesai.github.io/ArenWebsite/marketsimoptimizer",
     "madison gas and electric. madison gas & electric. mge. lmp. locational market price. machine learning. forecasting. temporal fusion transformer.": "https://arenkdesai.github.io/ArenWebsite/lmpforecasting"
@@ -14,7 +14,7 @@ const urlDict = {
 
 export function createWebsiteOverlay(defaultUrl) {
   // Check if there's already an input dialog to prevent duplicates
-  if (document.getElementById('url-input-dialog')) {
+  if (document.getElementById('url-input-dialog') || document.getElementById('popup-site')) {
     return;
   }
   
@@ -153,6 +153,7 @@ function showWebsiteIframe(url) {
   iframe.style.width = '100%';
   iframe.style.height = '100%';
   iframe.style.border = 'none';
+  iframe.id = 'popup-site';
   
   // Create close button
   const closeBtn = document.createElement('button');
