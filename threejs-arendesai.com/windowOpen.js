@@ -1,4 +1,6 @@
 import { findMostSimilarUrl } from "./similarityAlgo.js";
+import { showEgg } from "./easterEgg.js";
+import { world_scene } from "./main.js";
 
 const urlDict = {
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
@@ -14,6 +16,8 @@ const urlDict = {
 
 // Global callback for window closure - will be set by fisher component
 let onWindowClosedCallback = null;
+
+let foundURLegg = false;
 
 export function createWebsiteOverlay(defaultUrl, onClosed) {
   // Store the callback for when window is closed
@@ -102,6 +106,10 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
 
     let showWebsite;
     if (userRes.slice(0,8) == "https://" || userRes.slice(0,7) == "http://" || userRes.slice(0,4) == "www.") {
+        if (!foundURLegg) {
+          foundURLegg = true;
+          showEgg(world_scene);
+        }
         showWebsite = userRes;
     }
     else {

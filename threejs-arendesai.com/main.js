@@ -5,11 +5,14 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
 
 import { createPier } from "./pier.js";
 import { createFisher } from './fisher.js';
+import { showEgg, updateEggs } from './easterEgg.js';
 
 const texLoader = new THREE.TextureLoader();
 let waterSurface;
 let skybox;
 let updateFisher;
+export let world_scene;
+export let world_camera;
 
 // Initialize application
 async function init() {
@@ -41,6 +44,7 @@ async function init() {
     
     // Create scene
     const scene = new THREE.Scene();
+    world_scene = scene;
     scene.background = new THREE.Color(0x111133);
     
     // Create camera
@@ -50,6 +54,7 @@ async function init() {
         0.1, 
         1000
     );
+    world_camera = camera;
     camera.position.x = -29.187;
     camera.position.y = 1.882;
     camera.position.z = 27.907;
@@ -109,6 +114,7 @@ async function init() {
             updateFisher(delta);
             labelRenderer.render(scene, camera); 
         }
+        updateEggs(time);
 
         renderer.render(scene, camera);
         // console.log(`camera x: ${camera.position.x}`);

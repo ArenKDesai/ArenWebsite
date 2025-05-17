@@ -3,6 +3,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
+import { showEgg, updateEggs } from './easterEgg.js';
 
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
@@ -229,6 +230,8 @@ function handleClick() {
         console.warn('Cannot play animations - not properly initialized');
         return;
     }
+
+    showEgg();
     
     // If this is the first click, start the dialogue
     if (dialogueProgress === 0) {
