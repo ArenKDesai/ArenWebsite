@@ -19,6 +19,25 @@ let isTyping = false; // Whether text is currently being animated
 let typingSpeed = 50; // Milliseconds between characters
 let typingInterval; // Interval for typing animation
 
+// Track window closures
+let windowCloseCount = 0;
+
+// Different dialogues for when the window is closed
+const postCloseDialogues = [
+    "oh, you closed it already? ▸ was it not what you were looking for? ▸ let's find something else.",
+];
+
+// For repeated closures beyond our prepared dialogues
+const fallbackDialogues = [
+    "still searching? ▸ don't forget you can give me a URL directly... ▸ aren's website isn't that cool anyway.",
+    "another page lost to the depths... ▸ shall we continue our search?",
+    "the tides shift, and so do websites... ▸ let's keep looking.",
+    "hmm, let me try fishing up something else for you... ▸ what section did you want to see?",
+    "the sea is vast and full of websites... ▸ give me a URL and I can probably pull something else up.",
+    "sometimes the best treasures are hidden in the deepest parts of the ocean... ▸ would you like to try again?",
+    "don't worry, there are plenty more websites in the sea. ▸ what would you like to see next?"
+];
+
 export function createFisher(scene) {
     // Create a dedicated clock for animations
     clock = new THREE.Clock();
@@ -175,6 +194,35 @@ function startTypingAnimation(dialogueDiv) {
     }, typingSpeed);
 }
 
+function handleWindowClose() {
+    windowCloseCount++;
+    console.log(`Window closed (count: ${windowCloseCount})`);
+    
+    // Restart animations
+    if (mixer && animationActions.length > 0) {
+        // clock.start();
+        // animationActions.forEach(action => {
+        //     action.reset();
+        //     action.play();
+        // });
+    }
+    
+    // Show appropriate dialogue based on close count
+    let closeDialogue;
+    if (windowCloseCount <= postCloseDialogues.length) {
+        closeDialogue = postCloseDialogues[windowCloseCount - 1];
+    } else {
+        // For repeated closures, cycle through fallback dialogues
+        const fallbackIndex = (windowCloseCount - postCloseDialogues.length - 1) % fallbackDialogues.length;
+        closeDialogue = fallbackDialogues[fallbackIndex];
+    }
+    
+    // Add a short delay before showing the dialogue
+    setTimeout(() => {
+        showDialogue(closeDialogue);
+    }, 100); // 100ms delay
+}
+
 // Handle click event
 function handleClick() {
     if (!mixer || animationActions.length === 0) {
@@ -220,7 +268,8 @@ function handleClick() {
         
         // If we reached the critical point, show the website
         if (dialogueProgress >= 3) {
-            createWebsiteOverlay("");
+            // Create website overlay and pass the window close callback
+            createWebsiteOverlay("", handleWindowClose);
         } else {
             // Reset dialogue and start new segment if needed
             // You can add new dialogue here for each dialogueProgress level

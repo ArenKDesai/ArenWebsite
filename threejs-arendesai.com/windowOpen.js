@@ -12,7 +12,15 @@ const urlDict = {
     "madison gas and electric. madison gas & electric. mge. lmp. locational market price. machine learning. forecasting. temporal fusion transformer.": "https://arenkdesai.github.io/ArenWebsite/lmpforecasting"
 }
 
-export function createWebsiteOverlay(defaultUrl) {
+// Global callback for window closure - will be set by fisher component
+let onWindowClosedCallback = null;
+
+export function createWebsiteOverlay(defaultUrl, onClosed) {
+  // Store the callback for when window is closed
+  if (onClosed && typeof onClosed === 'function') {
+    onWindowClosedCallback = onClosed;
+  }
+
   // Check if there's already an input dialog to prevent duplicates
   if (document.getElementById('url-input-dialog') || document.getElementById('popup-site')) {
     return;
@@ -92,13 +100,20 @@ export function createWebsiteOverlay(defaultUrl) {
     
     const userRes = input.value.trim();
 
-    let finalUrl = findMostSimilarUrl(userRes, Object.keys(urlDict));
+    let showWebsite;
+    if (userRes.slice(0,8) == "https://" || userRes.slice(0,7) == "http://" || userRes.slice(0,4) == "www.") {
+        showWebsite = userRes;
+    }
+    else {
+       const finalUrl = findMostSimilarUrl(userRes, Object.keys(urlDict));
+       showWebsite = urlDict[finalUrl];
+    }
     
     if (inputDialog.parentNode) {
       document.body.removeChild(inputDialog);
     }
 
-    showWebsiteIframe(urlDict[finalUrl]);
+    showWebsiteIframe(showWebsite);
   });
   
   // Make sure the cancel button works
@@ -136,6 +151,7 @@ export function createWebsiteOverlay(defaultUrl) {
 function showWebsiteIframe(url) {
   // Create container
   const overlay = document.createElement('div');
+  overlay.id = 'website-overlay';
   overlay.style.position = 'fixed';
   overlay.style.top = '20%';
   overlay.style.left = '10%';
@@ -174,6 +190,10 @@ function showWebsiteIframe(url) {
   closeBtn.addEventListener('click', () => {
     if (overlay.parentNode) {
       document.body.removeChild(overlay);
+      // Call the closure callback if it exists
+      if (onWindowClosedCallback) {
+        onWindowClosedCallback();
+      }
     }
   });
   
@@ -187,8 +207,12 @@ function showWebsiteIframe(url) {
     if (e.key === 'Escape') {
       if (overlay.parentNode) {
         document.body.removeChild(overlay);
+        // Call the closure callback if it exists
+        if (onWindowClosedCallback) {
+          onWindowClosedCallback();
+        }
+        document.removeEventListener('keydown', escapeHandler);
       }
-      document.removeEventListener('keydown', escapeHandler);
     }
   });
 }
