@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Marketsimoptimizer'
+title = 'Market Simulation Optimizer'
 +++
 
 ### Market Simulation Optimizer (<a href="/MarketSimulatorDocs.txt" download="/MarketSimulatorDocs.txt">documentation</a>)

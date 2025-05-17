@@ -1,8 +1,8 @@
 import { findMostSimilarUrl } from "./similarityAlgo.js";
 
 const urlDict = {
-    "portfolio. resume. cv.": "https://arenkdesai.github.io/ArenWebsite/portfolio",
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
+    "portfolio. resume. cv.": "https://arenkdesai.github.io/ArenWebsite/portfolio",
     "boat. graphics. sea. water. fish.": "https://arenkdesai.github.io/ArenWebsite/boat",
     "coursework. school. classes.": "https://arenkdesai.github.io/ArenWebsite/coursework",
     "point sprites. graphics. particles.": "https://arenkdesai.github.io/ArenWebsite/pointspritetutorial",

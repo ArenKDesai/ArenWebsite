@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Gcpwebsite'
+title = 'GCP Website'
 +++
 
 ### This GCP Website ([github](https://github.com/ArenKDesai/ArenWebsite))

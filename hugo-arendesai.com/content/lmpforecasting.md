@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Lmpforecasting'
+title = 'Locational Market Price (LMP) Forecasting'
 +++
 
 ### Locational Market Price (LMP) Forecasting
