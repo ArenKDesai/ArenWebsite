@@ -1,9 +1,0 @@
-[submodule "hugo-arendesai.com/themes/mainroad"]
-	path = hugo-arendesai.com/themes/mainroad
-	url = https://github.com/Vimux/Mainroad.git
-[submodule "hugo-arendesai.com/themes/hugo-theme-cactus"]
-	path = hugo-arendesai.com/themes/hugo-theme-cactus
-	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
-[submodule "hugo-arendesai.com/themes/hugo-xmin"]
-	path = hugo-arendesai.com/themes/hugo-xmin
-	url = https://github.com/yihui/hugo-xmin.git
