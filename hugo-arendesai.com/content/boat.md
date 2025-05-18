@@ -1,5 +1,9 @@
 +++
 title = 'Boat'
+injectCSS: |
+  body {
+    background-color: #ff0000;
+  }
 +++
 
 ### ([github](https://github.com/ArenKDesai/Boat))
