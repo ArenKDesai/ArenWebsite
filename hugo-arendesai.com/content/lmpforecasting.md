@@ -3,12 +3,7 @@ draft = false
 title = 'Locational Market Price (LMP) Forecasting'
 +++
 
-<style>
-    Body {
-        background-image: url("../paper.jpg");
-        background-size: cover;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 
 ### Locational Market Price (LMP) Forecasting
 *Forecasting, Machine Learning (ML), LASSO Regression, Deep Neural Networks (DNN)*

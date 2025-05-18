@@ -2,12 +2,7 @@
 title = 'Boat'
 +++
 
-<style>
-    Body {
-        background-image: url("../paper.jpg");
-        background-size: cover;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 
 ### ([github](https://github.com/ArenKDesai/Boat))
 

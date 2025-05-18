@@ -3,14 +3,8 @@ draft = false
 title = 'Home'
 +++
 
-<style>
-    Body {
-        background-image: url("../paper.jpg");
-        background-size: cover;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 
-<body>
 <img src="face.jpeg" alt="aren's face">
 
 <newline></newline>
@@ -26,4 +20,3 @@ Table of Contents:
 - gcp website
 - market simulation optimizer
 - locational market price forecasting
-</body>

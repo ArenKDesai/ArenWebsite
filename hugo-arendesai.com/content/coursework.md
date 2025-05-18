@@ -2,12 +2,7 @@
 title = 'Coursework'
 +++
 
-<style>
-    Body {
-        background-image: url("../paper.jpg");
-        background-size: cover;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 
 Note: prerequisites are removed in favor of higher-level coursework in most cases. 
 
