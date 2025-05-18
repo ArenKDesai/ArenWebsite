@@ -4,7 +4,7 @@ title = 'Boat'
 
 <style>
     Body {
-        background-image: url("../yellowpaper.png");
+        background-image: url("../paper.jpg");
     }
 </style>
 
