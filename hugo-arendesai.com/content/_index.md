@@ -3,7 +3,7 @@ draft = false
 title = 'Home'
 +++
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="indexStyle.css">
 
 <img src="face.jpeg" alt="aren's face">
 
