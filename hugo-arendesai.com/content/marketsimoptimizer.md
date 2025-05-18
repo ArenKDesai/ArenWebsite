@@ -3,7 +3,7 @@ draft = false
 title = 'Market Simulation Optimizer'
 +++
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 ### Market Simulation Optimizer (<a href="/MarketSimulatorDocs.txt" download="/MarketSimulatorDocs.txt">documentation</a>)
 *scikit-learn, NumPy*

@@ -3,7 +3,7 @@ draft = false
 title = 'Locational Market Price (LMP) Forecasting'
 +++
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 ### Locational Market Price (LMP) Forecasting
 *Forecasting, Machine Learning (ML), LASSO Regression, Deep Neural Networks (DNN)*

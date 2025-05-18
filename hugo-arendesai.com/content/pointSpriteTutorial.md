@@ -2,7 +2,7 @@
 title = 'Point Sprite Tutorial'
 +++
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 ### ([github](https://github.com/CS559-Spring25-AH/portfolio-4-ArenKDesai))
 

@@ -3,7 +3,7 @@ draft = false
 title = 'GCP Website'
 +++
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 ### This GCP Website ([github](https://github.com/ArenKDesai/ArenWebsite))
 *Google Cloud Platform (GCP), Hugo, Linux, Bucket, HTTPS*

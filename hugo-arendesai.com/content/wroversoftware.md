@@ -2,7 +2,7 @@
 title = 'WRoverSoftware'
 +++
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 
 ### ([github](https://github.com/WisconsinRobotics/WRoverSoftware))
 
