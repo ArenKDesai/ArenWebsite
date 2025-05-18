@@ -230,8 +230,6 @@ function handleClick() {
         console.warn('Cannot play animations - not properly initialized');
         return;
     }
-
-    showEgg();
     
     // If this is the first click, start the dialogue
     if (dialogueProgress === 0) {

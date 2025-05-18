@@ -62,7 +62,7 @@ async function init() {
     camera.rotation.y = 0.587;
     camera.rotation.z = 0.026;
 
-    // NOTE: enable for debugging purposes
+    // NOTE: enable for debgging purposes
     // const controls = new OrbitControls(camera, renderer.domElement);
     // controls.maxPolarAngle = Math.PI * 0.75; // Allow looking down at water
     // controls.minDistance = 10.0;
