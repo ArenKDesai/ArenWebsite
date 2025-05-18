@@ -1,0 +1,3 @@
+[submodule "hugo-arendesai.com/themes/hugo-xmin"]
+	path = hugo-arendesai.com/themes/hugo-xmin
+	url = https://github.com/yihui/hugo-xmin.git
