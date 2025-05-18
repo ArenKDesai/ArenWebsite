@@ -2,6 +2,13 @@
 title = 'Portfolio'
 +++
 
+<style>
+    Body {
+        background-image: url("../paper.jpg");
+        background-size: cover;
+    }
+</style>
+
 My main interest is in Data Science (mainly deep learning and machine learning), but I also work in Computer Graphics and Robotics. 
 
 ## Degrees

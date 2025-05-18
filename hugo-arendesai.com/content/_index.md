@@ -3,6 +3,13 @@ draft = false
 title = 'Home'
 +++
 
+<style>
+    Body {
+        background-image: url("../paper.jpg");
+        background-size: cover;
+    }
+</style>
+
 <img src="face.jpeg" alt="aren's face">
 
 <newline></newline>

@@ -3,6 +3,13 @@ draft = false
 title = 'Market Simulation Optimizer'
 +++
 
+<style>
+    Body {
+        background-image: url("../paper.jpg");
+        background-size: cover;
+    }
+</style>
+
 ### Market Simulation Optimizer (<a href="/MarketSimulatorDocs.txt" download="/MarketSimulatorDocs.txt">documentation</a>)
 *scikit-learn, NumPy*
 

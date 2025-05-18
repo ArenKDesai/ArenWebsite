@@ -2,6 +2,13 @@
 title = 'Coursework'
 +++
 
+<style>
+    Body {
+        background-image: url("../paper.jpg");
+        background-size: cover;
+    }
+</style>
+
 Note: prerequisites are removed in favor of higher-level coursework in most cases. 
 
 ### Data Science
