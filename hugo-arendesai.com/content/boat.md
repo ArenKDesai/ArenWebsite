@@ -5,6 +5,7 @@ title = 'Boat'
 <style>
     Body {
         background-image: url("../paper.jpg");
+        opacity: 0.3;
     }
 </style>
 
