@@ -12,7 +12,7 @@
       <link>http://localhost:1313/boat/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/boat/</guid>
-      <description>&lt;style&gt;&#xD;&#xA;    Body {&#xD;&#xA;        background-image: url(&#34;../paper.jpg&#34;);&#xD;&#xA;    }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;github&#34;&gt;(&lt;a href=&#34;https://github.com/ArenKDesai/Boat&#34;&gt;github&lt;/a&gt;)&lt;/h3&gt;&#xA;&lt;p&gt;This boat was designed in Blender and modeled in Unity, using the High-Definition Rendering Pipeline (HDRP). Here&amp;rsquo;s a screenshot:&lt;/p&gt;&#xA;&lt;img src=&#34;./boatScreenshot.jpg&#34; alt=&#34;Boat&#34; width=&#34;500&#34;&gt;</description>
+      <description>&lt;style&gt;&#xD;&#xA;    Body {&#xD;&#xA;        background-image: url(&#34;../paper.jpg&#34;);&#xD;&#xA;        background-size: cover;&#xD;&#xA;    }&#xD;&#xA;&lt;/style&gt;&#xD;&#xA;&lt;h3 id=&#34;github&#34;&gt;(&lt;a href=&#34;https://github.com/ArenKDesai/Boat&#34;&gt;github&lt;/a&gt;)&lt;/h3&gt;&#xA;&lt;p&gt;This boat was designed in Blender and modeled in Unity, using the High-Definition Rendering Pipeline (HDRP). Here&amp;rsquo;s a screenshot:&lt;/p&gt;&#xA;&lt;img src=&#34;./boatScreenshot.jpg&#34; alt=&#34;Boat&#34; width=&#34;500&#34;&gt;</description>
     </item>
     <item>
       <title>Coursework</title>
