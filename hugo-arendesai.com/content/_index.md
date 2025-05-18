@@ -10,6 +10,7 @@ title = 'Home'
     }
 </style>
 
+<body>
 <img src="face.jpeg" alt="aren's face">
 
 <newline></newline>
@@ -25,3 +26,4 @@ Table of Contents:
 - gcp website
 - market simulation optimizer
 - locational market price forecasting
+</body>
