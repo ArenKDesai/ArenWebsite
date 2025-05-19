@@ -10,6 +10,8 @@ My main interest is in Data Science (mainly deep learning and machine learning),
 
 I have a **Bachelor's Degree in Computer Science and Data Science** from the University of Wisconsin Madison, where I was the Finance Lead of the Google Developer Student Club and a member of the UW Robotics Club - Arm Software team. 
 
+You can view all my coursework in the **coursework** page!
+
 ### Certifications
 
 I'm currently preparing for the **Google Cloud Platform Professional Certification** exam. 
