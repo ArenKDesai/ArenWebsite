@@ -87,16 +87,16 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   submitBtn.style.fontSize = '14px';
   
   // Cancel button
-  const cancelBtn = document.createElement('button');
-  cancelBtn.textContent = 'Cancel';
-  cancelBtn.type = 'button';
-  cancelBtn.style.padding = '6px 12px';
-  cancelBtn.style.backgroundColor = '#f1f1f1';
-  cancelBtn.style.color = '#333';
-  cancelBtn.style.border = '1px solid #ddd';
-  cancelBtn.style.borderRadius = '4px';
-  cancelBtn.style.cursor = 'pointer';
-  cancelBtn.style.fontSize = '14px';
+  // const cancelBtn = document.createElement('button');
+  // cancelBtn.textContent = 'Cancel';
+  // cancelBtn.type = 'button';
+  // cancelBtn.style.padding = '6px 12px';
+  // cancelBtn.style.backgroundColor = '#f1f1f1';
+  // cancelBtn.style.color = '#333';
+  // cancelBtn.style.border = '1px solid #ddd';
+  // cancelBtn.style.borderRadius = '4px';
+  // cancelBtn.style.cursor = 'pointer';
+  // cancelBtn.style.fontSize = '14px';
   
   // Add event listeners
   form.addEventListener('submit', (e) => {
@@ -125,11 +125,11 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   });
   
   // Make sure the cancel button works
-  cancelBtn.addEventListener('click', () => {
-    if (inputDialog.parentNode) {
-      document.body.removeChild(inputDialog);
-    }
-  });
+  // cancelBtn.addEventListener('click', () => {
+  //   if (inputDialog.parentNode) {
+  //     document.body.removeChild(inputDialog);
+  //   }
+  // });
   
   // Close on Escape key
   document.addEventListener('keydown', function escapeHandler(e) {
@@ -142,7 +142,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   });
   
   // Assemble elements
-  buttonContainer.appendChild(cancelBtn);
+  // buttonContainer.appendChild(cancelBtn);
   buttonContainer.appendChild(submitBtn);
   
   form.appendChild(label);

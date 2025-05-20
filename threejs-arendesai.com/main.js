@@ -133,7 +133,7 @@ async function init() {
 async function loadSkyboxAndWater(scene) {
     // Create the environment cubemap first
     return new Promise((resolve) => {
-        texLoader.load('Cubemap_Sky-512x512.png', texture => {
+        texLoader.load('cubemap1.png', texture => {
             texture.colorSpace = THREE.SRGBColorSpace;
             
             // We'll need to create an OffscreenCanvas to process the texture
