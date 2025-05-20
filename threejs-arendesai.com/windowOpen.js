@@ -1,6 +1,7 @@
 import { findMostSimilarUrl } from "./similarityAlgo.js";
 import { showEgg } from "./easterEgg.js";
 import { world_scene } from "./main.js";
+import { pulledUpWindow, setDialogueVar } from "./fisher.js";
 
 const urlDict = {
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
@@ -18,6 +19,7 @@ const urlDict = {
 let onWindowClosedCallback = null;
 
 let foundURLegg = false;
+let curURL = "";
 
 export function createWebsiteOverlay(defaultUrl, onClosed) {
   // Store the callback for when window is closed
@@ -105,7 +107,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
     const userRes = input.value.trim();
 
     let showWebsite;
-    if (userRes.slice(0,8) == "https://" || userRes.slice(0,7) == "http://" || userRes.slice(0,4) == "www.") {
+    if (userRes.slice(0,8) == "https://" || userRes.slice(0,7) == "http://" || userRes.slice(0,4) == "www." || userRes.slice(userRes.length-4, userRes.length-1) == ".com") {
         if (!foundURLegg) {
           foundURLegg = true;
           showEgg(world_scene);
@@ -121,7 +123,8 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
       document.body.removeChild(inputDialog);
     }
 
-    showWebsiteIframe(showWebsite);
+    curURL = showWebsite;
+    pulledUpWindow();
   });
   
   // Make sure the cancel button works
@@ -138,6 +141,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
         document.body.removeChild(inputDialog);
       }
       document.removeEventListener('keydown', escapeHandler);
+      setDialogueVar();
     }
   });
   
@@ -156,7 +160,8 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   setTimeout(() => input.focus(), 10);
 }
 
-function showWebsiteIframe(url) {
+export function showWebsiteIframe() {
+  const url = curURL;
   // Create container
   const overlay = document.createElement('div');
   overlay.id = 'website-overlay';

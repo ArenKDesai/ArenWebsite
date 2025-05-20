@@ -4,6 +4,7 @@ import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 import { showEgg, updateEggs } from './easterEgg.js';
+import { showWebsiteIframe } from "./windowOpen.js";
 
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
@@ -225,6 +226,14 @@ function handleWindowClose() {
 }
 
 // Handle click event
+let justClicked = false;
+let waitingForDialogue = false;
+
+export function setDialogueVar() {
+    waitingForDialogue = true;
+    justClicked = false;
+}
+
 function handleClick() {
     if (!mixer || animationActions.length === 0) {
         console.warn('Cannot play animations - not properly initialized');
@@ -283,29 +292,49 @@ function handleClick() {
     }
 }
 
+export function pulledUpWindow() {
+    animationActions.forEach(action => {
+        action.setEffectiveTimeScale(1.0);
+    });
+    justClicked = true;
+    waitingForDialogue = false;
+}
+
 // Update function to be called in the animation loop
+let currentFrame = 0;
+const LENGTH_ANIMATION = 140 * 2.5; // NOTE: for some reason the scale is 2.5
 function updateFisher(delta) {
     // Check if animations are playing
     if (mixer) {
+        console.log(currentFrame);
         // Use our dedicated clock for more accurate animation timing
         const deltaTime = clock.getDelta();
         
         // Update the animation mixer
         mixer.update(deltaTime);
         
-        // Debug animation progress (if playing)
         if (dialogueProgress > 0) {
-            // console.log('Animation time:', mixer.time.toFixed(3));
-            
-            // Check if all animations have completed
-            const allFinished = animationActions.every(
-                action => mixer.time >= action._clip.duration
-            );
-            
-            if (allFinished) {
-                // console.log('All animations complete');
-                // Uncomment to auto-reset when done
-                // dialogueProgress = false;
+            if (!waitingForDialogue) {
+                currentFrame += 1;
+                if (currentFrame > LENGTH_ANIMATION)
+                    currentFrame = 1; // TODO: maybe this should be 1?
+            }
+
+            if (currentFrame == 30 * 2.5 && !justClicked) {
+                animationActions.forEach(action => {
+                    action.halt();
+                });
+                waitingForDialogue = true;
+                currentFrame += 1;
+            }
+            else if (currentFrame == Math.ceil(95 * 2.5) && justClicked) {
+                animationActions.forEach(action => {
+                    action.halt();
+                });
+                waitingForDialogue = true;
+                justClicked = false;
+                currentFrame += 1;
+                showWebsiteIframe();
             }
         }
     }
