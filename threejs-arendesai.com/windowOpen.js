@@ -184,7 +184,7 @@ function showWebsiteIframe(url) {
   closeBtn.textContent = '×';
   closeBtn.style.position = 'absolute';
   closeBtn.style.top = '6px';
-  closeBtn.style.right = '6px';
+  closeBtn.style.right = '20px';
   closeBtn.style.width = '24px';
   closeBtn.style.height = '24px';
   closeBtn.style.borderRadius = '10%';
