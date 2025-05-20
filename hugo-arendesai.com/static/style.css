@@ -1,11 +1,11 @@
 Body {
-    background-image: url("./paper.jpg");
-    background-size: cover;
+    /* background-image: url("./paper.jpg");
+    background-size: cover; */
     color: white;
 }
 
 strong {
-  color: green;
+  color: white;
 }
 
 b {

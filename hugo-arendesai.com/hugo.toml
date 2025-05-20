@@ -1,7 +1,7 @@
 baseURL = 'https://arendesai.com/'
 languageCode = 'en-us'
 title = 'arendesai.com'
-theme = 'hugo-bearblog'
+theme = 'hugo-xmin'
 relativeURLs = true
 enableEmoji = true
 canonifyURLs = true
