@@ -81,7 +81,7 @@ export function createFisher(scene) {
                     const action = mixer.clipAction(clip);
                     
                     // Configure each animation action
-                    action.setLoop(THREE.LoopOnce);
+                    action.setLoop(THREE.LoopRepeat);
                     action.clampWhenFinished = true;
                     action.timeScale = 1.0;
                     
