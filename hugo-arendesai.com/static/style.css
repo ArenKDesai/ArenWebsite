@@ -1,15 +1,15 @@
 Body {
-    /* background-image: url("./paper.jpg");
-    background-size: cover; */
-    color: white;
+    background-image: url("./paper.jpg");
+    background-size: cover;
+    color: black;
 }
 
 strong {
-  color: white;
+  color: #6F4E37;
 }
 
 b {
-  color: white;
+  color: #6F4E37;
 }
 
 a {
