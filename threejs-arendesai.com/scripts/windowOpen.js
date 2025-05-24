@@ -1,7 +1,6 @@
 import { findMostSimilarUrl } from "./similarityAlgo.js";
 import { showEgg } from "./easterEgg.js";
 import { world_scene } from "./main.js";
-import { pulledUpWindow, setDialogueVar } from "./fisher.js";
 
 const urlDict = {
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
@@ -124,7 +123,6 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
     }
 
     curURL = showWebsite;
-    pulledUpWindow();
   });
   
   // Make sure the cancel button works

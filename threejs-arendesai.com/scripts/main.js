@@ -14,16 +14,10 @@ let updateFisher;
 export let world_scene;
 export let world_camera;
 export let frame = 0;
+export let fps = 0;
 
 // Initialize application
 async function init() {
-    // Check if WebGPU is available
-    if (!WebGPUCapabilities.isAvailable()) {
-        showError("WebGPU is not supported in your browser. Chrome, Edge, and Nightly/Developer Firefox support this, but stable Firefox doesn't.");
-        return;
-    }
-
-    // Create renderer
     const renderer = new THREE.WebGPURenderer({ 
         antialias: true,
         alpha: true
@@ -120,6 +114,7 @@ async function init() {
         renderer.render(scene, camera);
         
         frame++;
+        fps = frame / time;
     }
     
     animate();

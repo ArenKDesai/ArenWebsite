@@ -5,6 +5,7 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
 
 import { showEgg, updateEggs } from './easterEgg.js';
 import { showWebsiteIframe } from "./windowOpen.js";
+import { fps } from "./main.js";
 
 let mixer; // Animation mixer
 let animationActions = []; // Array to hold all animation actions
@@ -216,15 +217,6 @@ function handleWindowClose() {
     }, 100); // 100ms delay
 }
 
-// Handle click event
-let justClicked = false;
-let waitingForDialogue = false;
-
-export function setDialogueVar() {
-    waitingForDialogue = true;
-    justClicked = false;
-}
-
 function handleClick() {
     if (!mixer || animationActions.length === 0) {
         console.warn('Cannot play animations - not properly initialized');
@@ -283,48 +275,21 @@ function handleClick() {
     }
 }
 
-export function pulledUpWindow() {
-    animationActions.forEach(action => {
-        action.setEffectiveTimeScale(1.0);
-    });
-    justClicked = true;
-    waitingForDialogue = false;
-}
-
-// Update function to be called in the animation loop
-const LENGTH_ANIMATION = 140 * 2.5; // NOTE: for some reason the scale is 2.5
 function updateFisher(delta) {
-    // Check if animations are playing
-    if (mixer) {
-        // Use our dedicated clock for more accurate animation timing
-        const deltaTime = clock.getDelta();
-        
-        // Update the animation mixer
+    if (!mixer || !animationActions.length) return;
+    
+    const deltaTime = clock.getDelta();
+    
+    if (!isPaused) {
         mixer.update(deltaTime);
         
-        if (dialogueProgress > 0) {
-            if (!waitingForDialogue) {
-                currentFrame += 1;
-                if (currentFrame > LENGTH_ANIMATION)
-                    currentFrame = 1; // TODO: maybe this should be 1?
-            }
-
-            if (currentFrame == 30 * 2.5 && !justClicked) {
-                animationActions.forEach(action => {
-                    action.halt();
-                });
-                waitingForDialogue = true;
-                currentFrame += 1;
-            }
-            else if (currentFrame == Math.ceil(95 * 2.5) && justClicked) {
-                animationActions.forEach(action => {
-                    action.halt();
-                });
-                waitingForDialogue = true;
-                justClicked = false;
-                currentFrame += 1;
-                showWebsiteIframe();
-            }
+        // Track progress for the main animation (assuming first action is primary)
+        const primaryAction = animationActions[0];
+        if (primaryAction && primaryAction.isRunning()) {
+            const currentTime = primaryAction.time;
+            
+            // Check if we've hit a keyframe
+            checkKeyFrames(currentTime);
         }
     }
 }
