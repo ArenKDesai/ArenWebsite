@@ -4,11 +4,12 @@ import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 import { showEgg, updateEggs } from './easterEgg.js';
-import { showWebsiteIframe } from "./windowOpen.js";
+import { showWebsiteIframe} from "./windowOpen.js";
 import { fps } from "./main.js";
+import { isPaused, checkKeyFrames } from "./fisherStateMachine.js";
 
 let mixer; // Animation mixer
-let animationActions = []; // Array to hold all animation actions
+export let animationActions = []; // Array to hold all animation actions
 let dialogueProgress = 0; // Track animation state
 let fisher; // Reference to the model
 let clock; // Clock for animations
@@ -27,7 +28,7 @@ let windowCloseCount = 0;
 
 // Different dialogues for when the window is closed
 const postCloseDialogues = [
-    "oh, you closed it already? ▸ was it not what you were looking for? ▸ let's find something else.",
+    "looks like the links are waterlogged... ▸ I can probably find the rest of it though. ▸ what else do you want to see?",
 ];
 
 // For repeated closures beyond our prepared dialogues
@@ -47,7 +48,7 @@ export function createFisher(scene) {
     
     const loader = new GLTFLoader();
     
-    console.log('Starting to load fisher model...');
+    // console.log('Starting to load fisher model...');
     
     // Load the fisher model
     loader.load(
@@ -71,7 +72,7 @@ export function createFisher(scene) {
             scene.add(fisher);
             
             console.log('Fisher model loaded successfully');
-            console.log('Animations available:', gltf.animations.length);
+            // console.log('Animations available:', gltf.animations.length);
             
             // Check if the model has animations
             if (gltf.animations && gltf.animations.length > 0) {
@@ -90,10 +91,10 @@ export function createFisher(scene) {
                     // Store the action
                     animationActions.push(action);
                     
-                    console.log(`Animation ${index}: "${clip.name}" (duration: ${clip.duration}s)`);
+                    // console.log(`Animation ${index}: "${clip.name}" (duration: ${clip.duration}s)`);
                 });
                 
-                console.log(`Set up ${animationActions.length} animations`);
+                // console.log(`Set up ${animationActions.length} animations`);
             } else {
                 console.warn('Fisher model loaded but has no animations');
             }
@@ -103,10 +104,10 @@ export function createFisher(scene) {
             
             // Set up click event listener on the document
             document.addEventListener('click', handleClick);
-            console.log('Click event listener attached');
+            // console.log('Click event listener attached');
         },
         (xhr) => {
-            console.log(`Fisher model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
+            // console.log(`Fisher model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
         },
         (error) => {
             console.error('An error occurred loading the fisher model:', error);
@@ -268,13 +269,14 @@ function handleClick() {
             // You can add new dialogue here for each dialogueProgress level
             switch (dialogueProgress) {
                 case 2:
-                    showDialogue("i think i can fish some of it back up... ▸ are you looking for anything in particular?");
+                    showDialogue("I can fish it back up... ▸ but you'll have to tell me what page you're looking for.");
                     break;
             }
         }
     }
 }
 
+export let continuousFrame = 0;
 function updateFisher(delta) {
     if (!mixer || !animationActions.length) return;
     
@@ -291,5 +293,6 @@ function updateFisher(delta) {
             // Check if we've hit a keyframe
             checkKeyFrames(currentTime);
         }
+        continuousFrame++;
     }
 }

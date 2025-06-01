@@ -120,11 +120,24 @@ async function init() {
     animate();
 }
 
+function skyboxFromTime() {
+  const hour = new Date().getHours();
+  if ((hour >= 6 && hour < 8) || (hour >= 20 && hour < 22)) {
+    return './textures/cubemap1.png';
+  }
+  else if (hour >= 8 && hour < 20) {
+    return './textures/cubemap3.png';
+  }
+  else {
+    return './textures/cubemap2.png';
+  }
+}
+
 // Load skybox and create water surface
 async function loadSkyboxAndWater(scene) {
     // Create the environment cubemap first
     return new Promise((resolve) => {
-        texLoader.load('./textures/cubemap1.png', texture => {
+        texLoader.load(skyboxFromTime(), texture => {
             texture.colorSpace = THREE.SRGBColorSpace;
             
             // We'll need to create an OffscreenCanvas to process the texture

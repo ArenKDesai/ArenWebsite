@@ -1,4 +1,5 @@
-// this assumes same frame count
+import { animationActions, continuousFrame } from "./fisher.js";
+import { showWebsiteIframe } from "./windowOpen.js";
 
 // wait for click
 // while true:
@@ -9,13 +10,12 @@
 //     play frames 101-145, end animation
 
 let keyFrames = [
-        { time: 2.0, name: "cast_start", callback: onCastStart },
-        { time: 4.5, name: "cast_peak", callback: onCastPeak },
-        { time: 7.0, name: "reel_in", callback: onReelIn },
+        { time: 1.2, name: "cast_start", callback: onCastStart, pauseAt: true },
+        { time: 3.93, name: "cast_peak", callback: onCastPeak, pauseAt: true},
         { time: 10.0, name: "dialogue_trigger", callback: onDialogueTrigger }
     ];
 let currentKeyFrameIndex = 0;
-let isPaused = false;
+export let isPaused = false;
 let animationCallbacks = new Map(); // Store callbacks for specific time
 
 // Check if we've reached any keyframes
@@ -25,18 +25,18 @@ export function checkKeyFrames(currentTime) {
         const keyFrame = keyFrames[i];
         
         if (currentTime >= keyFrame.time && !keyFrame.triggered) {
-            keyFrame.triggered = true;
+            // keyFrame.triggered = true;
             currentKeyFrameIndex = i + 1;
+            if (currentKeyFrameIndex == keyFrames.length)
+                currentKeyFrameIndex = 0;
             
             // Execute callback
-            if (keyFrame.callback) {
+            if (keyFrame.callback)
                 keyFrame.callback(keyFrame, currentTime);
-            }
             
             // Optionally pause at this keyframe
-            if (keyFrame.pauseAt) {
+            if (keyFrame.pauseAt)
                 pauseAnimation();
-            }
         }
     }
 }
@@ -51,7 +51,7 @@ function pauseAnimation() {
 }
 
 // Resume animation
-function resumeAnimation() {
+export function resumeAnimation() {
     isPaused = false;
     animationActions.forEach(action => {
         action.paused = false;
@@ -83,6 +83,7 @@ function onCastStart(keyFrame, time) {
 function onCastPeak(keyFrame, time) {
     console.log("Cast reaches peak at", time);
     // Maybe show water splash effect
+    showWebsiteIframe();
 }
 
 function onReelIn(keyFrame, time) {
@@ -92,10 +93,6 @@ function onReelIn(keyFrame, time) {
 
 function onDialogueTrigger(keyFrame, time) {
     console.log("Dialogue trigger at", time);
-    if (dialogueProgress === 1) {
-        // Auto-advance dialogue based on animation timing
-        handleClick();
-    }
 }
 
 // Enhanced click handler that works with animation states

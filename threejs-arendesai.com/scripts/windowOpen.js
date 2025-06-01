@@ -1,6 +1,7 @@
 import { findMostSimilarUrl } from "./similarityAlgo.js";
 import { showEgg } from "./easterEgg.js";
 import { world_scene } from "./main.js";
+import { resumeAnimation } from "./fisherStateMachine.js";
 
 const urlDict = {
     "table of contents. all projects. work.": "https://arenkdesai.github.io/ArenWebsite",
@@ -27,7 +28,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   }
 
   // Check if there's already an input dialog to prevent duplicates
-  if (document.getElementById('url-input-dialog') || document.getElementById('popup-site')) {
+  if (document.getElementById('url-input-dialog') || document.getElementById('popup-site') ) {
     return;
   }
   
@@ -123,6 +124,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
     }
 
     curURL = showWebsite;
+    resumeAnimation();
   });
   
   // Make sure the cancel button works
@@ -158,7 +160,10 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   setTimeout(() => input.focus(), 10);
 }
 
+let windowUp = false;
 export function showWebsiteIframe() {
+  if (windowUp)
+    return;
   const url = curURL;
   // Create container
   const overlay = document.createElement('div');
@@ -206,6 +211,8 @@ export function showWebsiteIframe() {
         onWindowClosedCallback();
       }
     }
+    windowUp = false;
+    resumeAnimation();
   });
   
   // Add elements
@@ -226,4 +233,5 @@ export function showWebsiteIframe() {
       }
     }
   });
+  windowUp = true;
 }
