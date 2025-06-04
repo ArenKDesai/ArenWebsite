@@ -19,7 +19,7 @@ jobs:
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: projects/70577247397/locations/global/workloadIdentityPools/arendesai-com-pool/providers/github
+          workload_identity_provider: https://iam.googleapis.com/projects/70577247397/locations/global/workloadIdentityPools/arendesai-com-pool/providers/github
           service_account: github-website-deployer@personal-431100.iam.gserviceaccount.com
 
       - name: Deploy to Google Cloud Storage
