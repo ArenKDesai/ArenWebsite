@@ -21,6 +21,7 @@ let onWindowClosedCallback = null;
 let foundURLegg = false;
 let curURL = "";
 
+let paneUp = false;
 export function createWebsiteOverlay(defaultUrl, onClosed) {
   // Store the callback for when window is closed
   if (onClosed && typeof onClosed === 'function') {
@@ -69,6 +70,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   input.style.borderRadius = '4px';
   input.style.fontSize = '14px';
   input.style.boxSizing = 'border-box';
+  input.style.backgroundColor = 'rgba(220, 210, 200, 1.0)';
   
   // Button container for layout
   const buttonContainer = document.createElement('div');
@@ -125,6 +127,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
 
     curURL = showWebsite;
     resumeAnimation();
+    paneUp = false;
   });
   
   // Make sure the cancel button works
@@ -158,11 +161,12 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   
   // Auto-focus the input
   setTimeout(() => input.focus(), 10);
+  paneUp = true;
 }
 
 let windowUp = false;
 export function showWebsiteIframe() {
-  if (windowUp)
+  if (windowUp || paneUp)
     return;
   const url = curURL;
   // Create container
@@ -174,7 +178,7 @@ export function showWebsiteIframe() {
   overlay.style.width = '40%';
   overlay.style.height = '60%';
   overlay.style.zIndex = '1000';
-  overlay.style.backgroundColor = 'rgba(180, 170, 160, 0.5)';   
+  overlay.style.backgroundColor = 'rgba(180, 170, 160, 0.6)';
   // overlay.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
   overlay.style.borderRadius = '4px';
   overlay.style.overflow = 'hidden';
