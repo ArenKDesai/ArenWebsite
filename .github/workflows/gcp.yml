@@ -29,4 +29,3 @@ jobs:
           destination: 'arendesai.com' # Your GCS bucket name
           parent: false # Set to false if you want files directly at the bucket root
           gzip: true # Optional: Gzip files for better performance
-          predefinedAcl: 'publicRead' # Optional: Make uploaded objects publicly readable for a static website
