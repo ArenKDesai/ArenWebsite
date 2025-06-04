@@ -28,12 +28,12 @@ let windowCloseCount = 0;
 
 // Different dialogues for when the window is closed
 const postCloseDialogues = [
-    "looks like the links are waterlogged... ▸ I can probably find the rest of it though. ▸ what else do you want to see?",
+    "looks like the links are waterlogged... ▸ I can probably find the rest of it. ▸ what else do you want to see?",
 ];
 
 // For repeated closures beyond our prepared dialogues
 const fallbackDialogues = [
-    "still searching? ▸ don't forget you can give me a URL directly... ▸ aren's website isn't that cool anyway.",
+    "still searching? ▸ I could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
     "another page lost to the depths... ▸ shall we continue our search?",
     "the tides shift, and so do websites... ▸ let's keep looking.",
     "hmm, let me try fishing up something else for you... ▸ what section did you want to see?",

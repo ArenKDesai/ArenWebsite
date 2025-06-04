@@ -39,7 +39,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
   inputDialog.style.top = '30%';
   inputDialog.style.left = '50%';
   inputDialog.style.transform = 'translate(-50%, -50%)';
-  inputDialog.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+  inputDialog.style.backgroundColor = 'rgba(180, 170, 160, 0.9)';
   inputDialog.style.padding = '15px';
   inputDialog.style.borderRadius = '8px';
   inputDialog.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
@@ -174,7 +174,7 @@ export function showWebsiteIframe() {
   overlay.style.width = '40%';
   overlay.style.height = '60%';
   overlay.style.zIndex = '1000';
-  // overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';   
+  overlay.style.backgroundColor = 'rgba(180, 170, 160, 0.5)';   
   // overlay.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
   overlay.style.borderRadius = '4px';
   overlay.style.overflow = 'hidden';

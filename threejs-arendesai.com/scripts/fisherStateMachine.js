@@ -11,8 +11,8 @@ import { showWebsiteIframe } from "./windowOpen.js";
 
 let keyFrames = [
         { time: 1.2, name: "cast_start", callback: onCastStart, pauseAt: true },
-        { time: 3.93, name: "cast_peak", callback: onCastPeak, pauseAt: true},
-        { time: 10.0, name: "dialogue_trigger", callback: onDialogueTrigger }
+        { time: 3.94, name: "cast_peak", callback: onCastPeak, pauseAt: true},
+        // { time: 5.5, name: "dialogue_trigger", callback: onDialogueTrigger }
     ];
 let currentKeyFrameIndex = 0;
 export let isPaused = false;
