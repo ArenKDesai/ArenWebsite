@@ -101,10 +101,10 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
             const finalUrl = findMostSimilarUrl(userRes, Object.keys(urlDict));
             showWebsite = urlDict[finalUrl];
         
-            if (!foundReasonEgg && userRes.toLowerCase().includes("find what you love and let it kill you")) {
+            if (!foundReasonEgg && userRes.toLowerCase().includes("what matters most is how well you walk through the fire")) {
                 foundReasonEgg = true;
                 showEgg(world_scene);
-                showWebsite = "https://arenkdesai.github.io/ArenWebsite/threejsreason"
+                showWebsite = "https://arenkdesai.github.io/ArenWebsite/threejsreason";
             }
         }
         

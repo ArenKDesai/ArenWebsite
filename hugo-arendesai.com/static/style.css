@@ -5,7 +5,7 @@ Body {
 }
 
 strong {
-  color: #6F4E37;
+  color: #013220;
 }
 
 b {
@@ -18,6 +18,6 @@ a {
 }
 
 a:hover {
-  color: #013220; /* Change color on hover */
+  color: #6F4E37; /* Change color on hover */
   text-decoration: underline; /* Add underline on hover, if you want */
 }

@@ -24,9 +24,13 @@ function showEgg() {
 
             switch(numEggs) {
                 case 0:
+                    console.log("egg0")
                     eggContainer.position.set(-30, -2, 18);
+                    break;
                 case 1:
+                    console.log("egg1");
                     eggContainer.position.set(-29, -2, 17);
+                    break;
             }
             
             // Add to eggs array and scene
@@ -47,8 +51,6 @@ function showEgg() {
                 // Slow rotation
                 eggContainer.rotation.y = time * eggContainer.userData.rotationSpeed;
             };
-
-            numEggs++;
         },
         undefined,
         (error) => {
@@ -59,6 +61,7 @@ function showEgg() {
 
 // Add this function to animate all eggs
 function updateEggs(time) {
+    numEggs = eggs.length;
     eggs.forEach(egg => {
         if (egg.userData && egg.userData.update) {
             egg.userData.update(time);
