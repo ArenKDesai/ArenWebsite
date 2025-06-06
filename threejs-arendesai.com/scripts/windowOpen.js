@@ -145,7 +145,7 @@ export function showWebsiteIframe() {
         width: 40%;
         height: 60%;
         z-index: 1000;
-        background-color: rgba(180, 170, 160, 0.6);
+        background-color: rgba(180, 170, 160, 0.8);
         border-radius: 4px;
         overflow: hidden;
     `;
