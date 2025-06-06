@@ -208,11 +208,13 @@ function handleClick() {
             if (!dialogueManager.handleClick()) {
                 // Show input dialog
                 createWebsiteOverlay("", handleWebsiteClosed);
+                fisherStateMachine.submittedRequest = true;
             }
             break;
         case ANIMATION_STATES.CASTING:
             if (!dialogueManager.handleClick()) {
                 fisherStateMachine.setState(ANIMATION_STATES.WAITING_FOR_INPUT);
+                handleClick();
             }
             
         case ANIMATION_STATES.WEBSITE_SHOWN:
@@ -222,6 +224,7 @@ function handleClick() {
         case ANIMATION_STATES.DIALOGUE_CLOSE:
             // Handle post-close dialogue
             if (!dialogueManager.handleClick()) {
+                fisherStateMachine.submittedRequest = false;
                 fisherStateMachine.setState(ANIMATION_STATES.WAITING_FOR_INPUT);
             }
             break;
