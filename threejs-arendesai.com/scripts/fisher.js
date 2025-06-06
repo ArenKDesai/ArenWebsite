@@ -5,7 +5,7 @@ import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 import { fisherStateMachine, ANIMATION_STATES } from './fisherStateMachine.js';
-import { MAX_EGGS, eggs } from "./easterEgg.js";
+import { MAX_EGGS, numEggs } from "./easterEgg.js";
 
 let mixer;
 export let animationActions = [];
@@ -23,7 +23,7 @@ class DialogueManager {
                 "still searching? ▸ i could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
                 `i've heard there's ${MAX_EGGS} easter eggs in this website... ▸ i'm not sure how to find them.`,
                 "the sea is deep... ▸ i can probably catch any website. ▸ i wonder if that includes this website...",
-                `so far, it looks like you've found ${eggs.length} easter eggs... ▸ is that a lot?`
+                `so far, it looks like you've found ${numEggs} easter eggs... ▸ is that a lot?`
             ]
         };
         

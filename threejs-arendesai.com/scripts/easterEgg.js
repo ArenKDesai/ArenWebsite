@@ -3,10 +3,11 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { world_scene } from "./main.js";
 
 let eggs = [];
-const MAX_EGGS = 1;
+let numEggs = 0;
+const MAX_EGGS = 2;
 
 function showEgg() {
-    if (eggs.length == MAX_EGGS) {
+    if (numEggs == MAX_EGGS) {
         return;
     }
     const loader = new GLTFLoader();
@@ -21,9 +22,11 @@ function showEgg() {
             const eggContainer = new THREE.Group();
             eggContainer.add(gltf.scene);
 
-            switch(eggs.length) {
+            switch(numEggs) {
                 case 0:
                     eggContainer.position.set(-30, -2, 18);
+                case 1:
+                    eggContainer.position.set(-32, -2, 17);
             }
             
             // Add to eggs array and scene
@@ -44,6 +47,8 @@ function showEgg() {
                 // Slow rotation
                 eggContainer.rotation.y = time * eggContainer.userData.rotationSpeed;
             };
+
+            numEggs++;
         },
         undefined,
         (error) => {
@@ -61,4 +66,4 @@ function updateEggs(time) {
     });
 }
 
-export { updateEggs, showEgg, MAX_EGGS, eggs };
+export { updateEggs, showEgg, MAX_EGGS, numEggs };
