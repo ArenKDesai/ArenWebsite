@@ -15,12 +15,12 @@ class DialogueManager {
     constructor() {
         this.dialogues = {
             intro: "oh... ▸ you probably wanted to see aren's website... ▸ but it has sunk to the bottom of the sea. ▸ i think i can fish it back up... ▸ but all the webpages are scattered and soggy. ▸ tell me. what would you like to see?",
-            windowClosed: [
-                "looks like the links are waterlogged... ▸ i'll have to pull up the pages individually. ▸ what else do you want to see?",
-                "still searching? ▸ i could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
+            windowClosed: [ // the first dialogue is only shown once
+                "looks like the links are waterlogged... ▸ you'll have to rely on the keywords you find. ▸ what else do you want to see?",
                 "it's a bit of a pain trying to remember those keywords, huh? ▸ i thought websites were supposed to be convenient.",
-                "i've heard there's six easter eggs in this website... ▸ not sure how to find them.",
-                "i think the only website you can't find down here is this one... ▸ actually, is that true?"
+                "still searching? ▸ i could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
+                "i've heard there's six easter eggs in this website... ▸ i'm not sure how to find them.",
+                "the sea is deep... ▸ i can probably catch any website. ▸ i wonder if that includes this website..."
             ]
         };
         
@@ -30,6 +30,7 @@ class DialogueManager {
         this.typingSpeed = 25;
         this.typingInterval = null;
         this.windowCloseCount = -1; // start at -1 because windowClosed starts after one close
+                                    // this also loops back to index 1 instead of 0
         this.currentSegments = [];
     }
 
@@ -37,7 +38,9 @@ class DialogueManager {
         let dialogueText;
         
         if (dialogueKey === 'windowClosed') {
-            const index = Math.min(this.windowCloseCount, this.dialogues.windowClosed.length - 1);
+            let index = this.windowCloseCount;
+            if (index >= this.dialogues.windowClosed.length)
+                index = index % this.dialogues.windowClosed.length;
             dialogueText = this.dialogues.windowClosed[index];
             this.windowCloseCount++;
         } else {
