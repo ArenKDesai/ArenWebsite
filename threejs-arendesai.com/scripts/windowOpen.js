@@ -18,6 +18,7 @@ const urlDict = {
 
 let onWindowClosedCallback = null;
 let foundURLegg = false;
+let foundReasonEgg = false;
 let curURL = "";
 
 export function createWebsiteOverlay(defaultUrl, onClosed) {
@@ -94,6 +95,11 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
             if (!foundURLegg && userRes.includes("arendesai.com")) {
                 foundURLegg = true;
                 showEgg(world_scene);
+            }
+            else if (!foundReasonEgg && userRes.toLowerCase().includes("find what you love and let it kill you")) {
+                foundReasonEgg = true;
+                showEgg(world_scene);
+                userRes = "https://arenkdesai.github.io/ArenWebsite/threejsreason"
             }
             showWebsite = userRes;
         } else {
