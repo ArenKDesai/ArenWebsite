@@ -19,6 +19,7 @@ class FisherStateMachine {
         this.currentState = ANIMATION_STATES.IDLE;
         this.isPaused = false;
         this.submittedRequest = false;
+        this.introPlayed = false;
         this.keyFrames = [
             { time: 1.2, name: "cast_start", state: ANIMATION_STATES.CASTING },
             { time: 3.94, name: "cast_peak", state: ANIMATION_STATES.FISHING }
@@ -56,6 +57,8 @@ class FisherStateMachine {
                 // Reset for next cycle
                 this.resetAnimation();
                 break;
+            case ANIMATION_STATES.WAITING_FOR_INPUT:
+                this.submittedRequest = false;
         }
     }
 
@@ -105,6 +108,7 @@ class FisherStateMachine {
     }
 
     resetAnimation() {
+        this.introPlayed = true;
         this.currentKeyFrameIndex = 0;
         this.keyFrames.forEach(kf => kf.triggered = false);
         this.setState(ANIMATION_STATES.IDLE);

@@ -16,19 +16,20 @@ class DialogueManager {
         this.dialogues = {
             intro: "oh... ▸ you probably wanted to see aren's website... ▸ but it has sunk to the bottom of the sea. ▸ i think i can fish it back up... ▸ but all the webpages are scattered and soggy. ▸ tell me. what would you like to see?",
             windowClosed: [
-                "looks like the links are waterlogged... ▸ I can probably find the rest of it. ▸ what else do you want to see?",
-                "still searching? ▸ I could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
-                "another page lost to the depths... ▸ shall we continue our search?",
-                "the tides shift, and so do websites... ▸ let's keep looking."
+                "looks like the links are waterlogged... ▸ i'll have to pull up the pages individually. ▸ what else do you want to see?",
+                "still searching? ▸ i could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
+                "it's a bit of a pain trying to remember those keywords, huh? ▸ i thought websites were supposed to be convenient.",
+                "i've heard there's six easter eggs in this website... ▸ not sure how to find them.",
+                "i think the only website you can't find down here is this one... ▸ actually, is that true?"
             ]
         };
         
         this.currentSegmentIndex = 0;
         this.currentCharIndex = 0;
         this.isTyping = false;
-        this.typingSpeed = 50;
+        this.typingSpeed = 25;
         this.typingInterval = null;
-        this.windowCloseCount = 0;
+        this.windowCloseCount = -1; // start at -1 because windowClosed starts after one close
         this.currentSegments = [];
     }
 
@@ -190,7 +191,10 @@ function handleClick() {
         case ANIMATION_STATES.IDLE:
             // First click - start everything
             if (fisherStateMachine.startAnimation()) {
-                dialogueManager.showDialogue('intro');
+                if (fisherStateMachine.introPlayed)
+                    dialogueManager.showDialogue('windowClosed');
+                else
+                    dialogueManager.showDialogue('intro');
             }
             break;
             
@@ -224,7 +228,6 @@ function handleClick() {
         case ANIMATION_STATES.DIALOGUE_CLOSE:
             // Handle post-close dialogue
             if (!dialogueManager.handleClick()) {
-                fisherStateMachine.submittedRequest = false;
                 fisherStateMachine.setState(ANIMATION_STATES.WAITING_FOR_INPUT);
             }
             break;
