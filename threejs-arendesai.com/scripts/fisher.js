@@ -14,8 +14,8 @@ let clock;
 class DialogueManager {
     constructor() {
         this.dialogues = {
-            intro: "oh... ▸ you probably wanted to see aren's website... ▸ but it's sunk to the bottom of the sea.",
-            fishing: "I think I can fish it back up... ▸ but you'll have to tell me what page you're looking for.",
+            intro: "oh... ▸ you probably wanted to see aren's website... ▸ but it has sunk to the bottom of the sea.",
+            fishing: "i think i can fish it back up... ▸ but all the webpages are scattered and soggy. ▸ tell me. what would you like to see?",
             windowClosed: [
                 "looks like the links are waterlogged... ▸ I can probably find the rest of it. ▸ what else do you want to see?",
                 "still searching? ▸ I could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
@@ -211,6 +211,10 @@ function handleClick() {
                 createWebsiteOverlay("", handleWebsiteClosed);
             }
             break;
+        case ANIMATION_STATES.CASTING:
+            if (!dialogueManager.handleClick()) {
+                // TODO: unknown
+            }
             
         case ANIMATION_STATES.WEBSITE_SHOWN:
             // Website is open, ignore clicks

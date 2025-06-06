@@ -126,7 +126,7 @@ class FisherStateMachine {
                 // Pause at fishing point to wait for user input
                 if (keyFrame.state === ANIMATION_STATES.CASTING) {
                     this.pauseAnimation();
-                    this.setState(ANIMATION_STATES.WAITING_FOR_INPUT);
+                    // this.setState(ANIMATION_STATES.WAITING_FOR_INPUT)
                 }
             }
         }
