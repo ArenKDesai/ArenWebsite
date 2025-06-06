@@ -41,7 +41,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
     inputDialog.id = 'url-input-dialog';
     inputDialog.style.cssText = `
         position: fixed;
-        top: 30%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgba(180, 170, 160, 0.9);
@@ -96,15 +96,16 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
                 foundURLegg = true;
                 showEgg(world_scene);
             }
-            else if (!foundReasonEgg && userRes.toLowerCase().includes("find what you love and let it kill you")) {
-                foundReasonEgg = true;
-                showEgg(world_scene);
-                userRes = "https://arenkdesai.github.io/ArenWebsite/threejsreason"
-            }
             showWebsite = userRes;
         } else {
             const finalUrl = findMostSimilarUrl(userRes, Object.keys(urlDict));
             showWebsite = urlDict[finalUrl];
+        
+            if (!foundReasonEgg && userRes.toLowerCase().includes("find what you love and let it kill you")) {
+                foundReasonEgg = true;
+                showEgg(world_scene);
+                showWebsite = "https://arenkdesai.github.io/ArenWebsite/threejsreason"
+            }
         }
         
         if (inputDialog.parentNode) {
@@ -114,14 +115,6 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
         curURL = showWebsite;
         fisherStateMachine.onInputSubmitted();
     });
-
-    const escapeHandler = (e) => {
-        if (e.key === 'Escape' && inputDialog.parentNode) {
-            document.body.removeChild(inputDialog);
-            document.removeEventListener('keydown', escapeHandler);
-        }
-    };
-    document.addEventListener('keydown', escapeHandler);
 
     form.appendChild(input);
     form.appendChild(submitBtn);

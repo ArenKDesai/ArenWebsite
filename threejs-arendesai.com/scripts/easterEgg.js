@@ -26,7 +26,7 @@ function showEgg() {
                 case 0:
                     eggContainer.position.set(-30, -2, 18);
                 case 1:
-                    eggContainer.position.set(-32, -2, 17);
+                    eggContainer.position.set(-29, -2, 17);
             }
             
             // Add to eggs array and scene
