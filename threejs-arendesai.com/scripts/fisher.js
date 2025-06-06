@@ -3,7 +3,9 @@ import * as THREE from 'three/webgpu';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { createWebsiteOverlay } from "./windowOpen.js";
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
 import { fisherStateMachine, ANIMATION_STATES } from './fisherStateMachine.js';
+import { MAX_EGGS, eggs } from "./easterEgg.js";
 
 let mixer;
 export let animationActions = [];
@@ -15,12 +17,13 @@ class DialogueManager {
     constructor() {
         this.dialogues = {
             intro: "oh... ▸ you probably wanted to see aren's website... ▸ but it has sunk to the bottom of the sea. ▸ i think i can fish it back up... ▸ but all the webpages are scattered and soggy. ▸ tell me. what would you like to see?",
-            windowClosed: [ // the first dialogue is only shown once
+            windowClosed: [
                 "looks like the links are waterlogged... ▸ you'll have to rely on the keywords you find. ▸ what else do you want to see?",
                 "it's a bit of a pain trying to remember those keywords, huh? ▸ i thought websites were supposed to be convenient.",
                 "still searching? ▸ i could probably find other websites with a full URL... ▸ aren's website isn't that cool anyway.",
-                "i've heard there's six easter eggs in this website... ▸ i'm not sure how to find them.",
-                "the sea is deep... ▸ i can probably catch any website. ▸ i wonder if that includes this website..."
+                `i've heard there's ${MAX_EGGS} easter eggs in this website... ▸ i'm not sure how to find them.`,
+                "the sea is deep... ▸ i can probably catch any website. ▸ i wonder if that includes this website...",
+                `so far, it looks like you've found ${eggs.length} easter eggs... ▸ is that a lot?`
             ]
         };
         
@@ -30,7 +33,6 @@ class DialogueManager {
         this.typingSpeed = 25;
         this.typingInterval = null;
         this.windowCloseCount = -1; // start at -1 because windowClosed starts after one close
-                                    // this also loops back to index 1 instead of 0
         this.currentSegments = [];
     }
 
@@ -39,8 +41,10 @@ class DialogueManager {
         
         if (dialogueKey === 'windowClosed') {
             let index = this.windowCloseCount;
-            if (index >= this.dialogues.windowClosed.length)
-                index = index % this.dialogues.windowClosed.length;
+            if (index > this.dialogues.windowClosed.length) {
+                index = 1;
+                this.windowCloseCount = 1;
+            }
             dialogueText = this.dialogues.windowClosed[index];
             this.windowCloseCount++;
         } else {

@@ -91,7 +91,7 @@ export function createWebsiteOverlay(defaultUrl, onClosed) {
         
         if (userRes.slice(0,8) === "https://" || userRes.slice(0,7) === "http://" || 
             userRes.slice(0,4) === "www." || userRes.includes(".com")) {
-            if (!foundURLegg) {
+            if (!foundURLegg && userRes.includes("arendesai.com")) {
                 foundURLegg = true;
                 showEgg(world_scene);
             }

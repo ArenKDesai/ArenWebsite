@@ -5,14 +5,14 @@ import { world_scene } from "./main.js";
 let eggs = [];
 const MAX_EGGS = 1;
 
-export function showEgg() {
+function showEgg() {
     if (eggs.length == MAX_EGGS) {
         return;
     }
     const loader = new GLTFLoader();
     const scene = world_scene;
     loader.load(
-        "easterEgg.glb",
+        "../models/easterEgg.glb",
         (gltf) => {
             // Scale the egg model down if needed
             gltf.scene.scale.set(0.25, 0.25, 0.25);
@@ -53,10 +53,12 @@ export function showEgg() {
 }
 
 // Add this function to animate all eggs
-export function updateEggs(time) {
+function updateEggs(time) {
     eggs.forEach(egg => {
         if (egg.userData && egg.userData.update) {
             egg.userData.update(time);
         }
     });
 }
+
+export { updateEggs, showEgg, MAX_EGGS, eggs };
