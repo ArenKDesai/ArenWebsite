@@ -6,6 +6,7 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
 import { createPier } from "./pier.js";
 import { createFisher } from './fisher.js';
 import { showEgg, updateEggs } from './easterEgg.js';
+import { randomWeather } from "./weather.js";
 
 const texLoader = new THREE.TextureLoader();
 let waterSurface;
@@ -91,6 +92,10 @@ async function init() {
     labelRenderer.domElement.style.top = '0px';
     labelRenderer.domElement.style.pointerEvents = 'none';
     document.body.appendChild(labelRenderer.domElement);
+
+    // TODO: fix weather
+    // const weather = randomWeather();
+    let weather;
     
     let clock = new THREE.Clock();
     // Animation loop
@@ -110,6 +115,9 @@ async function init() {
             labelRenderer.render(scene, camera); 
         }
         updateEggs(time);
+        if (weather) {
+            weather.update();
+        }
 
         renderer.render(scene, camera);
         
