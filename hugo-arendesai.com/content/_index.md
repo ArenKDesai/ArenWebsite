@@ -1,6 +1,7 @@
 +++
 draft = false
 title = 'Home'
+{{ .TableOfContents }}
 +++
 
 <link rel="stylesheet" href="style.css">
