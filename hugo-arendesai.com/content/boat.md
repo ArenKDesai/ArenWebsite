@@ -2,7 +2,7 @@
 title = 'Boat'
 +++
 
-<a href="./index.html">home</a>
+<a href="../index.html">home</a>
 
 <link rel="stylesheet" href="../style.css">
 

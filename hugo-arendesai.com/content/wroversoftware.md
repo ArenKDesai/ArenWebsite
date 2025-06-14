@@ -2,6 +2,8 @@
 title = 'WRoverSoftware'
 +++
 
+<a href="../index.html">home</a>
+
 <link rel="stylesheet" href="../style.css">
 
 ### ([github](https://github.com/WisconsinRobotics/WRoverSoftware))

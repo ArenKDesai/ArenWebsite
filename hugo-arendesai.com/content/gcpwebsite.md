@@ -3,6 +3,8 @@ draft = false
 title = 'GCP Website (arendesai.com)'
 +++
 
+<a href="../index.html">home</a>
+
 <link rel="stylesheet" href="../style.css">
 
 *Google Cloud Platform (GCP), Hugo, Linux, Bucket, HTTPS*

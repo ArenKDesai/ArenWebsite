@@ -3,6 +3,8 @@ draft = false
 title = 'Market Simulation Optimizer'
 +++
 
+<a href="../index.html">home</a>
+
 <link rel="stylesheet" href="../style.css">
 
 ### Market Simulation Optimizer (<a href="/MarketSimulatorDocs.txt" download="/MarketSimulatorDocs.md">documentation</a>)

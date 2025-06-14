@@ -3,6 +3,8 @@ draft = false
 title = 'Locational Market Price (LMP) Forecasting'
 +++
 
+<a href="../index.html">home</a>
+
 <link rel="stylesheet" href="../style.css">
 
 ### Locational Market Price (LMP) Forecasting
