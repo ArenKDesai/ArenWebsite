@@ -6,9 +6,7 @@ title = 'Locational Market Price (LMP) Forecasting'
 
 <a href="../index.html">home</a>
 
-### Locational Market Price (LMP) Forecasting
-*Forecasting, Machine Learning (ML), LASSO Regression, Deep Neural Networks (DNN)*
+A deep exploration of locational market price (LMP) data focused on Madison, WI for Madison Gas & Electric (MGE). Multiple data sources were used and coordinated with data engineers to develop a [temporal fusion transformer](https://arxiv.org/abs/1912.09363) that captures the spatiotemporal nature of LMP data, allows for a 2-week forecast, and maintains explainability. This is used by MGE energy traders to maximize potential revenue. 
+PyTorch and Tensorflow were both used for the temporal fusion transformer, and a large quantity of SQL and BeanShell (Java child language) was written to move and download data. 
 
-A deep exploration of locational market price (LMP) data focused on Madison, WI. Multiple data sources were used and coordinated with data engineers to develop a [LEAR](https://www.mdpi.com/1996-1073/9/8/621) and deep neural network (DNN) model that captures the spatiotemporal nature of LMP data, and allows for a 2-week forecast. This is used by Madison Gas & Electric's (MGE's) energy traders to maximize potential revenue. 
-
-Code is restricted. 
+Code is restricted. Ask me for details. 
