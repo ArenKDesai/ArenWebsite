@@ -19,20 +19,20 @@ I like leaving the details in the code --- more specifically, the GitHub reposit
 
 - (professional) [Locational Market Price (LMP) Forecasting](./lmpforecasting)
     -   *temporal fusion transformer for multi-horizon LMP forecasting*
-- (professional) Market Simulation Opimizer
+- (professional) [Market Simulation Opimizer](./marketsimoptimizer)
     -   *linear optimization algorithm for resolving MISO market bids*
 
 ### Graphics
 
-- (personal) arendesai.com on Google Cloud Platform (GCP)
+- (personal) [arendesai.com on Google Cloud Platform (GCP)](./gcpwebsite)
     -   *three.js, hugo, and GCP*
 
 ### Robotics
 
-- (school) WRoverSoftware Mars Rover
+- (school) [WRoverSoftware Mars Rover](./wroversoftware)
     -   *CAN/VESC communications*
 
 ### Other
 
-- (professional) Portfolio
-- (school) Coursework
+- (professional) [Portfolio](./portfolio)
+- (school) [Coursework](./coursework)
