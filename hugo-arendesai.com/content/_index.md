@@ -1,7 +1,6 @@
 +++
 draft = false
 title = 'Home'
-{{ .TableOfContents }}
 +++
 
 <link rel="stylesheet" href="style.css">
@@ -37,6 +36,3 @@ I like leaving the details in the code --- more specifically, the GitHub reposit
 
 - (professional) Portfolio
 - (school) Coursework
-
-#### P.S.
-It's probably not Easter, but you still might find some <strong>eggs</strong> around. 

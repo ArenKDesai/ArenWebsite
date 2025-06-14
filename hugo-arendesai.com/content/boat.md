@@ -2,6 +2,8 @@
 title = 'Boat'
 +++
 
+<a href="./index.html">home</a>
+
 <link rel="stylesheet" href="../style.css">
 
 ### ([github](https://github.com/ArenKDesai/Boat))
