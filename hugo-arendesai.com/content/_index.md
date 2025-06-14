@@ -17,7 +17,7 @@ I like leaving the details in the code --- more specifically, the GitHub reposit
 
 ### Data Science
 
-- (professional) Locational Market Price (LMP) Forecasting
+- (professional) [Locational Market Price (LMP) Forecasting](./lmpforecasting)
     -   *temporal fusion transformer for multi-horizon LMP forecasting*
 - (professional) Market Simulation Opimizer
     -   *linear optimization algorithm for resolving MISO market bids*
