@@ -131,13 +131,13 @@ async function init() {
 function skyboxFromTime() {
   const hour = new Date().getHours();
   if ((hour >= 6 && hour < 8) || (hour >= 20 && hour < 22)) {
-    return './textures/cubemap1.png';
+    return './textures/cubemap1.png'; // sunrise/sunset
   }
   else if (hour >= 8 && hour < 20) {
-    return './textures/cubemap3.png';
+    return './textures/cubemap3.png'; // day
   }
   else {
-    return './textures/cubemap2.png';
+    return './textures/cubemap2.png'; // night
   }
 }
 
