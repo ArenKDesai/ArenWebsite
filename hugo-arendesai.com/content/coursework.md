@@ -1,10 +1,9 @@
 +++
 title = 'Coursework'
 +++
+<link rel="stylesheet" href="../style.css">
 
 <a href="../index.html">home</a>
-
-<link rel="stylesheet" href="../style.css">
 
 Note: prerequisites are removed in favor of higher-level coursework in most cases. 
 

@@ -1,10 +1,9 @@
 +++
 title = 'Portfolio'
 +++
+<link rel="stylesheet" href="../style.css">
 
 <a href="../index.html">home</a>
-
-<link rel="stylesheet" href="../style.css">
 
 My main interest is in Data Science (mainly deep learning and machine learning), but I also work in Computer Graphics and Robotics. 
 
