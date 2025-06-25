@@ -183,6 +183,11 @@ export function createFisher(scene) {
             
             document.removeEventListener('click', handleClick);
             document.addEventListener('click', handleClick);
+            document.addEventListener('keydown', (e) => {
+                if (e.code === 'Enter' || e.code === 'Space') {
+                    handleClick();
+                }
+            });
         },
         undefined,
         (error) => console.error('Error loading fisher model:', error)
