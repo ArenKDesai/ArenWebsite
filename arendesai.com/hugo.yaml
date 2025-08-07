@@ -137,7 +137,7 @@ params:
     title: "Aren."
     subtitle: "I'm a data scientist."
     content: "I'm also a machine learning engineer and energy market analyst."
-    image: /images/nn.svg
+    # image: /images/nn.svg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -223,7 +223,7 @@ params:
       - title: "High School"
         school:
           name: "McFarland High School"
-        date: "2009 - 2013"
+        date: "2017 - 2021"
         content: |-
           Extracurricular Activities
             - Driftwood Literary Arts member
@@ -239,7 +239,7 @@ params:
       - title: FICO DMP Certification
         content: Completed the training course for Compeer Financial in 2024.
       - title: Hackathon Judge
-        content: Judged for the UW Madison Google Developer Student Club's 2024 Cheesehacks hackathon over 100 applications and a $2,500 prize pool.
+        content: Judged for the UW Madison Google Developer Student Club's 2024 Cheesehacks hackathon with over 100 applications and a $2,500 prize pool.
 
 
   # projects
