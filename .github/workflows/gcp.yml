@@ -25,7 +25,7 @@ jobs:
       - name: Deploy to Google Cloud Storage
         uses: google-github-actions/upload-cloud-storage@v2
         with:
-          path: './threejs-arendesai.com' # The local path to your website's build output or static files
+          path: './arendesai.com/public' # The local path to your website's build output or static files
           destination: 'arendesai.com' # Your GCS bucket name
           parent: false # Set to false if you want files directly at the bucket root
           gzip: true # Optional: Gzip files for better performance
