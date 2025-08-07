@@ -156,7 +156,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/images/me.jpg"
     content: |-
       I am a data scientist, machine learning engineer, and energy market analyst who leverages powerful deep-learning tools to predict the movement of trades in the MISO and PJM grids. 
 
