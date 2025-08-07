@@ -116,7 +116,7 @@ params:
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
     brandName: "arendesai.com" # Brand name for the brand | default is the title variable
-    disableSearch: false
+    disableSearch: true
     # searchPlaceholder: "Search"
     stickyNavBar:
       enable : true
@@ -146,11 +146,13 @@ params:
       name: "Resume"
       url: "#"
       download: true
-      newPage: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/ArenKDesai
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/aren-desai-aba931241/
 
   # About
   about:
@@ -178,7 +180,7 @@ params:
     # title: "Custom Name"
     items:
       - job: "Energy Supply and Trading Intern"
-        company: "Madison Gas & Electric"
+        company: "Madison Gas and Electric"
         companyUrl: "https://www.mge.com/"
         date: "May 2024 - present"
         featuredLink:
@@ -248,10 +250,10 @@ params:
     # title, content, image, badges, links, featured
       - title: PJM Load Forecaster
         content: A temporal fusion transformer trained with PyTorch Lightning/Forecasting and deployed with Apache Airflow to predict the total load of the PJM grid.
-        image: /images/projects/profile.png
+        image: /images/pjm_grid.png
         featured:
           name: Docs
-          link: https://hugo-profile.netlify.app
+          link: https://example.com
         badges:
           - "Apache Airflow"
           - "PyTorch"
