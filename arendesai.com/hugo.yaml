@@ -236,6 +236,8 @@ params:
         # title, url, image, content
       - title: FICO DMP Certification
         content: Completed the training course for Compeer Financial in 2024.
+      - title: Hackathon Judge
+        content: Judged for the UW Madison Google Developer Student Club's 2024 Cheesehacks hackathon over 100 applications and a $2,500 prize pool.
 
 
   # projects
@@ -259,7 +261,7 @@ params:
 
   #Contact
   contact:
-    enable: true
+    enable: false
     # title: "Custom Name"
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
     btnName: Mail me
