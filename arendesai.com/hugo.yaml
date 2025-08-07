@@ -137,7 +137,7 @@ params:
     title: "Aren."
     subtitle: "I'm a data scientist."
     content: "I'm also a machine learning engineer and energy market analyst."
-    image: /images/wild-grad-065.jpg
+    image: ./images/wild-grad-065.jpg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
