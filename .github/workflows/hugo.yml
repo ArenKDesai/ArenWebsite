@@ -53,11 +53,11 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          cd hugo-arendesai.com && hugo
+          cd arendesai.com && hugo
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./hugo-arendesai.com/public
+          path: ./arendesai.com/public
 
   # Deployment job
   deploy:
