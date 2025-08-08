@@ -250,7 +250,7 @@ params:
     # title, content, image, badges, links, featured
       - title: PJM Load Forecaster
         content: A temporal fusion transformer trained with PyTorch Lightning/Forecasting and deployed with Apache Airflow to predict the total load of the PJM grid.
-        image: /images/pjm_grid.png
+        image: /images/pjm_graph.png
         featured:
           name: Docs
           link: https://example.com
