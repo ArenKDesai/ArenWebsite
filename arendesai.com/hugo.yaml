@@ -137,7 +137,7 @@ params:
     title: "Aren."
     subtitle: "I'm a data scientist."
     content: "I'm also a machine learning engineer and energy market analyst."
-    # image: /images/nn.svg
+    # image: /images/solar-energy-svgrepo-com.svg
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
