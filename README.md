@@ -1,4 +1,5 @@
 https://arendesai.com
 
 ## TODO:
-2. Replace SVG
+1. Replace SVG
+2. Finish Simplified Chinese section
