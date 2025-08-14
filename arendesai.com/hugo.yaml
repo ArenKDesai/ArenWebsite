@@ -205,7 +205,7 @@ params:
     items:
       - title: GCP Professinoal Machine Learning Engineer Certification
         content: Passed the certification exam on 8/13/2025 (view here).
-        link: https://www.credly.com/badges/ccc75566-4cfc-4b61-97e6-72488c0503e1/public_url
+        url: "https://www.credly.com/badges/ccc75566-4cfc-4b61-97e6-72488c0503e1/public_url"
       - title: FICO DMP Certification
         content: Completed the training course for Compeer Financial in 2024.
       - title: Hackathon Judge
