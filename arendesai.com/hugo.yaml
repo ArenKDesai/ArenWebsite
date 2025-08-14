@@ -203,6 +203,8 @@ params:
   achievements:
     enable: true
     items:
+      - title: GCP Professinoal Machine Learning Engineer Certification
+        content: Passed the certification exam on 8/13/2025 (view here).
       - title: FICO DMP Certification
         content: Completed the training course for Compeer Financial in 2024.
       - title: Hackathon Judge
