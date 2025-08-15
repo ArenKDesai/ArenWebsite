@@ -36,9 +36,9 @@ languages:
     params:
       description: "Aren Desai的网站。"
       hero:
-        intro: "你好！我是"
+        intro: "你好！我叫"
         title: "Aren。"
-        subtitle: ""
+        subtitle: "我是数据科学家。"
         content: ""
       about:
         title: ""
@@ -128,6 +128,7 @@ params:
   # Hero section (English defaults, Chinese overridden above)
   hero:
     enable: true
+    image: "/images/faceSmall.jpg"
     bottomImage:
       enable: true
     button:
