@@ -162,10 +162,16 @@ params:
   experience:
     enable: true
     items:
+      - job: "Energy Supply Analyst"
+        company: "Madison Gas and Electric"
+        companyUrl: "https://www.mge.com/"
+        date: "September 2025 - Present"
+        content: "Leveraged deep-learning model frameworks and cloud technologies to produce meaninful solutions for our energy traders."
+    
       - job: "Energy Supply and Trading Intern"
         company: "Madison Gas and Electric"
         companyUrl: "https://www.mge.com/"
-        date: "May 2024 - present"
+        date: "May 2024 - August 2025"
         content: "Despite the title, I mostly model machine learning and deep learning models to analyze the MISO grid. My projects include a simulation of MISO's optimization algorithm on MGE's load-managing resources and an LMP forecaster."
 
       - job: "Data Analytics Intern"
