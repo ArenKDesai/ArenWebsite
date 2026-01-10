@@ -222,18 +222,19 @@ params:
   projects:
     enable: true
     items:
-      - title: PJM Load Forecaster
-        content: A temporal fusion transformer trained with PyTorch Lightning/Forecasting and deployed with Apache Airflow to predict the total load of the PJM grid.
+      - title: Energy Price Journalist
+        content: 5-minute Real-Time prices from 300+ CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions. 
         image: /images/pjm_graph.png
         featured:
           name: Docs
-          link: https://example.com
+          link: https://energy-pricing-journalist.onrender.com
         badges:
-          - "Apache Airflow"
-          - "PyTorch"
+          - "Chronos2"
+          - "Polars"
+          - "DuckDB"
         links:
           - icon: fab fa-github
-            url: https://github.com/ArenKDesai/PJMEnergyConsumption
+            url: https://github.com/ArenKDesai/Energy-Pricing-Journalist
 
   # Contact
   contact:
