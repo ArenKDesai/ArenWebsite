@@ -34,7 +34,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          # Fixed syntax: changed ":" to "."
+          # FIXED: Changed env:HUGO_VERSION to env.HUGO_VERSION
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
@@ -50,7 +50,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-        # We are hardcoding the baseURL here to match your GitHub subpath exactly
+        # ADDED: Explicit baseURL to ensure paths match your GitHub subfolder
         run: |
           cd arendesai.com && hugo \
             --minify \
