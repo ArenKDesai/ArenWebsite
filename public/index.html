@@ -129,13 +129,16 @@ arendesai.com
 
     switch (localStorageValue) {
         case "dark":
+            document.documentElement.classList.add('dark');
             document.body.classList.add('dark');
             break;
         case "light":
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             break;
         default:
             if (mediaQuery) {
+                document.documentElement.classList.add('dark');
                 document.body.classList.add('dark');
             }
             break;
@@ -655,112 +658,100 @@ arendesai.com
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-8 col-lg-8 py-5">
                 <div class="experience-container px-3 pt-2">
-                    <ul class="nav nav-pills mb-3 bg-transparent primary-font" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-2 bg-transparent primary-font" id="pills-tab" role="tablist">
                         
+                            
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link active bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='madison-gas-and-electric--tab'
+                                    data-bs-target='#pills-madison-gas-and-electric-'
+                                    aria-controls='madison-gas-and-electric-'
+                                >
+                                    Madison Gas and Electric
+                                </div>
+                            </li>
                         
-                        <li class="nav-item px-1 bg-transparent" role="presentation">
-                            <div 
-                                class="nav-link active bg-transparent" 
-                                aria-selected="true" 
-                                role="tab" 
-                                data-bs-toggle="pill"
-                                id='Madison-Gas-and-Electric-May-2024---present-tab'
-                                data-bs-target='#pills-Madison-Gas-and-Electric-May-2024---present'
-                                aria-controls='Madison-Gas-and-Electric-May-2024---present' 
-                            >
-                                Madison Gas and Electric
-                            </div>
-                        </li>
+                            
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link  bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='madison-gas-and-electric--tab'
+                                    data-bs-target='#pills-madison-gas-and-electric-'
+                                    aria-controls='madison-gas-and-electric-'
+                                >
+                                    Madison Gas and Electric
+                                </div>
+                            </li>
                         
-                        
-                        
-                        <li class="nav-item px-1 bg-transparent" role="presentation">
-                            <div 
-                                class="nav-link bg-transparent" 
-                                aria-selected="true" 
-                                role="tab" 
-                                data-bs-toggle="pill"
-                                id='Compeer-Financial-Jan-2023---May-2024-tab'
-                                data-bs-target='#pills-Compeer-Financial-Jan-2023---May-2024' 
-                                aria-controls='Compeer-Financial-Jan-2023---May-2024'
-                            >
-                                Compeer Financial
-                            </div>
-                        </li>
-                        
+                            
+                            
+                            <li class="nav-item px-1 bg-transparent" role="presentation">
+                                <div
+                                    class="nav-link  bg-transparent"
+                                    aria-selected="true"
+                                    role="tab"
+                                    data-bs-toggle="pill"
+                                    id='compeer-financial--tab'
+                                    data-bs-target='#pills-compeer-financial-'
+                                    aria-controls='compeer-financial-'
+                                >
+                                    Compeer Financial
+                                </div>
+                            </li>
                         
                     </ul>
-                    <div class="tab-content pb-5 pt-2 bg-transparent primary-font" id="pills-tabContent">
-                        
-                        
-                        <div 
-                            class="tab-pane fade show active bg-transparent" 
-                            role="tabpanel"
-                            id='pills-Madison-Gas-and-Electric-May-2024---present'
-                            aria-labelledby='pills-Madison-Gas-and-Electric-May-2024---present-tab'
-                        >
-                            <div>
-                                <span class="h4">Energy Supply and Trading Intern</span>
-                                <small>-</small>
-                                <a href="https://www.mge.com/" target="_blank">Madison Gas and Electric</a>
-                                <div class="pb-1">
-                                    <small>May 2024 - present</small>
-                                    
-                                    <span class="p-2">
-                                        <span 
-                                            style="cursor: pointer;" 
-                                            data-bs-toggle="tooltip" 
-                                            data-bs-placement="top" 
-                                            data-bs-original-title=Working&#32;as&#32;a&#32;Energy&#32;Supply&#32;and&#32;Trading&#32;Intern&#32;at&#32;Madison&#32;Gas&#32;and&#32;Electric
-                                        >
-                                            <i class="fas fa-info-circle fa-xs"></i>
-                                        </span>
-                                    </span>
-                                    
-                                </div>
 
+                    <div class="tab-content pb-3 bg-transparent primary-font" id="pills-tabContent">
+                        
+                            
+                            
+                            
+                            
+                            <div
+                                class="tab-pane fade bg-transparent show active"
+                                role="tabpanel"
+                                id='pills-madison-gas-and-electric-'
+                                aria-labelledby='madison-gas-and-electric--tab'
+                            >
                                 
                             </div>
-
-                            Despite the title, I mostly model machine learning and deep learning models to analyze the MISO grid. My projects include a simulation of MISO&rsquo;s optimization algorithm on MGE&rsquo;s load-managing resources and an LMP forecaster.
-                        </div>
                         
                         
-                        
-                        <div 
-                            class="tab-pane fade bg-transparent" 
-                            role="tabpanel"
-                            id='pills-Compeer-Financial-Jan-2023---May-2024'
-                            aria-labelledby='pills-Compeer-Financial-Jan-2023---May-2024-tab'
-                        >
-                            <div>
-                                <span class="h4">Data Analytics Intern</span>
-                                <small>-</small>
-                                <a href="https://www.compeer.com/" target="_blank">Compeer Financial</a>
-                                
-                                <div class="pb-1">
-                                    <small>Jan 2023 - May 2024</small>
-                                    
-                                    <span class="p-2">
-                                        <span 
-                                            style="cursor: pointer;" 
-                                            data-bs-toggle="tooltip" 
-                                            data-bs-placement="top" 
-                                            data-bs-original-title=Worked&#32;as&#32;a&#32;Data&#32;Analytics&#32;Intern&#32;at&#32;Compeer&#32;Financial
-                                        > 
-                                            <i class="fas fa-info-circle fa-xs"></i>
-                                        </span>
-                                    </span>
-                                    
-                                </div>
-                                
+                            
+                            
+                            
+                            
+                            <div
+                                class="tab-pane fade bg-transparent "
+                                role="tabpanel"
+                                id='pills-madison-gas-and-electric-'
+                                aria-labelledby='madison-gas-and-electric--tab'
+                            >
                                 
                             </div>
-
-                            <div class="pt-2">
-                                I modeled and analyzed the risk of loans to farmers that might fall into RAU - the Risk Asset Unit.
+                        
+                        
+                            
+                            
+                            
+                            
+                            <div
+                                class="tab-pane fade bg-transparent "
+                                role="tabpanel"
+                                id='pills-compeer-financial-'
+                                aria-labelledby='compeer-financial--tab'
+                            >
+                                
                             </div>
-                        </div>
                         
                         
                     </div>
@@ -974,7 +965,7 @@ arendesai.com
 <div class="text-center pt-2">
     
     <span class="px-1">
-        <a href="https://github.com/ArenKDesai" aria-label="github">
+        <a href="https://github.com/ArenKDesai" target="_blank" aria-label="github">
             <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
                 <path id="footer-socialNetworks-github-svg-path"
                     d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
@@ -1001,7 +992,7 @@ arendesai.com
 
     
     <span class="px-1">
-        <a href="https://www.linkedin.com/in/aren-desai-aba931241/" aria-label="linkedin">
+        <a href="https://www.linkedin.com/in/aren-desai-aba931241/" target="_blank" aria-label="linkedin">
             <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
                 viewBox="0 0 512 512">
                 <rect width="512" height="512" fill="#0077b5" rx="15%" />
@@ -1029,7 +1020,7 @@ arendesai.com
                     </a>
                 </div>
             
-            &copy; 2025  All rights reserved
+            &copy; 2026  All rights reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -1047,10 +1038,13 @@ arendesai.com
 </footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     }
 
@@ -1059,9 +1053,11 @@ arendesai.com
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
