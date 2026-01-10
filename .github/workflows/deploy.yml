@@ -6,13 +6,11 @@ on:
       - main
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -36,13 +34,18 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ${{ env:HUGO_VERSION }}
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      # NEW: This step fetches your GitHub Pages metadata (like the URL)
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
@@ -51,13 +54,15 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
+        # UPDATED: Added the --baseURL flag using the URL from the Setup Pages step
         run: |
-          cd arendesai.com && hugo --minify
+          cd arendesai.com && hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Points to the public directory created by Hugo
           path: ./arendesai.com/public
 
   deploy:
