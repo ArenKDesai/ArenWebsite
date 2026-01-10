@@ -849,36 +849,38 @@ arendesai.com
         <div class="row justify-content-center px-3 px-md-5">
             
             <div class="col-lg-4 col-md-6 my-3">
-                <div class="card my-3 h-100" title="PJM Load Forecaster">
+                <div class="card my-3 h-100" title="Energy Price Journalist">
                     <div class="card-head">
-                        <img class="card-img-top" src="/images/pjm_graph.png" alt="PJM Load Forecaster">
+                        <img class="card-img-top" src="/images/energypricingjournalist.png" alt="Energy Price Journalist">
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
                             
-                            <span class="badge badge-secondary">Apache Airflow</span>
+                            <span class="badge badge-secondary">Chronos2</span>
                             
-                            <span class="badge badge-secondary">PyTorch</span>
+                            <span class="badge badge-secondary">Polars</span>
+                            
+                            <span class="badge badge-secondary">DuckDB</span>
                             
                         </div>
-                        <h5 class="card-title bg-transparent mt-1">PJM Load Forecaster</h5>
+                        <h5 class="card-title bg-transparent mt-1">Energy Price Journalist</h5>
                         <div class="card-text bg-transparent secondary-font">
-                            A temporal fusion transformer trained with PyTorch Lightning/Forecasting and deployed with Apache Airflow to predict the total load of the PJM grid.
+                            5-minute Real-Time prices from 300&#43; CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions.
                         </div>
                     </div>
                     
                     <div class="card-footer py-3">
                         
                         <span class="m-1 mx-2">
-                            <a href="https://github.com/ArenKDesai/PJMEnergyConsumption" target="_blank">
+                            <a href="https://github.com/ArenKDesai/Energy-Pricing-Journalist" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </span>
                         
                         
                         <span class="float-end">
-                            <a class="btn btn-sm" href="https://example.com" target="_blank">
-                                Docs
+                            <a class="btn btn-sm" href="https://energy-pricing-journalist.onrender.com" target="_blank">
+                                Website
                             </a>
                         </span>
                         

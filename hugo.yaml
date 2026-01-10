@@ -224,9 +224,9 @@ params:
     items:
       - title: Energy Price Journalist
         content: 5-minute Real-Time prices from 300+ CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions. 
-        image: /images/pjm_graph.png
+        image: /images/energypricingjournalist.png
         featured:
-          name: Docs
+          name: Website
           link: https://energy-pricing-journalist.onrender.com
         badges:
           - "Chronos2"
