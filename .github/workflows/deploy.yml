@@ -34,6 +34,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
+          # Fixed syntax: changed ":" to "."
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
@@ -42,11 +43,6 @@ jobs:
         with:
           node-version: '20'
 
-      # NEW: This step fetches your GitHub Pages metadata (like the URL)
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
@@ -54,11 +50,11 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-        # UPDATED: Added the --baseURL flag using the URL from the Setup Pages step
+        # We are hardcoding the baseURL here to match your GitHub subpath exactly
         run: |
           cd arendesai.com && hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://arenkdesai.github.io/ArenWebsite/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
