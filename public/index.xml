@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>arendesai.com</title>
+    <title>Home on arendesai.com</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on arendesai.com</description>
+    <description>Recent content in Home on arendesai.com</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Experience</title>
+      <link>http://localhost:1313/experience/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/experience/</guid>
+      <description>&lt;h3 id=&#34;energy-supply-analyst&#34;&gt;Energy Supply Analyst&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Madison Gas and Electric&lt;/strong&gt; | &lt;em&gt;September 2025 - Present&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Leveraged deep-learning model frameworks and cloud technologies to produce meaningful solutions for our energy traders.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;energy-supply-and-trading-intern&#34;&gt;Energy Supply and Trading Intern&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Madison Gas and Electric&lt;/strong&gt; | &lt;em&gt;May 2024 - August 2025&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Despite the title, I mostly model machine learning and deep learning models to analyze the MISO grid. My projects include a simulation of MISO&amp;rsquo;s optimization algorithm on MGE&amp;rsquo;s load-managing resources and an LMP forecaster.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;h3 id=&#34;energy-price-journalist&#34;&gt;Energy Price Journalist&lt;/h3&gt;&#xA;&lt;p&gt;5-minute Real-Time prices from 300+ CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/energypricingjournalist.png&#34; alt=&#34;Energy Price Journalist&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Links:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://energy-pricing-journalist.onrender.com&#34;&gt;Website&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ArenKDesai/Energy-Pricing-Journalist&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Badges:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Chronos2&lt;/li&gt;&#xA;&lt;li&gt;Polars&lt;/li&gt;&#xA;&lt;li&gt;DuckDB&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -1,277 +1,53 @@
 baseURL: "https://hugo-profile.netlify.app"
 title: "arendesai.com"
-theme: hugo-profile
+theme: "hugo-bearblog"
 
 # Language configuration
 defaultContentLanguage: "en"
 defaultContentLanguageInSubdir: false
 
-languages:
-  en:
-    languageName: "English"
-    languageCode: "en-us"
-    weight: 1
-    title: "arendesai.com"
-    params:
-      description: "Aren Desai's professional website."
-      hero:
-        intro: "Hi, my name is"
-        title: "Aren."
-        subtitle: "I'm a data scientist."
-        content: "I'm also a machine learning engineer and energy market analyst."
-      about:
-        title: "About Me"
-        content: |-
-          I am a data scientist, machine learning engineer, and energy market analyst who leverages powerful deep-learning tools to predict the movement of trades in the MISO and PJM grids. 
+# languages:
+#   en:
+#     languageName: "English"
+#     languageCode: "en-us"
+#     weight: 1
+#     title: "arendesai.com"
+#     params:
+#       author: "Aren Desai"
+#       description: "Aren Desai's professional website. Data scientist, machine learning engineer, and energy market analyst."
+#
+#   zh:
+#     languageName: "中文"
+#     languageCode: "zh-cn"
+#     weight: 2
+#     title: "arendesai.com"
+#     params:
+#       author: "Aren Desai"
+#       description: "Aren Desai的网站。"
 
-          I studied computer science and data science as an undergraduate at the University of Wisconsin Madison, where I was also the finance lead of the Google Developer Student Club and a member of the robotics team.
-        skills:
-          title: "Here are a few tools I've been working with recently:"
-      
-  zh:
-    languageName: "中文"
-    languageCode: "zh-cn"
-    weight: 2
-    title: "arendesai.com"
-    params:
-      description: "Aren Desai的网站。"
-      hero:
-        intro: "你好！我叫"
-        title: "Aren。"
-        subtitle: "我是数据科学家。"
-        content: ""
-      about:
-        title: ""
-        content: |-
-          TODO
-        skills:
-          title: ""
-
-outputs:
-  home:
-    - "HTML"
-    - "RSS"
-    - "JSON"
-  page:
-    - "HTML"
-    - "RSS"
-
+# Robots.txt
 enableRobotsTXT: true
 
-pagination:
-  pagerSize: 3
+# Bearblog specific params
+params:
+  # General
+  author: "Aren Desai"
+  description: "Aren Desai's professional website."
+  
+  # Theme customization
+  color:
+    # You can customize these colors
+    # background: "#fff"
+    # text: "#000"
+    # anchor: "#00f"
+    
+  # Favicon
+  favicon: "/images/fav.png"
+
+  # Footer
+  footer: "Copyright © 2025 Aren Desai."
 
 markup:
   goldmark:
     renderer:
       unsafe: true
-
-# TODO: enable this when the Chinese section is complete. 
-# Menus:
-#   main:
-#     - identifier: zh
-#       name: 中文
-#       url: /zh
-#       weight: 1
-
-params:
-  title: "arendesai.com"
-  favicon: "/images/fav.png"
-  useBootstrapCDN: false
-  mathjax: false
-  animate: true
-
-  theme:
-    # disableThemeToggle: true
-    # defaultTheme: "light" # dark
-
-  font:
-    fontSize: 1rem
-    fontWeight: 400
-    lineHeight: 1.5
-    textAlign: left
-
-  color:
-    textColor: "#343a40"
-    secondaryTextColor: "#6c757d"
-    textLinkColor: "#009B77"
-    backgroundColor: "#eaedf0"
-    secondaryBackgroundColor: "#64ffda1a"
-    primaryColor: "#009B77"
-    secondaryColor: "#f8f9fa"
-
-    darkmode:
-      textColor: "#e4e6eb"
-      secondaryTextColor: "#b0b3b8"
-      textLinkColor: "#ADDFB3"
-      backgroundColor: "#18191a"
-      secondaryBackgroundColor: "#212529"
-      primaryColor: "#ADDFB3"
-      secondaryColor: "#212529"
-
-  navbar:
-    align: ms-auto
-    brandName: "arendesai.com"
-    disableSearch: true
-    stickyNavBar:
-      enable: true
-      showOnScrollUp: true
-    enableSeparator: false
-    menus:
-      disableAbout: false
-      disableExperience: false
-      disableEducation: false
-      disableProjects: false
-      disableAchievements: false
-      disableContact: false
-
-  # Hero section (English defaults, Chinese overridden above)
-  hero:
-    enable: true
-    image: "/images/faceSmall.jpg"
-    bottomImage:
-      enable: true
-    button:
-      enable: true
-      name: "Resume"
-      url: "/documents/resume.pdf"
-      download: true
-      newPage: true
-    socialLinks:
-      fontAwesomeIcons:
-        - icon: fab fa-github
-          url: https://github.com/ArenKDesai
-        - icon: fab fa-linkedin
-          url: https://www.linkedin.com/in/aren-desai-aba931241/
-
-  # About section (defaults, overridden per language)
-  about:
-    enable: true
-    image: "/images/me.jpg"
-    skills:
-      enable: true
-      items:
-        - "Python"
-        - "PyTorch"
-        - "SciKit-Learn"
-        - "Apache Airflow"
-        - "TensorFlow"
-        - "OR-Tools"
-
-  # Experience (you'll want to translate these too)
-  experience:
-    enable: true
-    items:
-      - job: "Energy Supply Analyst"
-        company: "Madison Gas and Electric"
-        companyUrl: "https://www.mge.com/"
-        date: "September 2025 - Present"
-        content: "Leveraged deep-learning model frameworks and cloud technologies to produce meaninful solutions for our energy traders."
-    
-      - job: "Energy Supply and Trading Intern"
-        company: "Madison Gas and Electric"
-        companyUrl: "https://www.mge.com/"
-        date: "May 2024 - August 2025"
-        content: "Despite the title, I mostly model machine learning and deep learning models to analyze the MISO grid. My projects include a simulation of MISO's optimization algorithm on MGE's load-managing resources and an LMP forecaster."
-
-      - job: "Data Analytics Intern"
-        company: "Compeer Financial"
-        companyUrl: "https://www.compeer.com/"
-        date: "Jan 2023 - May 2024"
-        content: "I modeled and analyzed the risk of loans to farmers that might fall into RAU - the Risk Asset Unit."
-
-  # Education
-  education:
-    enable: true
-    index: false
-    items:
-      - title: "Bachelor's of Science in Computer Science and Data Science"
-        school:
-          name: "University of Wisconsin, Madison"
-          url: "https://www.wisc.edu/"
-        date: "2021 - 2025"
-        content: |-
-          Extracurricular Activities
-            - **Finance lead** of the **Google Developer Student Club**
-            - **Robotics** team member
-            - Data science **peer mentor**
-            - Badminton club member
-
-      - title: "High School"
-        school:
-          name: "McFarland High School"
-        date: "2017 - 2021"
-        content: |-
-          Extracurricular Activities
-            - Driftwood Literary Arts member
-            - National Honor Society member
-
-  # Achievements
-  achievements:
-    enable: true
-    items:
-      - title: GCP Professinoal Machine Learning Engineer Certification
-        content: Passed the certification exam on 8/13/2025 (view here).
-        url: "https://www.credly.com/badges/ccc75566-4cfc-4b61-97e6-72488c0503e1/public_url"
-      - title: FICO DMP Certification
-        content: Completed the training course for Compeer Financial in 2024.
-      - title: Hackathon Judge
-        content: Judged for the UW Madison Google Developer Student Club's 2024 Cheesehacks hackathon with over 100 applications and a $2,500 prize pool.
-
-  # Projects
-  projects:
-    enable: true
-    items:
-      - title: Energy Price Journalist
-        content: 5-minute Real-Time prices from 300+ CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions. 
-        image: /images/energypricingjournalist.png
-        featured:
-          name: Website
-          link: https://energy-pricing-journalist.onrender.com
-        badges:
-          - "Chronos2"
-          - "Polars"
-          - "DuckDB"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/ArenKDesai/Energy-Pricing-Journalist
-
-  # Contact
-  contact:
-    enable: false
-
-  footer:
-    recentPosts:
-      path: "blogs"
-      count: 3
-      title: Recent Posts
-      enable: true
-      disableFeaturedImage: false
-    socialNetworks:
-      github: https://github.com/ArenKDesai
-      linkedin: https://www.linkedin.com/in/aren-desai-aba931241/
-
-  listPages:
-    disableFeaturedImage: false
-
-  singlePages:
-    socialShare: true
-    readTime:
-      enable: true
-      content: "min read"
-    scrollprogress:
-      enable: true
-    tags:
-      openInNewTab: true
-
-  terms:
-    read: "Read"
-    toc: "Table Of Contents"
-    copyright: "All rights reserved"
-    pageNotFound: "Page not found"
-    emailText: "Check out this site"
-
-  datesFormat:
-    article: "Jan 2, 2006"
-    articleList: "Jan 2, 2006"
-    articleRecent: "Jan 2, 2006"
