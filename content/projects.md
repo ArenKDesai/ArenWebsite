@@ -1,20 +1,20 @@
 ---
-title: "Projects"
-date: 2025-01-24
-menu: main
+date: 2026-01-26
 ---
 
-### Energy Price Journalist
+## Personal Projects
 
-5-minute Real-Time prices from 300+ CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions.
+### Energy Pricing Journalist
+**Link:** [energy-pricing-journalist.onrender.com](https://energy-pricing-journalist.onrender.com)
 
-![Energy Price Journalist](/images/energypricingjournalist.png)
+![Energy Pricing Journalist](/images/energypricingjournalist.png)
 
-**Links:**
-- [Website](https://energy-pricing-journalist.onrender.com)
-- [GitHub](https://github.com/ArenKDesai/Energy-Pricing-Journalist)
+*   Organized continuous download and analysis of real-time locational marginal price data for **300+ pricing nodes** with **Polars** and **DuckDB**.
+*   Published a live webpage of two weeks historic real-time pricing alongside a two hour future forecast for each pricing node with **Cloudflare**, **Plotly**, and **Chronos2**.
+*   Orchestrated the deployment of the backend on a local Linux machine and frontend on renderhub.com with a Cloudflare bucket handling the data pipeline, utilizing **Docker Compose** for ease of use.
 
-**Badges:**
-- Chronos2
-- Polars
-- DuckDB
+### WRoverSoftware
+**Link:** [github.com/WisconsinRobotics/WRoverSoftware](https://github.com/WisconsinRobotics/WRoverSoftware)
+
+*   Modeled robotic arm movement in **Rviz** and **Gazebo** using **RelaxedIK** for smooth motion planning.
+*   Transmitted and compiled **CAN messages** for motor controllers with **ROS2 nodes**.

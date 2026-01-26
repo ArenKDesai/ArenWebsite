@@ -1,25 +1,23 @@
 ---
 title: "Home"
-date: 2025-01-24
+date: 2026-01-26
 ---
 
-# Hi, my name is Aren.
+# Hi, I'm Aren Desai.
 
-![Aren Desai](/images/me.jpg)
+<img src="/images/faceSmall.jpg" alt="Aren Desai" style="width: 250px; border-radius: 12px; float: left; margin-right: 30px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
 
-I'm a data scientist. I'm also a machine learning engineer and energy market analyst.
+I am a **Data Scientist**, **Machine Learning Engineer**, and **Energy Market Analyst** based in Madison, WI. 
 
-## About Me
+I specialize in leveraging advanced statistical analysis, deep learning, and cloud technologies to solve complex problems in the energy and finance sectors.
 
-I am a data scientist, machine learning engineer, and energy market analyst who leverages powerful deep-learning tools to predict the movement of trades in the MISO and PJM grids.
+My work involves developing probabilistic models, analyzing complex time series relations, and building scalable data pipelines using tools like **Python**, **SQL**, **Apache Airflow**, and **Google Cloud Platform**.
 
-I studied computer science and data science as an undergraduate at the University of Wisconsin Madison, where I was also the finance lead of the Google Developer Student Club and a member of the robotics team.
+Feel free to browse my [Experience](/experience/), [Projects](/projects/), and [Skills](/skills/) to learn more about my work.
 
-### Skills
-Here are a few tools I've been working with recently:
-- Python
-- Machine Learning
-- Deep Learning
-- Apache Airflow
-- Docker
-- Linux
+<div style="clear: both;"></div>
+
+### Contact Me
+- **Email:** [arenkdesai@gmail.com](mailto:arenkdesai@gmail.com)
+- **GitHub:** [github.com/ArenKDesai](https://github.com/ArenKDesai)
+

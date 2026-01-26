@@ -1,26 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Home on arendesai.com</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Home on arendesai.com</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 24 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Experience</title>
-      <link>http://localhost:1313/experience/</link>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/</guid>
-      <description>&lt;h3 id=&#34;energy-supply-analyst&#34;&gt;Energy Supply Analyst&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Madison Gas and Electric&lt;/strong&gt; | &lt;em&gt;September 2025 - Present&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Leveraged deep-learning model frameworks and cloud technologies to produce meaningful solutions for our energy traders.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;energy-supply-and-trading-intern&#34;&gt;Energy Supply and Trading Intern&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Madison Gas and Electric&lt;/strong&gt; | &lt;em&gt;May 2024 - August 2025&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Despite the title, I mostly model machine learning and deep learning models to analyze the MISO grid. My projects include a simulation of MISO&amp;rsquo;s optimization algorithm on MGE&amp;rsquo;s load-managing resources and an LMP forecaster.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description>&lt;h3 id=&#34;energy-price-journalist&#34;&gt;Energy Price Journalist&lt;/h3&gt;&#xA;&lt;p&gt;5-minute Real-Time prices from 300+ CPNodes in the MISO market, saved in a duckdb persistant table on a local server and uploaded to a cloudflare plotly dashboard with Chronos2 predictions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/energypricingjournalist.png&#34; alt=&#34;Energy Price Journalist&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Links:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://energy-pricing-journalist.onrender.com&#34;&gt;Website&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ArenKDesai/Energy-Pricing-Journalist&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Badges:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Chronos2&lt;/li&gt;&#xA;&lt;li&gt;Polars&lt;/li&gt;&#xA;&lt;li&gt;DuckDB&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Aren Desai</title><link>https://arendesai.com/</link><description>Recent content in Home on Aren Desai</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://arendesai.com/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://arendesai.com/education/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><guid>https://arendesai.com/education/</guid><description>&lt;h2 id="education">Education&lt;/h2>
+&lt;h3 id="university-of-wisconsin---madison">University of Wisconsin - Madison&lt;/h3>
+&lt;p>&lt;strong>B.S. in Computer Science and Data Science&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Coursework:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Intro to Geographical Information Systems&lt;/li>
+&lt;li>Intro to Artificial Intelligence&lt;/li>
+&lt;li>Numerical Linear Algebra&lt;/li>
+&lt;li>Applied Multivariate Analysis&lt;/li>
+&lt;li>Intro to Big Data Systems&lt;/li>
+&lt;li>Intro to Algorithms&lt;/li>
+&lt;li>Data Ethics and Policy&lt;/li>
+&lt;li>Intro to Operating Systems&lt;/li>
+&lt;li>Accelerated Honors Computer Graphics&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="certifications">Certifications&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Google Cloud - Professional Machine Learning Engineer Certification&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>FICO - FICO DMP Certification&lt;/strong>&lt;/li>
+&lt;/ul></description></item><item><title/><link>https://arendesai.com/experience/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><guid>https://arendesai.com/experience/</guid><description>&lt;h2 id="professional-experience">Professional Experience&lt;/h2>
+&lt;h3 id="energy-supply-analyst">Energy Supply Analyst&lt;/h3>
+&lt;p>&lt;strong>Madison Gas and Electric&lt;/strong> | &lt;em>May 2024 - Present&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>Helped avoid &lt;strong>$150,150+/yr&lt;/strong> in fees by developing a probabilistic resource adequacy hour classification model with &lt;strong>scikit-learn&lt;/strong> in Python.&lt;/li>
+&lt;li>Produced &lt;strong>$73,000+/yr&lt;/strong> in revenue with ESRs in the day-ahead market by leveraging &lt;strong>Monte Carlo simulations&lt;/strong> to find optimal price arbitrage strategies.&lt;/li>
+&lt;li>Generated &lt;strong>$36,500+/yr&lt;/strong> in extra revenue by improving MGE’s day-ahead locational marginal price forecast by fine-tuning a pre-trained covariate forecasting model.&lt;/li>
+&lt;li>Reduced overhead management costs by scheduling machine learning models and data pipelines with &lt;strong>Apache Airflow&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="energy-supply-and-trading-intern">Energy Supply and Trading Intern&lt;/h3>
+&lt;p>&lt;strong>Madison Gas and Electric&lt;/strong> | &lt;em>May 2024 - August 2025&lt;/em>&lt;/p></description></item><item><title/><link>https://arendesai.com/projects/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><guid>https://arendesai.com/projects/</guid><description>&lt;h2 id="personal-projects">Personal Projects&lt;/h2>
+&lt;h3 id="energy-pricing-journalist">Energy Pricing Journalist&lt;/h3>
+&lt;p>&lt;strong>Link:&lt;/strong> &lt;a href="https://energy-pricing-journalist.onrender.com">energy-pricing-journalist.onrender.com&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://arendesai.com/images/energypricingjournalist.png" alt="Energy Pricing Journalist">&lt;/p>
+&lt;ul>
+&lt;li>Organized continuous download and analysis of real-time locational marginal price data for &lt;strong>300+ pricing nodes&lt;/strong> with &lt;strong>Polars&lt;/strong> and &lt;strong>DuckDB&lt;/strong>.&lt;/li>
+&lt;li>Published a live webpage of two weeks historic real-time pricing alongside a two hour future forecast for each pricing node with &lt;strong>Cloudflare&lt;/strong>, &lt;strong>Plotly&lt;/strong>, and &lt;strong>Chronos2&lt;/strong>.&lt;/li>
+&lt;li>Orchestrated the deployment of the backend on a local Linux machine and frontend on renderhub.com with a Cloudflare bucket handling the data pipeline, utilizing &lt;strong>Docker Compose&lt;/strong> for ease of use.&lt;/li>
+&lt;/ul>
+&lt;h3 id="wroversoftware">WRoverSoftware&lt;/h3>
+&lt;p>&lt;strong>Link:&lt;/strong> &lt;a href="https://github.com/WisconsinRobotics/WRoverSoftware">github.com/WisconsinRobotics/WRoverSoftware&lt;/a>&lt;/p></description></item><item><title/><link>https://arendesai.com/skills/</link><pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><guid>https://arendesai.com/skills/</guid><description>&lt;h2 id="skills">Skills&lt;/h2>
+&lt;h3 id="technical-skills">Technical Skills&lt;/h3>
+&lt;ul>
+&lt;li>Machine Learning&lt;/li>
+&lt;li>Statistical Analysis&lt;/li>
+&lt;li>Data Mining&lt;/li>
+&lt;li>Data Modeling&lt;/li>
+&lt;li>Data Visualization&lt;/li>
+&lt;/ul>
+&lt;h3 id="software-skills">Software Skills&lt;/h3>
+&lt;p>&lt;strong>Data Analysis &amp;amp; Manipulation:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Pandas&lt;/li>
+&lt;li>Polars&lt;/li>
+&lt;li>SQL&lt;/li>
+&lt;li>DuckDB&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Machine Learning &amp;amp; AI:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>PyTorch&lt;/li>
+&lt;li>TensorFlow&lt;/li>
+&lt;li>Scikit-Learn&lt;/li>
+&lt;li>SciPy&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Cloud &amp;amp; DevOps:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Google Cloud Platform (GCP)&lt;/li>
+&lt;li>Microsoft Azure&lt;/li>
+&lt;li>Docker&lt;/li>
+&lt;li>Clouflare&lt;/li>
+&lt;li>Apache Airflow&lt;/li>
+&lt;li>Linux&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Visualization:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>PowerBI&lt;/li>
+&lt;li>Matplotlib&lt;/li>
+&lt;li>Seaborn&lt;/li>
+&lt;li>Plotly&lt;/li>
+&lt;/ul>
+&lt;h3 id="programming-languages">Programming Languages&lt;/h3>
+&lt;ul>
+&lt;li>Python&lt;/li>
+&lt;li>R&lt;/li>
+&lt;li>SQL&lt;/li>
+&lt;li>Java&lt;/li>
+&lt;li>C++&lt;/li>
+&lt;/ul></description></item></channel></rss>

@@ -1,51 +1,62 @@
-baseURL: "https://hugo-profile.netlify.app"
-title: "arendesai.com"
-theme: "hugo-bearblog"
+baseURL: "https://arendesai.com"
+title: "Aren Desai"
+theme: "mainroad"
 
-# Language configuration
-defaultContentLanguage: "en"
-defaultContentLanguageInSubdir: false
+languageCode: "en-us"
 
-# languages:
-#   en:
-#     languageName: "English"
-#     languageCode: "en-us"
-#     weight: 1
-#     title: "arendesai.com"
-#     params:
-#       author: "Aren Desai"
-#       description: "Aren Desai's professional website. Data scientist, machine learning engineer, and energy market analyst."
-#
-#   zh:
-#     languageName: "中文"
-#     languageCode: "zh-cn"
-#     weight: 2
-#     title: "arendesai.com"
-#     params:
-#       author: "Aren Desai"
-#       description: "Aren Desai的网站。"
-
-# Robots.txt
-enableRobotsTXT: true
-
-# Bearblog specific params
+# Mainroad parameter configuration
 params:
-  # General
+  description: "Aren Desai's professional website. Data scientist, machine learning engineer, and energy market analyst."
   author: "Aren Desai"
-  description: "Aren Desai's professional website."
-  
-  # Theme customization
-  color:
-    # You can customize these colors
-    # background: "#fff"
-    # text: "#000"
-    # anchor: "#00f"
-    
-  # Favicon
-  favicon: "/images/fav.png"
+  opengraph: true
+  twitter_cards: false
+  readmore: true
+  # Mainroad style configuration
+  style:
+    vars:
+      highlightColor: "#a7c080" # Everforest Green
+      fontFamilyPrimary: "'Inter', 'Open Sans', Helvetica, Arial, sans-serif"
 
-  # Footer
-  footer: "Copyright © 2025 Aren Desai."
+  # Sidebar: left/right/false
+  sidebar:
+    home: false
+    list: false
+    single: false
+    widgets:
+      # - search  <-- Removed as requested
+      - recent
+      - categories
+      - taglist
+      - social
+  
+  # Social links (Mainroad specific)
+  social:
+    github: "ArenKDesai"
+    email: "arenkdesai@gmail.com"
+    linkedin: "aren-desai" # Assuming linkedin based on name, can remove if not known, but often standard. User gave github/email.
+    # User provided: github.com/ArenKDesai, arendesai.com, arenkdesai@gmail.com
+  
+  # Custom CSS
+  customCSS: ["css/everforest.css"]
+
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Experience
+      url: /experience/
+      weight: 2
+    - name: Projects
+      url: /projects/
+      weight: 3
+    - name: Education
+      url: /education/
+      weight: 4
+    - name: Skills
+      url: /skills/
+      weight: 5
 
 markup:
   goldmark:
