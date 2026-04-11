@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="generator" content="Hugo 0.160.1">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aren Desai</title>
-  <meta name="description" content="Aren Desai — Data Scientist specializing in energy, forecasting, and risk.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="icon" href="/favicon.png">
-</head>
-<body>
-  
+{{ define "main" }}
 <nav class="nav">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
@@ -40,7 +25,7 @@
 
 <div class="page-body">
 
-    
+    <!-- Experience -->
     <div class="card" id="experience">
         <div class="card-header">
             <span class="card-title">Experience</span>
@@ -106,7 +91,7 @@
         </div>
     </div>
 
-    
+    <!-- Projects -->
     <div id="projects" class="projects-section">
         <div class="card-header">
             <span class="card-title">Projects</span>
@@ -142,7 +127,7 @@
         </div>
     </div>
 
-    
+    <!-- Education -->
     <div class="card" id="education">
         <div class="card-header">
             <span class="card-title">Education</span>
@@ -177,7 +162,7 @@
         </div>
     </div>
 
-    
+    <!-- Skills -->
     <div class="card" id="skills">
         <div class="card-header">
             <span class="card-title">Skills</span>
@@ -229,6 +214,4 @@
 <footer class="footer">
     Aren Desai &mdash; Madison, WI
 </footer>
-
-</body>
-</html>
+{{ end }}
