@@ -3,15 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Site.Title }}</title>
-  <meta name="description" content="Aren Desai — Data Scientist specializing in energy, forecasting, and risk.">
+  <title>{{ .Site.Title }} // open cv</title>
+  <meta name="description" content="Aren Desai - data scientist working on forecasting, optimization, and risk in wholesale power markets.">
+  <meta name="theme-color" content="#040605">
+
+  <meta property="og:title" content="Aren Desai // open cv">
+  <meta property="og:description" content="Data scientist. Forecasting, optimization, and risk in wholesale power markets.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://arendesai.com">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="icon" href="/favicon.png">
 </head>
 <body>
+
+  <!-- boot sequence -->
+  <div id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <div id="boot-log"></div>
+      <div class="boot-skip">[ click / any key to skip ]</div>
+    </div>
+  </div>
+
+  <!-- CRT overlays -->
+  <div class="fx fx-scan" aria-hidden="true"></div>
+  <div class="fx fx-grain" aria-hidden="true"></div>
+  <div class="fx fx-vig" aria-hidden="true"></div>
+  <div class="fx fx-flicker" aria-hidden="true"></div>
+
+  <!-- fixed HUD frame -->
+  <div class="hud" aria-hidden="true">
+    <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+    <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+    <div class="hud-rail left"></div><div class="hud-rail right"></div>
+    <div class="hud-bar">
+      <span><i class="dot"></i>unit: desai.a.k</span>
+      <span class="ok">signal nominal</span>
+      <span id="hud-clock">--:--:-- cdt</span>
+    </div>
+    <div class="hud-foot">
+      <span>43.0731&deg;n 89.4012&deg;w // madison wi</span>
+      <span id="hud-scroll">depth 000%</span>
+    </div>
+    <div class="hud-crosshair" id="hud-xy">x 000 y 000</div>
+  </div>
+
   {{ block "main" . }}{{ end }}
+
+  <!-- console -->
+  <div class="console-hint" id="console-hint">press <b>~</b> for console</div>
+  <div id="console" aria-hidden="true">
+    <div class="con-bar">
+      <span>aren@arendesai.com &mdash; /dev/tty0</span>
+      <span>esc to close</span>
+    </div>
+    <div class="con-out" id="con-out"></div>
+    <form class="con-in" id="con-form" autocomplete="off">
+      <span>&gt;</span>
+      <input id="con-input" type="text" spellcheck="false" aria-label="console input">
+    </form>
+  </div>
+
+  <script src="/js/site.js" defer></script>
 </body>
 </html>
