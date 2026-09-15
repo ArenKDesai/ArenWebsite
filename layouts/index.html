@@ -1,296 +1,39 @@
 {{ define "main" }}
 
-<nav class="nav" aria-label="section navigation">
-  <a href="#ident">00<b>ident</b></a>
-  <a href="#experience">01<b>experience</b></a>
-  <a href="#projects">02<b>projects</b></a>
-  <a href="#education">03<b>education</b></a>
-  <a href="#stack">04<b>stack</b></a>
-  <a href="#contact">05<b>contact</b></a>
-</nav>
+<main class="stage">
+  <div class="card-wrap">
+  <div class="card-shadow" aria-hidden="true"></div>
 
-<main>
-
-  <!-- ══ 00 IDENT ═══════════════════════════════════════════ -->
-  <header class="hero" id="ident">
-    <div>
-      <div class="eyebrow">open cv &middot; rev 2026.09</div>
-
-      <h1 class="hero-name"><span class="glitch" data-text="aren desai">aren desai</span></h1>
-
-      <div class="hero-role">data scientist <em>//</em> energy markets</div>
-
-      <p class="hero-blurb">
-        I build forecasting and optimization systems that decide when
-        <strong>real megawatts</strong> get bought, sold, and stored. Currently at
-        <strong>Madison Gas &amp; Electric</strong>, running production ML against the
-        <strong>MISO</strong> day-ahead and real-time markets.
-      </p>
-
-      <div class="spec">
-        <div><b>unit</b><i></i><span>desai, aren k.</span></div>
-        <div><b>class</b><i></i><span>data scientist</span></div>
-        <div><b>core</b><i></i><span>forecasting / optimization</span></div>
-        <div><b>grid</b><i></i><span>miso &mdash; zone 2</span></div>
-        <div><b>node</b><i></i><span>madison, wi</span></div>
-        <div><b>status</b><i></i><span id="spec-status">operational</span></div>
-      </div>
-
-      <div class="hero-links">
-        <a class="chip" href="mailto:arenkdesai@gmail.com">&#9993; arenkdesai@gmail.com</a>
-        <a class="chip" href="https://github.com/ArenKDesai">&#8599; github</a>
-        <a class="chip" href="/documents/resume.pdf">&#8595; resume.pdf</a>
-        <button class="chip ghost" type="button" id="open-console-btn">&gt;_ console</button>
-      </div>
+  <div class="card" role="group" aria-label="Aren Desai — business card">
+    <div class="card-left">
+      <img class="card-photo" src="/images/faceSmall.jpg" alt="Aren Desai">
+      <div class="card-name">Aren Desai</div>
+      <div class="card-rule" aria-hidden="true"></div>
+      <div class="card-tagline">Data Science<br><span class="card-tagline-sub">for Energy, Finance,<br>and Forecasting</span></div>
     </div>
 
-    <figure class="figure">
-      <div class="figure-frame">
-        <img src="/images/faceSmall.jpg" alt="Aren Desai">
-        <div class="figure-scan"></div>
-      </div>
-      <span class="figure-tag tag-a">ocular array // nominal</span>
-      <span class="figure-tag tag-b">throughput 1.4e3 rows/s</span>
-      <span class="figure-tag tag-c">heat sink // caffeine</span>
-      <figcaption class="figure-cap">
-        <span>fig. 01 &mdash; operator</span>
-        <span>scan 0x1f</span>
-      </figcaption>
-    </figure>
-  </header>
-
-  <!-- ══ 01 EXPERIENCE ══════════════════════════════════════ -->
-  <section class="section reveal" id="experience">
-    <div class="section-head">
-      <span class="section-idx">01</span>
-      <h2 class="section-title" data-scramble>experience</h2>
-      <span class="section-meta">4 records</span>
-    </div>
-
-    <div class="timeline">
-
-      <article class="entry">
-        <div class="entry-when">may 2024<b>&mdash; present</b></div>
-        <div class="entry-spine"></div>
-        <div>
-          <h3 class="entry-role">Energy Supply Analyst</h3>
-          <div class="entry-org">Madison Gas &amp; Electric</div>
-          <ul>
-            <li>Avoided <strong>$150,150+/yr</strong> in fees with a probabilistic resource-adequacy hour classification model in <em>scikit-learn</em>.</li>
-            <li>Produced <strong>$73,000+/yr</strong> in revenue bidding ESRs into the day-ahead market, using <em>Monte Carlo</em> simulation for price arbitrage.</li>
-            <li>Generated <strong>$36,500+/yr</strong> by improving MGE's day-ahead LMP forecast via a fine-tuned covariate forecasting model.</li>
-            <li>Cut overhead by scheduling ML models and data pipelines on <em>Apache Airflow</em>.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="entry-when">may 2024<b>&mdash; aug 2025</b></div>
-        <div class="entry-spine"></div>
-        <div>
-          <h3 class="entry-role">Energy Supply &amp; Trading Intern</h3>
-          <div class="entry-org">Madison Gas &amp; Electric</div>
-          <ul>
-            <li>Accelerated MGE's MISO market simulation engine by <strong>97.3%</strong> with <em>SciPy</em> optimization routines and <em>Google OR-Tools</em>.</li>
-            <li>Prototyped a multi-horizon day-ahead LMP forecaster in <em>PyTorch</em>.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="entry-when">jan 2023<b>&mdash; jan 2024</b></div>
-        <div class="entry-spine"></div>
-        <div>
-          <h3 class="entry-role">Data Analytics Intern</h3>
-          <div class="entry-org">Compeer Financial</div>
-          <ul>
-            <li>Built a <em>scikit-learn</em> loan-risk model for the risk analysis team.</li>
-            <li>Introduced <em>PyTorch</em> and machine learning into Compeer's tech stack.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="entry-when">sep 2023<b>&mdash; may 2024</b></div>
-        <div class="entry-spine"></div>
-        <div>
-          <h3 class="entry-role">Finance Lead</h3>
-          <div class="entry-org">Google Developer Student Club</div>
-          <ul>
-            <li>Ran the GDSC account; planned meetings, tech talks, and workshops.</li>
-            <li>Judged the 2024 Cheesehacks hackathon.</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ══ 02 PROJECTS ════════════════════════════════════════ -->
-  <section class="section reveal" id="projects">
-    <div class="section-head">
-      <span class="section-idx">02</span>
-      <h2 class="section-title" data-scramble>projects</h2>
-      <span class="section-meta">2 deployed</span>
-    </div>
-
-    <div class="grid-2">
-
-      <article class="proj">
-        <div class="proj-bar">
-          <span>proc/01 &mdash; energy-pricing-journalist</span>
-          <span class="lights"><i></i><i></i><i></i></span>
-        </div>
-        <div class="proj-shot">
-          <img src="/images/energypricingjournalist.png" alt="Energy Pricing Journalist dashboard">
-        </div>
-        <div class="proj-body">
-          <h3 class="proj-name">Energy Pricing Journalist</h3>
-          <ul>
-            <li>Continuous ingest and analysis of real-time LMP data across <strong>300+ pricing nodes</strong> with Polars and DuckDB.</li>
-            <li>Live dashboard: two weeks of history, two-hour forecasts via <strong>Chronos2</strong> and Plotly.</li>
-            <li>Linux backend on Docker Compose; Cloudflare bucket behind the pipeline.</li>
-          </ul>
-          <div class="tags"><span>polars</span><span>duckdb</span><span>chronos2</span><span>plotly</span><span>docker</span></div>
-          <a class="proj-go" href="https://energy-pricing-journalist.onrender.com">open live &#8599;</a>
-        </div>
-      </article>
-
-      <article class="proj">
-        <div class="proj-bar">
-          <span>proc/02 &mdash; wrover-software</span>
-          <span class="lights"><i></i><i></i><i></i></span>
-        </div>
-        <div class="proj-ascii" aria-hidden="true">      [o]---------.
-       |          \
-     __|__      .--o--.
-    |  :  |    /   |   \
-    |__:__|   '----+----'
-       |           |
-   ====+====   ====+====</div>
-        <div class="proj-body">
-          <h3 class="proj-name">WRoverSoftware</h3>
-          <ul>
-            <li>Modeled robotic arm motion in <strong>Rviz</strong> and <strong>Gazebo</strong>, using RelaxedIK for smooth planning.</li>
-            <li>Transmitted and compiled <strong>CAN messages</strong> for motor controllers through ROS2 nodes.</li>
-          </ul>
-          <div class="tags"><span>ros2</span><span>gazebo</span><span>relaxedik</span><span>can bus</span><span>c++</span></div>
-          <a class="proj-go" href="https://github.com/WisconsinRobotics/WRoverSoftware">open source &#8599;</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ══ 03 EDUCATION ═══════════════════════════════════════ -->
-  <section class="section reveal" id="education">
-    <div class="section-head">
-      <span class="section-idx">03</span>
-      <h2 class="section-title" data-scramble>education</h2>
-      <span class="section-meta">verified</span>
-    </div>
-
-    <div class="split">
-      <div class="panel">
-        <div class="kv-title">degree</div>
-        <div class="degree">B.S. Computer Science &amp; Data Science</div>
-        <div class="school">University of Wisconsin &mdash; Madison</div>
-        <div class="chips">
-          <span>artificial intelligence</span>
-          <span>numerical linear algebra</span>
-          <span>applied multivariate analysis</span>
-          <span>big data systems</span>
-          <span>algorithms</span>
-          <span>operating systems</span>
-          <span>computer graphics</span>
-          <span>gis</span>
-          <span>data ethics &amp; policy</span>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="kv-title">certifications</div>
-        <div class="cert">Google Cloud &mdash; Professional ML Engineer</div>
-        <div class="cert">FICO &mdash; DMP Certification</div>
-        <div class="kv-title" style="margin-top:1.6rem">field notes</div>
-        <div class="chips">
-          <span>miso day-ahead &amp; rtm</span>
-          <span>resource adequacy</span>
-          <span>storage arbitrage</span>
-          <span>probabilistic forecasting</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 04 STACK ═══════════════════════════════════════════ -->
-  <section class="section reveal" id="stack">
-    <div class="section-head">
-      <span class="section-idx">04</span>
-      <h2 class="section-title" data-scramble>stack</h2>
-      <span class="section-meta">loaded modules</span>
-    </div>
-
-    <div class="panel">
-      <div class="skills">
-        <div>
-          <div class="kv-title">languages</div>
-          <div class="chips"><span>python</span><span>r</span><span>sql</span><span>java</span><span>c++</span></div>
-        </div>
-        <div>
-          <div class="kv-title">ml &amp; ai</div>
-          <div class="chips"><span>pytorch</span><span>tensorflow</span><span>scikit-learn</span><span>scipy</span><span>or-tools</span></div>
-        </div>
-        <div>
-          <div class="kv-title">data</div>
-          <div class="chips"><span>pandas</span><span>polars</span><span>duckdb</span><span>airflow</span></div>
-        </div>
-        <div>
-          <div class="kv-title">cloud &amp; devops</div>
-          <div class="chips"><span>gcp</span><span>azure</span><span>docker</span><span>cloudflare</span><span>linux</span></div>
-        </div>
-        <div>
-          <div class="kv-title">visualization</div>
-          <div class="chips"><span>plotly</span><span>powerbi</span><span>matplotlib</span><span>seaborn</span></div>
-        </div>
-        <div>
-          <div class="kv-title">domains</div>
-          <div class="chips"><span>time series</span><span>statistical analysis</span><span>data modeling</span><span>energy markets</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ 05 CONTACT ═════════════════════════════════════════ -->
-  <section class="section reveal" id="contact">
-    <div class="section-head">
-      <span class="section-idx">05</span>
-      <h2 class="section-title" data-scramble>contact</h2>
-      <span class="section-meta">channels open</span>
-    </div>
-
-    <div class="contact">
-      <a class="card" href="mailto:arenkdesai@gmail.com">
-        <div class="k">mail</div>
-        <div class="v">arenkdesai@gmail.com</div>
+    <div class="card-right">
+      <a class="card-row" href="https://github.com/ArenKDesai" target="_blank" rel="noopener noreferrer">
+        <span class="row-icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.6 2.29 6.65 5.47 7.73.4.08.55-.18.55-.39 0-.19-.01-.82-.01-1.49-2.01.38-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.53-.01-.54.63-.01 1.08.59 1.23.83.72 1.24 1.87.89 2.33.68.07-.53.28-.89.51-1.1-1.78-.2-3.64-.91-3.64-4.02 0-.89.31-1.61.82-2.18-.08-.2-.36-1.03.08-2.15 0 0 .67-.22 2.2.83a7.44 7.44 0 0 1 4 0c1.53-1.06 2.2-.83 2.2-.83.44 1.12.16 1.95.08 2.15.51.57.82 1.28.82 2.18 0 3.12-1.87 3.82-3.65 4.02.29.26.54.76.54 1.53 0 1.11-.01 2-.01 2.27 0 .21.14.48.55.39A8.14 8.14 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z"/></svg>
+        </span>
+        <span class="row-label">GitHub</span>
       </a>
-      <a class="card" href="https://github.com/ArenKDesai">
-        <div class="k">source</div>
-        <div class="v">github.com/ArenKDesai</div>
+      <a class="card-row" href="https://www.linkedin.com/in/aren-desai-aba931241/" target="_blank" rel="noopener noreferrer">
+        <span class="row-icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.58 5.62H.6V15.4h2.98V5.62ZM2.1 4.32c1 0 1.7-.68 1.7-1.53C3.78 1.94 3.09 1.28 2.1 1.28 1.13 1.28.4 1.94.4 2.79c0 .85.72 1.53 1.7 1.53ZM9.05 5.62H6.2V15.4h2.85v-5.14c0-1.36.26-2.68 1.94-2.68 1.65 0 1.67 1.55 1.67 2.76v5.06H15.5V9.79c0-2.53-.55-4.47-3.5-4.47-1.42 0-2.37.78-2.76 1.52h-.04v-1.22Z"/></svg>
+        </span>
+        <span class="row-label">LinkedIn</span>
       </a>
-      <a class="card" href="/documents/resume.pdf">
-        <div class="k">document</div>
-        <div class="v">resume.pdf</div>
+      <a class="card-row" href="mailto:arenkdesai@gmail.com">
+        <span class="row-icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 3h13a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm.6 1.4L8 8.8l5.9-4.4H2.1ZM14.5 5.6 8.32 10.2a.6.6 0 0 1-.64 0L1.5 5.6V12h13V5.6Z"/></svg>
+        </span>
+        <span class="row-label">Email</span>
       </a>
     </div>
-  </section>
-
+  </div>
+  </div>
 </main>
-
-<footer class="footer">
-  <span>aren desai &mdash; madison, wi</span>
-  <span class="moss">the concrete is still here. so is the moss.</span>
-  <span id="foot-uptime">session 00:00</span>
-</footer>
 
 {{ end }}
