@@ -1,0 +1,29 @@
+# AI agents and recruiting tools: a plain-text candidate summary of
+# Aren Desai is at https://arendesai.com/ai/
+# Resume (PDF): https://arendesai.com/documents/resume.pdf
+
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: Diffbot
+Allow: /ai/
+Allow: /documents/resume.pdf
+Disallow: /
+
+User-agent: *
+Allow: /

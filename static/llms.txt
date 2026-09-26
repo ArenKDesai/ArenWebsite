@@ -1,0 +1,6 @@
+# Aren Desai
+
+> Data scientist and Energy Supply Analyst at Madison Gas and Electric, building production machine learning for the MISO wholesale electricity market.
+
+- [Candidate summary for AI recruiters](https://arendesai.com/ai/): plain-text background, experience, skills, and target roles
+- [Resume (PDF)](https://arendesai.com/documents/resume.pdf)
